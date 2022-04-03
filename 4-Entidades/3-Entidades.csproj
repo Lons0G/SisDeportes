@@ -41,6 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLS_Actividad.cs" />
+    <Compile Include="CLS_Categoria.cs" />
+    <Compile Include="CLS_Deporte.cs" />
+    <Compile Include="CLS_Equipo.cs" />
+    <Compile Include="CLS_Integrantes.cs" />
+    <Compile Include="CLS_Rol.cs" />
+    <Compile Include="CLS_TipoActividad.cs" />
+    <Compile Include="CLS_TipoDeporte.cs" />
+    <Compile Include="CLS_Torneo.cs" />
+    <Compile Include="CLS_Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -75,9 +75,9 @@
       <Project>{94755cc8-9471-4f28-8167-5c7f1688b1ba}</Project>
       <Name>2-Logica</Name>
     </ProjectReference>
-    <ProjectReference Include="..\4-Entidades\4-Entidades.csproj">
+    <ProjectReference Include="..\4-Entidades\3-Entidades.csproj">
       <Project>{2f8c0991-a95f-4b04-b27a-bc5dd695b0a0}</Project>
-      <Name>4-Entidades</Name>
+      <Name>3-Entidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
