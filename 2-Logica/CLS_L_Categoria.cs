@@ -7,7 +7,7 @@ namespace _2_Logica.Logica
     internal class CLS_L_Categoria
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
         //METODO PARA INSERTAR CATEGORIA//
         public bool Insertar_Categoria(ref CLS_Categoria obj_categoria) {
             try {
