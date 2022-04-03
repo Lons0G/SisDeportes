@@ -124,5 +124,36 @@ namespace _2_Logica.Logica
                 _conexion.Dispose();
             }
         }
+        public void Login(ref CLS_Usuario obj_usuario)
+        {
+            try {
+                Conexion();
+                SqlCommand comando = new SqlCommand("SP_Login", _conexion)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                comando.Parameters.AddWithValue("@Usuario", obj_usuario.Usuario);
+                comando.Parameters.AddWithValue("@Password", obj_usuario.Password);
+                _conexion.Open();
+                int fila = Convert.ToInt32(comando.ExecuteScalar());
+                if (fila != 0) {
+                    SqlDataReader reader = comando.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        obj_usuario.Id = Convert.ToInt32(reader["IdUsuario"].ToString());
+                        obj_usuario.Rol = Convert.ToInt32(reader["IdRol"].ToString());
+                    }
+                }
+                else { obj_usuario.Id = 0; }
+            }
+            catch (Exception error) {
+                obj_usuario.Error = error.Message;
+            }
+            finally
+            {
+                _conexion.Close();
+                _conexion.Dispose();
+            }
+        }
     }
 }
