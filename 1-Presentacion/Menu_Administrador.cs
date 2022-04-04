@@ -15,7 +15,7 @@ namespace _1_Presentacion
         public Menu_Administrador(string nombre)
         {
             InitializeComponent();
-            lblmensajeadmi.Text = nombre;
+            //lblmensajeadmi.Text = nombre;
         }
 
         private void Menu_Administrador_Load(object sender, EventArgs e)
