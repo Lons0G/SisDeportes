@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using _3_Entidades;
+using _2_Logica.Logica;
+using _2_Logica;
 
 namespace _1_Presentacion
 {
@@ -17,50 +20,16 @@ namespace _1_Presentacion
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("Data Source=LAPTOP-VE4H6KBS; Initial Catalog=DB_DEPORTES; Integrated Security=True");
 
         public void logear(string usuario, string contrasena) //este metodo sirve para comprobar si mi usuario existe en el servidor
         {
-            try
-            {
-                con.Open();
+            CLS_Usuario obj_usuario = new CLS_Usuario();
+            CLS_L_Usuarios L_usuario = new CLS_L_Usuarios();
 
-                SqlCommand cmd = new SqlCommand("SELECT nombre, IdRol from TBL_Usuario WHERE Usuario=@usuario AND Contrasena=@contrasena", con);
-                cmd.Parameters.AddWithValue("usuario", usuario);
-                cmd.Parameters.AddWithValue("contrasena", contrasena);
+            obj_usuario.Usuario = usuario;
+            obj_usuario.Password = contrasena;
 
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-
-                if (dt.Rows.Count == 1)
-                {
-                    this.Hide();//oculta el formulario de login
-
-                    if (dt.Rows[0][1].ToString() == "1")//adminsitrador
-                    {
-                        new Menu_Administrador(dt.Rows[0][0].ToString()).Show();
-                    }
-                    //else if (dt.Rows[0][1].ToString() == "2")//usuario
-                    //{
-                    //    new Menu_Usuario(dt.Rows[0][0].ToString()).Show();
-                    //}
-
-                }
-                else
-                {
-                    MessageBox.Show("Usuario y/o contraseña invalidos");
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
+            L_usuario.Login(ref obj_usuario);
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)

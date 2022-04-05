@@ -3,9 +3,9 @@ using System.Data;
 using System.Data.SqlClient;
 using _3_Entidades;
 
-namespace _2_Logica.Logica
+namespace _2_Logica //_2_Logica
 {
-    internal class CLS_L_Usuarios
+    public class CLS_L_Usuarios
     {
         SqlConnection _conexion;
         private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }

@@ -2,9 +2,9 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
-namespace _2_Logica.Logica
+namespace _2_Logica
 {
-    internal class CLS_L_Torneo
+    public class CLS_L_Torneo
     {
         SqlConnection _conexion;
         private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }

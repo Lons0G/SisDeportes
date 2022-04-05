@@ -17,5 +17,9 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=LAPTOP-VE4H6KBS; Initial Catalog=DB_DEPORTES; Integrated Security=True</Value>
     </Setting>
+    <Setting Name="Conexion_Damian" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)" />
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
