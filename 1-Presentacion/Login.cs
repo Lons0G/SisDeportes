@@ -34,12 +34,12 @@ namespace _1_Presentacion
 
             if (obj_usuario.Id != 0) //VERIFICA si mi rol de usuario existe, si es asi entra y muestra el menu de administrador
             {
-                if (obj_usuario.Rol == 2) //si mi rol es igual da 2 es administrador
+                if (obj_usuario.Rol == 1) //si mi rol es igual da 1 es administrador
                 {
                     Menu_Administrador MenuAdmi = new Menu_Administrador(); //cree el objeto 
                     MenuAdmi.Show();//si se cumple me abre la ventana de menu
                 }
-                else if (obj_usuario.Rol == 1)//si mi rol es 1 es usuario y muestra el menu de usuario
+                else if (obj_usuario.Rol == 2)//si mi rol es 2 es usuario y muestra el menu de usuario
                 {
                     Menu_Encargado MenuEncar = new Menu_Encargado();
                     MenuEncar.Show();
@@ -47,7 +47,7 @@ namespace _1_Presentacion
             }
             else
             {
-                MessageBox.Show("Usuario y/o Contraseña no existe");
+                MessageBox.Show("Usuario y/o Contraseña no existe"); //si no es ninguno, entonces no existe
             }
 
         }
@@ -60,6 +60,22 @@ namespace _1_Presentacion
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pbmostrar_Click(object sender, EventArgs e)
+        {
+            //imagen ocultar la mandamos hacia enfrente
+            pbocultar.BringToFront();
+            //oculatamos la contraseña
+            txtContraLog.PasswordChar = '\0';
+        }
+
+        private void pbocultar_Click(object sender, EventArgs e)
+        {
+            //imagen mostrar la madamos hacia enfrente
+            pbmostrar.BringToFront();
+            //mostramos la contraseña
+            txtContraLog.PasswordChar = '*';
         }
     }
 }

@@ -38,14 +38,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtUsuLog = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pbmostrar = new System.Windows.Forms.PictureBox();
+            this.pbocultar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbmostrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbocultar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pbmostrar);
+            this.panel1.Controls.Add(this.pbocultar);
             this.panel1.Controls.Add(this.btnIniciar);
             this.panel1.Controls.Add(this.txtContraLog);
             this.panel1.Controls.Add(this.label2);
@@ -75,6 +81,7 @@
             this.txtContraLog.ForeColor = System.Drawing.Color.Black;
             this.txtContraLog.Location = new System.Drawing.Point(276, 19);
             this.txtContraLog.Name = "txtContraLog";
+            this.txtContraLog.PasswordChar = '*';
             this.txtContraLog.Size = new System.Drawing.Size(162, 30);
             this.txtContraLog.TabIndex = 13;
             // 
@@ -139,6 +146,28 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Usuario:";
             // 
+            // pbmostrar
+            // 
+            this.pbmostrar.Image = ((System.Drawing.Image)(resources.GetObject("pbmostrar.Image")));
+            this.pbmostrar.Location = new System.Drawing.Point(207, 19);
+            this.pbmostrar.Name = "pbmostrar";
+            this.pbmostrar.Size = new System.Drawing.Size(53, 31);
+            this.pbmostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbmostrar.TabIndex = 34;
+            this.pbmostrar.TabStop = false;
+            this.pbmostrar.Click += new System.EventHandler(this.pbmostrar_Click);
+            // 
+            // pbocultar
+            // 
+            this.pbocultar.Image = ((System.Drawing.Image)(resources.GetObject("pbocultar.Image")));
+            this.pbocultar.Location = new System.Drawing.Point(207, 19);
+            this.pbocultar.Name = "pbocultar";
+            this.pbocultar.Size = new System.Drawing.Size(53, 30);
+            this.pbocultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbocultar.TabIndex = 33;
+            this.pbocultar.TabStop = false;
+            this.pbocultar.Click += new System.EventHandler(this.pbocultar_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -158,6 +187,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbmostrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbocultar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +205,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtUsuLog;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pbmostrar;
+        private System.Windows.Forms.PictureBox pbocultar;
     }
 }
