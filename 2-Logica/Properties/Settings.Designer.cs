@@ -26,31 +26,10 @@ namespace _2_Logica.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-HAKO7TF\\SQLEXPRESS;Initial Catalog=DB_DEPORTES;Integrated Sec" +
-            "urity=True")]
-        public string Conexion_Angel {
-            get {
-                return ((string)(this["Conexion_Angel"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-VE4H6KBS; Initial Catalog=DB_DEPORTES; Integrated Security=Tru" +
-            "e")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-VE4H6KBS;Initial Catalog=DB_DEPORTES;Integrated Security=True")]
         public string Conexion_Juan {
             get {
                 return ((string)(this["Conexion_Juan"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        public string Conexion_Damian {
-            get {
-                return ((string)(this["Conexion_Damian"]));
             }
         }
     }

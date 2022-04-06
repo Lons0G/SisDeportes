@@ -10,15 +10,14 @@ using System.Windows.Forms;
 
 namespace _1_Presentacion
 {
-    public partial class Menu_Administrador : Form
+    public partial class Menu_Encargado : Form
     {
-        public Menu_Administrador(/*string nombre*/)
+        public Menu_Encargado()
         {
             InitializeComponent();
-            //lblmensajeadmi.Text = nombre;
         }
 
-        private void Menu_Administrador_Load(object sender, EventArgs e)
+        private void Menu_Encargado_Load(object sender, EventArgs e)
         {
 
         }

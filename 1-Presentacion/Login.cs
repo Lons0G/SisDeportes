@@ -30,6 +30,26 @@ namespace _1_Presentacion
             obj_usuario.Password = contrasena;
 
             L_usuario.Login(ref obj_usuario);
+
+
+            if (obj_usuario.Id != 0) //VERIFICA si mi rol de usuario existe, si es asi entra y muestra el menu de administrador
+            {
+                if (obj_usuario.Rol == 2) //si mi rol es igual da 2 es administrador
+                {
+                    Menu_Administrador MenuAdmi = new Menu_Administrador(); //cree el objeto 
+                    MenuAdmi.Show();//si se cumple me abre la ventana de menu
+                }
+                else if (obj_usuario.Rol == 1)//si mi rol es 1 es usuario y muestra el menu de usuario
+                {
+                    Menu_Encargado MenuEncar = new Menu_Encargado();
+                    MenuEncar.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Usuario y/o Contraseña no existe");
+            }
+
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
