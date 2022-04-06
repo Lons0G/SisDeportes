@@ -3,12 +3,12 @@ using System.Data;
 using System.Data.SqlClient;
 using _3_Entidades;
 
-namespace _2_Logica //_2_Logica
+namespace _2_Logica 
 {
     public class CLS_L_Usuarios
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
         
         //METODO PARA INSERTAR USUARIO//
         public bool Insertar_Usuario(ref CLS_Usuario obj_usuario) {
