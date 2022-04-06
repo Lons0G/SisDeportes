@@ -22,5 +22,27 @@ namespace _1_Presentacion
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOpcionesUsuario_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Opciones_Usuario opciones = new Opciones_Usuario();
+
+            opciones.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login mostrar = new Login();
+
+            mostrar.Show();
+        }
     }
 }

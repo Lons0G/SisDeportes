@@ -45,6 +45,7 @@ namespace _1_Presentacion
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
+            this.Hide();
             logear(this.txtUsuLog.Text, this.txtContraLog.Text);
         }
 
