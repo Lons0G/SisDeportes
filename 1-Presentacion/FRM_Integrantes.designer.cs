@@ -47,6 +47,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.lbNombreEquipo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,6 +78,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lbNombreEquipo);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.CbEntrenador);
             this.groupBox1.Controls.Add(this.CbJugador);
@@ -224,16 +227,37 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Form1
+            // btnRegistrar
+            // 
+            this.btnRegistrar.BackColor = System.Drawing.Color.Snow;
+            this.btnRegistrar.Location = new System.Drawing.Point(361, 416);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.TabIndex = 6;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // lbNombreEquipo
+            // 
+            this.lbNombreEquipo.AutoSize = true;
+            this.lbNombreEquipo.Location = new System.Drawing.Point(113, 32);
+            this.lbNombreEquipo.Name = "lbNombreEquipo";
+            this.lbNombreEquipo.Size = new System.Drawing.Size(10, 13);
+            this.lbNombreEquipo.TabIndex = 3;
+            this.lbNombreEquipo.Text = "-";
+            // 
+            // FRM_Integrantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.IndianRed;
+            this.BackColor = System.Drawing.Color.Tomato;
             this.ClientSize = new System.Drawing.Size(448, 450);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Name = "FRM_Integrantes";
             this.Text = "Integrantes";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
@@ -265,6 +289,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbNombreEquipo;
+        private System.Windows.Forms.Button btnRegistrar;
     }
 }
 

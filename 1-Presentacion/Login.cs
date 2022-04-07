@@ -14,6 +14,7 @@ namespace _1_Presentacion
 
         public void logear(string usuario, string contrasena) //este metodo sirve para comprobar si mi usuario existe en el servidor
         {
+
             CLS_Usuario obj_usuario = new CLS_Usuario();
             CLS_L_Usuarios L_usuario = new CLS_L_Usuarios();
 
@@ -41,7 +42,6 @@ namespace _1_Presentacion
             {
                 MessageBox.Show("Usuario y/o Contraseña no existe"); //si no es ninguno, entonces no existe
             }
-
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
