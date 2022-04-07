@@ -21,10 +21,8 @@ namespace _1_Presentacion
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Menu_Administrador volver = new Menu_Administrador();
-
-            volver.Show();
+            this.Close();
+            this.Dispose();
         }
 
         private void Agregar_Usuario_Load(object sender, EventArgs e)

@@ -34,12 +34,8 @@ namespace _1_Presentacion
             AbrirForms(new Opciones_Usuario());
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login mostrar = new Login();
-
-            mostrar.Show();
+        private void button4_Click(object sender, EventArgs e) {
+            this.Close();
         }
 
         private void AbrirForms(object FRM_secundario) {
