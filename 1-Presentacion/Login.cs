@@ -25,6 +25,7 @@ namespace _1_Presentacion
 
             if (obj_usuario.Id != 0) //VERIFICA si mi rol de usuario existe, si es asi entra y muestra el menu de administrador
             {
+                this.Hide();
                 if (obj_usuario.Rol == 1) //si mi rol es igual da 1 es administrador
                 {
                     Menu_Administrador MenuAdmi = new Menu_Administrador(); //cree el objeto 
@@ -45,7 +46,6 @@ namespace _1_Presentacion
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            this.Hide();
             logear(this.txtUsuLog.Text, this.txtContraLog.Text);
         }
 

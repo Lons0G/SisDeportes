@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbmostrar = new System.Windows.Forms.PictureBox();
+            this.pbocultar = new System.Windows.Forms.PictureBox();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.txtContraLog = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,13 +40,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtUsuLog = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbmostrar = new System.Windows.Forms.PictureBox();
-            this.pbocultar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbmostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbocultar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,6 +60,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(556, 167);
             this.panel1.TabIndex = 24;
+            // 
+            // pbmostrar
+            // 
+            this.pbmostrar.Image = ((System.Drawing.Image)(resources.GetObject("pbmostrar.Image")));
+            this.pbmostrar.Location = new System.Drawing.Point(207, 19);
+            this.pbmostrar.Name = "pbmostrar";
+            this.pbmostrar.Size = new System.Drawing.Size(53, 31);
+            this.pbmostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbmostrar.TabIndex = 34;
+            this.pbmostrar.TabStop = false;
+            this.pbmostrar.Click += new System.EventHandler(this.pbmostrar_Click);
+            // 
+            // pbocultar
+            // 
+            this.pbocultar.Image = ((System.Drawing.Image)(resources.GetObject("pbocultar.Image")));
+            this.pbocultar.Location = new System.Drawing.Point(207, 19);
+            this.pbocultar.Name = "pbocultar";
+            this.pbocultar.Size = new System.Drawing.Size(53, 30);
+            this.pbocultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbocultar.TabIndex = 33;
+            this.pbocultar.TabStop = false;
+            this.pbocultar.Click += new System.EventHandler(this.pbocultar_Click);
             // 
             // btnIniciar
             // 
@@ -146,28 +168,6 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Usuario:";
             // 
-            // pbmostrar
-            // 
-            this.pbmostrar.Image = ((System.Drawing.Image)(resources.GetObject("pbmostrar.Image")));
-            this.pbmostrar.Location = new System.Drawing.Point(207, 19);
-            this.pbmostrar.Name = "pbmostrar";
-            this.pbmostrar.Size = new System.Drawing.Size(53, 31);
-            this.pbmostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbmostrar.TabIndex = 34;
-            this.pbmostrar.TabStop = false;
-            this.pbmostrar.Click += new System.EventHandler(this.pbmostrar_Click);
-            // 
-            // pbocultar
-            // 
-            this.pbocultar.Image = ((System.Drawing.Image)(resources.GetObject("pbocultar.Image")));
-            this.pbocultar.Location = new System.Drawing.Point(207, 19);
-            this.pbocultar.Name = "pbocultar";
-            this.pbocultar.Size = new System.Drawing.Size(53, 30);
-            this.pbocultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbocultar.TabIndex = 33;
-            this.pbocultar.TabStop = false;
-            this.pbocultar.Click += new System.EventHandler(this.pbocultar_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -185,10 +185,10 @@
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbmostrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbocultar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

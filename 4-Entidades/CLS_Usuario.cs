@@ -13,7 +13,7 @@
         private decimal _sueldo;
         private int _rol;
         private string _error;
-
+      
         // CAMPOS PUBLICOS
         public int Id { get => _id; set => _id = value; }
         public string Nombre { get => _nombre; set => _nombre = value; }
@@ -25,5 +25,6 @@
         public decimal Sueldo { get => _sueldo; set => _sueldo = value; }
         public int Rol { get => _rol; set => _rol = value; }
         public string Error { get => _error; set => _error = value; }
+
     }
 }

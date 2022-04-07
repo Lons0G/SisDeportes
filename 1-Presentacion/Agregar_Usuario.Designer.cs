@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar_Usuario));
             this.label6 = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.fdd = new System.Windows.Forms.Label();
@@ -35,8 +36,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtusuario = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtSueldo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
@@ -47,13 +46,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnregistrar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.creausuario = new System.Windows.Forms.Label();
+            this.pbmostrar = new System.Windows.Forms.PictureBox();
+            this.pbocultar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbmostrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbocultar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(121, 19);
+            this.label6.Location = new System.Drawing.Point(137, 34);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(298, 32);
             this.label6.TabIndex = 46;
@@ -66,6 +74,7 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(162, 30);
             this.txtApellido.TabIndex = 45;
+            this.txtApellido.TextChanged += new System.EventHandler(this.txtApellido_TextChanged);
             // 
             // fdd
             // 
@@ -84,6 +93,7 @@
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(162, 30);
             this.txtnombre.TabIndex = 43;
+            this.txtnombre.TextChanged += new System.EventHandler(this.txtnombre_TextChanged);
             // 
             // label4
             // 
@@ -98,44 +108,27 @@
             // txtpassword
             // 
             this.txtpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword.Location = new System.Drawing.Point(296, 212);
+            this.txtpassword.Location = new System.Drawing.Point(295, 162);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(162, 30);
             this.txtpassword.TabIndex = 50;
+            this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(66, 215);
+            this.label2.Location = new System.Drawing.Point(65, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 25);
             this.label2.TabIndex = 49;
             this.label2.Text = "Contraseña:";
             // 
-            // txtusuario
-            // 
-            this.txtusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusuario.Location = new System.Drawing.Point(296, 164);
-            this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(162, 30);
-            this.txtusuario.TabIndex = 48;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 164);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 25);
-            this.label1.TabIndex = 47;
-            this.label1.Text = "Usuario:";
-            // 
             // txtSueldo
             // 
             this.txtSueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSueldo.Location = new System.Drawing.Point(297, 363);
+            this.txtSueldo.Location = new System.Drawing.Point(296, 313);
             this.txtSueldo.Name = "txtSueldo";
             this.txtSueldo.Size = new System.Drawing.Size(162, 30);
             this.txtSueldo.TabIndex = 59;
@@ -144,7 +137,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(67, 363);
+            this.label7.Location = new System.Drawing.Point(66, 313);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 25);
             this.label7.TabIndex = 58;
@@ -153,16 +146,16 @@
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(296, 313);
+            this.txtTelefono.Location = new System.Drawing.Point(246, 263);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(162, 30);
+            this.txtTelefono.Size = new System.Drawing.Size(211, 30);
             this.txtTelefono.TabIndex = 57;
             // 
             // d
             // 
             this.d.AutoSize = true;
             this.d.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.d.Location = new System.Drawing.Point(66, 313);
+            this.d.Location = new System.Drawing.Point(65, 263);
             this.d.Name = "d";
             this.d.Size = new System.Drawing.Size(104, 25);
             this.d.TabIndex = 56;
@@ -171,16 +164,16 @@
             // txtCorreo
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Location = new System.Drawing.Point(297, 266);
+            this.txtCorreo.Location = new System.Drawing.Point(157, 216);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(162, 30);
+            this.txtCorreo.Size = new System.Drawing.Size(301, 30);
             this.txtCorreo.TabIndex = 55;
             // 
             // df
             // 
             this.df.AutoSize = true;
             this.df.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.df.Location = new System.Drawing.Point(67, 266);
+            this.df.Location = new System.Drawing.Point(66, 216);
             this.df.Name = "df";
             this.df.Size = new System.Drawing.Size(85, 25);
             this.df.TabIndex = 54;
@@ -189,7 +182,7 @@
             // cbotipo
             // 
             this.cbotipo.FormattingEnabled = true;
-            this.cbotipo.Location = new System.Drawing.Point(309, 421);
+            this.cbotipo.Location = new System.Drawing.Point(308, 371);
             this.cbotipo.Name = "cbotipo";
             this.cbotipo.Size = new System.Drawing.Size(149, 24);
             this.cbotipo.TabIndex = 53;
@@ -200,7 +193,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(66, 417);
+            this.label5.Location = new System.Drawing.Point(65, 367);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(172, 25);
             this.label5.TabIndex = 52;
@@ -209,7 +202,7 @@
             // btnregistrar
             // 
             this.btnregistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnregistrar.Location = new System.Drawing.Point(347, 481);
+            this.btnregistrar.Location = new System.Drawing.Point(346, 431);
             this.btnregistrar.Name = "btnregistrar";
             this.btnregistrar.Size = new System.Drawing.Size(112, 45);
             this.btnregistrar.TabIndex = 51;
@@ -220,7 +213,7 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(481, 559);
+            this.btnVolver.Location = new System.Drawing.Point(481, 494);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(112, 45);
             this.btnVolver.TabIndex = 60;
@@ -228,11 +221,68 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // creausuario
+            // 
+            this.creausuario.AutoSize = true;
+            this.creausuario.Location = new System.Drawing.Point(23, 510);
+            this.creausuario.Name = "creausuario";
+            this.creausuario.Size = new System.Drawing.Size(237, 16);
+            this.creausuario.TabIndex = 61;
+            this.creausuario.Text = "El usuario se generan al darle registrar";
+            // 
+            // pbmostrar
+            // 
+            this.pbmostrar.Image = ((System.Drawing.Image)(resources.GetObject("pbmostrar.Image")));
+            this.pbmostrar.Location = new System.Drawing.Point(481, 164);
+            this.pbmostrar.Name = "pbmostrar";
+            this.pbmostrar.Size = new System.Drawing.Size(53, 31);
+            this.pbmostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbmostrar.TabIndex = 63;
+            this.pbmostrar.TabStop = false;
+            this.pbmostrar.Click += new System.EventHandler(this.pbmostrar_Click);
+            // 
+            // pbocultar
+            // 
+            this.pbocultar.Image = ((System.Drawing.Image)(resources.GetObject("pbocultar.Image")));
+            this.pbocultar.Location = new System.Drawing.Point(481, 164);
+            this.pbocultar.Name = "pbocultar";
+            this.pbocultar.Size = new System.Drawing.Size(53, 30);
+            this.pbocultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbocultar.TabIndex = 62;
+            this.pbocultar.TabStop = false;
+            this.pbocultar.Click += new System.EventHandler(this.pbocultar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(25, 417);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(126, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 64;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(464, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(142, 106);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 65;
+            this.pictureBox2.TabStop = false;
+            // 
             // Agregar_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 616);
+            this.BackColor = System.Drawing.Color.DarkGray;
+            this.ClientSize = new System.Drawing.Size(609, 564);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbmostrar);
+            this.Controls.Add(this.pbocultar);
+            this.Controls.Add(this.creausuario);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.txtSueldo);
             this.Controls.Add(this.label7);
@@ -245,8 +295,6 @@
             this.Controls.Add(this.btnregistrar);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtusuario);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.fdd);
@@ -255,6 +303,10 @@
             this.Name = "Agregar_Usuario";
             this.Text = "Agregar_Usuario";
             this.Load += new System.EventHandler(this.Agregar_Usuario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbmostrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbocultar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,8 +321,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtusuario;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSueldo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtTelefono;
@@ -281,5 +331,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnregistrar;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Label creausuario;
+        private System.Windows.Forms.PictureBox pbmostrar;
+        private System.Windows.Forms.PictureBox pbocultar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

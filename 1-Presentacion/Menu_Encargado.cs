@@ -21,5 +21,14 @@ namespace _1_Presentacion
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Login vol = new Login();
+
+            vol.Show();
+        }
     }
 }

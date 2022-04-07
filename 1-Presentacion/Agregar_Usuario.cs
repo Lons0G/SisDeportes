@@ -38,6 +38,7 @@ namespace _1_Presentacion
         {
             indice = cbotipo.SelectedIndex;
             indice = indice + 1;
+            
         }
 
         private void btnregistrar_Click(object sender, EventArgs e)
@@ -48,8 +49,8 @@ namespace _1_Presentacion
 
             obj_usuario.Nombre = this.txtnombre.Text;
             obj_usuario.Apellido = this.txtApellido.Text;
-            obj_usuario.Usuario = this.txtusuario.Text;
-            obj_usuario.Password = this.txtpassword.Text;
+            obj_usuario.Usuario = obj_usuario.Nombre[0] + "" + obj_usuario.Nombre[1] + "" + obj_usuario.Apellido[0] + "" + obj_usuario.Apellido[1] + "" + obj_usuario.Apellido[2];
+            obj_usuario.Password = this.txtpassword.Text; /*en la parte de usuario, se toma 2 letras inicales y 3 inciales del apellido*/
             obj_usuario.Telefono = this.txtTelefono.Text;
             obj_usuario.Correo = this.txtCorreo.Text;
             obj_usuario.Sueldo = Convert.ToDecimal(this.txtSueldo.Text);
@@ -57,11 +58,12 @@ namespace _1_Presentacion
 
             bool resultado = L_Usuario.Insertar_Usuario(ref obj_usuario);
 
-            MessageBox.Show(obj_usuario.Error);
+            //MessageBox.Show(obj_usuario.Error);
 
             if (resultado == true)
             {
                 MessageBox.Show("Datos Guardados Correctamente", "Datos Guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Tu Usuario es: " + obj_usuario.Usuario); //cuando se guarda, muestra esta ventana con el usurio generado
             }
             else
             {
@@ -69,6 +71,42 @@ namespace _1_Presentacion
             }
 
 
+        }
+
+        private void txtnombre_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtusuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbmostrar_Click(object sender, EventArgs e)
+        {
+            //imagen ocultar la mandamos hacia enfrente
+            pbocultar.BringToFront();
+            //oculatamos la contraseña
+             txtpassword.PasswordChar = '\0';
+        }
+
+        private void pbocultar_Click(object sender, EventArgs e)
+        {
+            //imagen mostrar la madamos hacia enfrente
+            pbmostrar.BringToFront();
+            //mostramos la contraseña
+            txtpassword.PasswordChar = '*';
         }
     }
 }
