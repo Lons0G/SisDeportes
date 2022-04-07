@@ -40,6 +40,7 @@
             this._p_usuario = new System.Windows.Forms.Panel();
             this._pb_imagen_usuario = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this._p_forms = new System.Windows.Forms.Panel();
             this._p_lateral.SuspendLayout();
             this._p_salir.SuspendLayout();
             this._p_usuario.SuspendLayout();
@@ -170,12 +171,21 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // _p_forms
+            // 
+            this._p_forms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._p_forms.Location = new System.Drawing.Point(120, 0);
+            this._p_forms.Name = "_p_forms";
+            this._p_forms.Size = new System.Drawing.Size(1104, 761);
+            this._p_forms.TabIndex = 6;
+            // 
             // Menu_Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1224, 761);
+            this.Controls.Add(this._p_forms);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this._p_lateral);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -205,5 +215,6 @@
         private System.Windows.Forms.PictureBox _pb_imagen_usuario;
         private System.Windows.Forms.Button btnOpcionesUsuario;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel _p_forms;
     }
 }
