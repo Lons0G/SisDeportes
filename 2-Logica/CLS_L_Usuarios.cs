@@ -27,7 +27,6 @@ namespace _2_Logica
                 comando.Parameters.AddWithValue("@Correo", obj_usuario.Correo);
                 comando.Parameters.AddWithValue("@Sueldo", obj_usuario.Sueldo);
                 comando.Parameters.AddWithValue("@IdRol", obj_usuario.Rol);
-                _conexion.Open();
                 comando.ExecuteNonQuery();
                 return true;
             }
@@ -79,6 +78,7 @@ namespace _2_Logica
                     CommandType = CommandType.StoredProcedure
                 };
                 comando.Parameters.AddWithValue("@IdUsuario", obj_usuario.Id);
+                _conexion.Open();
                 comando.ExecuteNonQuery();
                 return true;
             }
