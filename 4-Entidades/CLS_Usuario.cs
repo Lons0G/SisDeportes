@@ -12,6 +12,7 @@
         private string _correo;
         private decimal _sueldo;
         private int _rol;
+        private string _deporte;
         private string _error;
       
         // CAMPOS PUBLICOS
@@ -25,6 +26,6 @@
         public decimal Sueldo { get => _sueldo; set => _sueldo = value; }
         public int Rol { get => _rol; set => _rol = value; }
         public string Error { get => _error; set => _error = value; }
-
+        public string Deporte { get => _deporte; set => _deporte = value; }
     }
 }

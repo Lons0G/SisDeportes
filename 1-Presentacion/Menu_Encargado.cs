@@ -14,6 +14,8 @@ namespace _1_Presentacion
     {
         public Menu_Encargado()
         {
+            ///NECESITO TENER EL USUARIO CON EL DEPORTE///
+            ///
             InitializeComponent();
         }
 

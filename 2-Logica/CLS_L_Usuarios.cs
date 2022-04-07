@@ -8,7 +8,7 @@ namespace _2_Logica
     public class CLS_L_Usuarios
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
         
         //METODO PARA INSERTAR USUARIO//
         public bool Insertar_Usuario(ref CLS_Usuario obj_usuario) {
@@ -154,6 +154,35 @@ namespace _2_Logica
             }
             finally
             {
+                _conexion.Close();
+                _conexion.Dispose();
+            }
+        }
+        public bool ObtenerDeporte(ref CLS_Usuario obj_usuario) {
+            try
+            {
+                Conexion();
+                SqlCommand comando = new SqlCommand("SP_Login", _conexion)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                comando.Parameters.AddWithValue("@IdUsuario", obj_usuario.Id);
+                _conexion.Open();
+                int fila = Convert.ToInt32(comando.ExecuteScalar());
+                if (fila != 0) {
+                    SqlDataReader reader = comando.ExecuteReader();
+                    while (reader.Read()) {
+                        obj_usuario.Deporte = reader["Nombre"].ToString();
+                    }
+                }
+                else { obj_usuario.Id = 0; }
+                return true;
+            }
+            catch (Exception error) {
+                obj_usuario.Error = error.Message;
+                return false;
+            }
+            finally {
                 _conexion.Close();
                 _conexion.Dispose();
             }
