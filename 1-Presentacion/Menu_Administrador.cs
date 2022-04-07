@@ -16,6 +16,7 @@ namespace _1_Presentacion
         {
             InitializeComponent();
             //lblmensajeadmi.Text = nombre;
+            _p_forms.Visible = false;
         }
 
         private void Menu_Administrador_Load(object sender, EventArgs e)
@@ -25,24 +26,30 @@ namespace _1_Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnOpcionesUsuario_Click(object sender, EventArgs e)
         {
-            this.Hide();
-
-            Opciones_Usuario opciones = new Opciones_Usuario();
-
-            opciones.Show();
+            AbrirForms(new Opciones_Usuario());
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login mostrar = new Login();
+        private void button4_Click(object sender, EventArgs e) {
+            this.Close();
+        }
 
-            mostrar.Show();
+        private void AbrirForms(object FRM_secundario) {
+            pictureBox1.Visible = false;
+            _p_forms.Visible = true;
+            if (this._p_forms.Controls.Count > 0) {
+                this._p_forms.Controls.RemoveAt(0);
+            }
+            Form secundario = FRM_secundario as Form;
+            secundario.TopLevel = false;
+            secundario.Dock = DockStyle.Fill;
+            this._p_forms.Controls.Add(secundario);
+            this._p_forms.Tag = secundario;
+            secundario.Show();
         }
     }
 }
