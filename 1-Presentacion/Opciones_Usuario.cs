@@ -25,5 +25,10 @@ namespace _1_Presentacion
 
             agrega.Show();
         }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+             
+        }
     }
 }
