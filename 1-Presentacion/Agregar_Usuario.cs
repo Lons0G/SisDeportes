@@ -57,6 +57,8 @@ namespace _1_Presentacion
 
             bool resultado = L_Usuario.Insertar_Usuario(ref obj_usuario);
 
+            MessageBox.Show(obj_usuario.Error);
+
             if (resultado == true)
             {
                 MessageBox.Show("Datos Guardados Correctamente", "Datos Guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);

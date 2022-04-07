@@ -32,5 +32,16 @@ namespace _2_Logica.Properties {
                 return ((string)(this["Conexion_Juan"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-HAKO7TF\\SQLEXPRESS;Initial Catalog=DB_DEPORTES;Integrated Sec" +
+            "urity=True")]
+        public string Conexion_Angel {
+            get {
+                return ((string)(this["Conexion_Angel"]));
+            }
+        }
     }
 }
