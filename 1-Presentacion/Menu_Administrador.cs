@@ -24,18 +24,13 @@ namespace _1_Presentacion
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnOpcionesUsuario_Click(object sender, EventArgs e)
-        {
+        private void _btn_usuarios_Click(object sender, EventArgs e) {
             AbrirForms(new Opciones_Usuario());
         }
 
         private void button4_Click(object sender, EventArgs e) {
             this.Close();
+            this.Dispose();
         }
 
         private void AbrirForms(object FRM_secundario) {
@@ -50,6 +45,14 @@ namespace _1_Presentacion
             this._p_forms.Controls.Add(secundario);
             this._p_forms.Tag = secundario;
             secundario.Show();
+            //SE CREA UN NUEVO EVENTO QUE DETECTA CUANDO SE CERRO EL FORMS SECUNDARIO//
+            secundario.FormClosing += new FormClosingEventHandler(Agregar_Usuario_Close);
+        }
+        //ESTE METODO SE EJECUTA CUANDO SE OPRIME EL BOTON VOLVER EN EL FORMS DE REGISTRAR USUARIO//
+        private void Agregar_Usuario_Close(object sender, FormClosingEventArgs e)
+        {
+            _p_forms.Visible = false;
+            pictureBox1.Visible = true;
         }
     }
 }

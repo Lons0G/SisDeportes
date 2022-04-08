@@ -71,8 +71,8 @@
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(223, 97);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Location = new System.Drawing.Point(216, 97);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(122, 26);
             this.txtApellido.TabIndex = 45;
@@ -92,8 +92,8 @@
             // txtnombre
             // 
             this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnombre.Location = new System.Drawing.Point(222, 67);
-            this.txtnombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnombre.Location = new System.Drawing.Point(216, 67);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(122, 26);
             this.txtnombre.TabIndex = 43;
@@ -113,8 +113,8 @@
             // txtpassword
             // 
             this.txtpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword.Location = new System.Drawing.Point(221, 132);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtpassword.Location = new System.Drawing.Point(216, 132);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(122, 26);
@@ -136,7 +136,7 @@
             // 
             this.txtSueldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSueldo.Location = new System.Drawing.Point(222, 254);
-            this.txtSueldo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSueldo.Margin = new System.Windows.Forms.Padding(2);
             this.txtSueldo.Name = "txtSueldo";
             this.txtSueldo.Size = new System.Drawing.Size(122, 26);
             this.txtSueldo.TabIndex = 59;
@@ -156,7 +156,7 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(184, 214);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(159, 26);
             this.txtTelefono.TabIndex = 57;
@@ -176,7 +176,7 @@
             // 
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(118, 176);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(227, 26);
             this.txtCorreo.TabIndex = 55;
@@ -196,7 +196,7 @@
             // 
             this.cbotipo.FormattingEnabled = true;
             this.cbotipo.Location = new System.Drawing.Point(231, 301);
-            this.cbotipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbotipo.Margin = new System.Windows.Forms.Padding(2);
             this.cbotipo.Name = "cbotipo";
             this.cbotipo.Size = new System.Drawing.Size(113, 21);
             this.cbotipo.TabIndex = 53;
@@ -218,7 +218,7 @@
             // 
             this.btnregistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistrar.Location = new System.Drawing.Point(260, 350);
-            this.btnregistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnregistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnregistrar.Name = "btnregistrar";
             this.btnregistrar.Size = new System.Drawing.Size(84, 37);
             this.btnregistrar.TabIndex = 51;
@@ -230,7 +230,7 @@
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.Location = new System.Drawing.Point(361, 401);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(84, 37);
             this.btnVolver.TabIndex = 60;
@@ -251,8 +251,8 @@
             // pbmostrar
             // 
             this.pbmostrar.Image = ((System.Drawing.Image)(resources.GetObject("pbmostrar.Image")));
-            this.pbmostrar.Location = new System.Drawing.Point(361, 133);
-            this.pbmostrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbmostrar.Location = new System.Drawing.Point(361, 132);
+            this.pbmostrar.Margin = new System.Windows.Forms.Padding(2);
             this.pbmostrar.Name = "pbmostrar";
             this.pbmostrar.Size = new System.Drawing.Size(40, 25);
             this.pbmostrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -264,7 +264,7 @@
             // 
             this.pbocultar.Image = ((System.Drawing.Image)(resources.GetObject("pbocultar.Image")));
             this.pbocultar.Location = new System.Drawing.Point(361, 133);
-            this.pbocultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbocultar.Margin = new System.Windows.Forms.Padding(2);
             this.pbocultar.Name = "pbocultar";
             this.pbocultar.Size = new System.Drawing.Size(40, 24);
             this.pbocultar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -276,7 +276,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(19, 339);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(94, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -286,8 +286,8 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(348, 6);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(342, 7);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(106, 86);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -299,7 +299,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(457, 458);
+            this.ClientSize = new System.Drawing.Size(450, 458);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pbmostrar);
@@ -323,7 +323,7 @@
             this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Agregar_Usuario";
             this.Text = "Agregar_Usuario";
             this.Load += new System.EventHandler(this.Agregar_Usuario_Load);

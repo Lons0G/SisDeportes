@@ -33,7 +33,9 @@ namespace _1_Presentacion
 
         int indice;
         private void cbotipo_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {   //NOTA PARA ANGEL (de Angel) 
+            //REALIZAR LA OBTENCION DE LOS ROLES EN SQL Y MOSTRARLO EN EL CBO
+            //
             indice = cbotipo.SelectedIndex;
             indice = indice + 1;
             
