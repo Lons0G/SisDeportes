@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System;
+using System.Windows.Forms;
+using _3_Entidades;
+using _2_Logica;
 
 namespace _1_Presentacion
 {
@@ -16,7 +20,13 @@ namespace _1_Presentacion
         {
             InitializeComponent();
         }
-
+        public void GuardarDatosJu(string Nombre,string Apellido,string Edad,string Nacionalidad,string Posicion,string Dorsal)//Guardar Datos Jugador
+        {
+            CLS_Integrantes obj_Integrante = new CLS_Integrantes();
+            CLS_L_Integrante L_Integrante = new CLS_L_Integrante ();
+            
+            
+        }
         private void CbEntrenador_CheckedChanged(object sender, EventArgs e)
         {
             if (CbEntrenador.Checked== true)
@@ -46,6 +56,18 @@ namespace _1_Presentacion
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (CbJugador.Checked == true)
+            {
+
+            }
+            else
+            {
+
+            }
         }
     }
 }
