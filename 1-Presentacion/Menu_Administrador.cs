@@ -12,11 +12,15 @@ namespace _1_Presentacion
 {
     public partial class Menu_Administrador : Form
     {
-        public Menu_Administrador(/*string nombre*/)
+        public Menu_Administrador(int rol)
         {
             InitializeComponent();
-            //lblmensajeadmi.Text = nombre;
+            if (rol == 1) { _lbl_usuario.Text = "Administrador"; }
+            else { _lbl_usuario.Text = "Encargado"; }
             _p_forms.Visible = false;
+            ///MODIFICAR LOS CONTROLES QUE APARECEN///
+            ///REALIZAR UN METODO PARA DETERMINAR QUE BOTONES MOSTRAR EN CASO 
+            ///DE QUE SEA UN ENCARGADO O UN ADMINISTRADOR///
         }
 
         private void Menu_Administrador_Load(object sender, EventArgs e)

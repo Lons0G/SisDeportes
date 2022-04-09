@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Administrador));
-            this.lbladmi = new System.Windows.Forms.Label();
+            this._lbl_usuario = new System.Windows.Forms.Label();
             this._p_lateral = new System.Windows.Forms.Panel();
             this._btn_usuarios = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -47,23 +47,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbladmi
+            // _lbl_usuario
             // 
-            this.lbladmi.AutoSize = true;
-            this.lbladmi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbladmi.ForeColor = System.Drawing.Color.White;
-            this.lbladmi.Location = new System.Drawing.Point(9, 80);
-            this.lbladmi.Margin = new System.Windows.Forms.Padding(0);
-            this.lbladmi.Name = "lbladmi";
-            this.lbladmi.Size = new System.Drawing.Size(107, 20);
-            this.lbladmi.TabIndex = 3;
-            this.lbladmi.Text = "Administrador";
+            this._lbl_usuario.AutoSize = true;
+            this._lbl_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lbl_usuario.ForeColor = System.Drawing.Color.White;
+            this._lbl_usuario.Location = new System.Drawing.Point(9, 80);
+            this._lbl_usuario.Margin = new System.Windows.Forms.Padding(0);
+            this._lbl_usuario.Name = "_lbl_usuario";
+            this._lbl_usuario.Size = new System.Drawing.Size(107, 20);
+            this._lbl_usuario.TabIndex = 3;
+            this._lbl_usuario.Text = "Administrador";
             // 
             // _p_lateral
             // 
             this._p_lateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(33)))), ((int)(((byte)(24)))));
             this._p_lateral.Controls.Add(this._btn_usuarios);
-            this._p_lateral.Controls.Add(this.lbladmi);
+            this._p_lateral.Controls.Add(this._lbl_usuario);
             this._p_lateral.Controls.Add(this.button3);
             this._p_lateral.Controls.Add(this.button2);
             this._p_lateral.Controls.Add(this._p_salir);
@@ -177,6 +177,7 @@
             this.Controls.Add(this._p_lateral);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu_Administrador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu_Administrador";
             this.Load += new System.EventHandler(this.Menu_Administrador_Load);
             this._p_lateral.ResumeLayout(false);
@@ -191,7 +192,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbladmi;
+        private System.Windows.Forms.Label _lbl_usuario;
         private System.Windows.Forms.Panel _p_lateral;
         private System.Windows.Forms.Button _btn_usuarios;
         private System.Windows.Forms.Panel _p_usuario;
