@@ -63,6 +63,26 @@ namespace _1_Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2022_04_08_004451 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2022-04-08 004451", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iStock_949190756 {
+            get {
+                object obj = ResourceManager.GetObject("iStock-949190756", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap usuario_de_perfil {
             get {
                 object obj = ResourceManager.GetObject("usuario-de-perfil", resourceCulture);

@@ -16,7 +16,7 @@ namespace _2_Logica
                 Conexion();
                 SqlCommand comando = new SqlCommand("SP_INSERTAR_Actividad", _conexion)
                 {
-                    CommandType = CLS_Actividad.StoredProcedure
+                    CommandType = CommandType.StoredProcedure 
                 };
                 comando.Parameters.AddWithValue("@Fecha", obj_actividad.Fecha);
                 comando.Parameters.AddWithValue("@IdContricante_1", obj_actividad.IdContricante_1);

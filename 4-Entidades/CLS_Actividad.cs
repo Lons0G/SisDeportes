@@ -17,7 +17,6 @@ namespace _3_Entidades //_3_Entidades
         private string _nombre;
         private string _error;
 
-        public static CommandType StoredProcedure { get; internal set; }
         public int IdActividad { get => _idActividad; set => _idActividad = value; }
         public DateTime Fecha { get => _fecha; set => _fecha = value; }
         public int IdContricante_1 { get => _idContricante_1; set => _idContricante_1 = value; }
