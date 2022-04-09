@@ -52,12 +52,6 @@
     <Compile Include="Agregar_Usuario.Designer.cs">
       <DependentUpon>Agregar_Usuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Creación_Actividades.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Creación_Actividades.Designer.cs">
-      <DependentUpon>Creación_Actividades.cs</DependentUpon>
-    </Compile>
     <Compile Include="FRM_Integrantes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,12 +70,6 @@
     <Compile Include="Menu_Administrador.Designer.cs">
       <DependentUpon>Menu_Administrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu_Encargado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu_Encargado.Designer.cs">
-      <DependentUpon>Menu_Encargado.cs</DependentUpon>
-    </Compile>
     <Compile Include="Opciones_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,9 +81,6 @@
     <EmbeddedResource Include="Agregar_Usuario.resx">
       <DependentUpon>Agregar_Usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Creación_Actividades.resx">
-      <DependentUpon>Creación_Actividades.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FRM_Integrantes.resx">
       <DependentUpon>FRM_Integrantes.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,26 +90,23 @@
     <EmbeddedResource Include="Menu_Administrador.resx">
       <DependentUpon>Menu_Administrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu_Encargado.resx">
-      <DependentUpon>Menu_Encargado.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Opciones_Usuario.resx">
       <DependentUpon>Opciones_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -143,11 +125,6 @@
       <Project>{2f8c0991-a95f-4b04-b27a-bc5dd695b0a0}</Project>
       <Name>3-Entidades</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Imagenes\usuario-de-perfil.png" />
-    <None Include="Resources\Captura de pantalla 2022-04-08 004451.png" />
-    <None Include="Resources\iStock-949190756.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

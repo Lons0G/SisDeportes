@@ -37,13 +37,10 @@
             this._p_salir = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this._p_usuario = new System.Windows.Forms.Panel();
-            this._pb_imagen_usuario = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this._p_forms = new System.Windows.Forms.Panel();
             this._p_lateral.SuspendLayout();
             this._p_salir.SuspendLayout();
-            this._p_usuario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._pb_imagen_usuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,23 +125,11 @@
             // 
             // _p_usuario
             // 
-            this._p_usuario.Controls.Add(this._pb_imagen_usuario);
             this._p_usuario.Location = new System.Drawing.Point(0, 0);
             this._p_usuario.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this._p_usuario.Name = "_p_usuario";
             this._p_usuario.Size = new System.Drawing.Size(120, 77);
             this._p_usuario.TabIndex = 5;
-            // 
-            // _pb_imagen_usuario
-            // 
-            this._pb_imagen_usuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._pb_imagen_usuario.Image = global::_1_Presentacion.Properties.Resources.usuario_de_perfil;
-            this._pb_imagen_usuario.Location = new System.Drawing.Point(0, 0);
-            this._pb_imagen_usuario.Name = "_pb_imagen_usuario";
-            this._pb_imagen_usuario.Size = new System.Drawing.Size(120, 77);
-            this._pb_imagen_usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this._pb_imagen_usuario.TabIndex = 5;
-            this._pb_imagen_usuario.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -183,8 +168,6 @@
             this._p_lateral.ResumeLayout(false);
             this._p_lateral.PerformLayout();
             this._p_salir.ResumeLayout(false);
-            this._p_usuario.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._pb_imagen_usuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -200,7 +183,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel _p_salir;
-        private System.Windows.Forms.PictureBox _pb_imagen_usuario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel _p_forms;
     }
