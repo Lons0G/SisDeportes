@@ -18,9 +18,13 @@ namespace _1_Presentacion
         /// 2- REALIZAR LOS METODOS CORRESPONDIENTES A SUS BOTONES
         /// ACTUALIZAR Y ELIMINAR
         /// </summary>
-        public UC_boton_entidad()
+        public UC_boton_entidad(int Id, string nombre, string apellido)
         {
             InitializeComponent();
+            this.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
+            this.Name = Id.ToString();
+            _lbl_nombre_entidad.Text = nombre + " " + apellido;
+            //this.Location = new Point(20, 20);
         }
 
     }

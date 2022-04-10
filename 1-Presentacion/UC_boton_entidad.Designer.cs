@@ -36,9 +36,9 @@
             // _btn_eliminar
             // 
             this._btn_eliminar.Dock = System.Windows.Forms.DockStyle.Right;
-            this._btn_eliminar.Location = new System.Drawing.Point(255, 0);
+            this._btn_eliminar.Location = new System.Drawing.Point(261, 0);
             this._btn_eliminar.Name = "_btn_eliminar";
-            this._btn_eliminar.Size = new System.Drawing.Size(65, 50);
+            this._btn_eliminar.Size = new System.Drawing.Size(59, 50);
             this._btn_eliminar.TabIndex = 0;
             this._btn_eliminar.Text = "Eliminar";
             this._btn_eliminar.UseVisualStyleBackColor = true;
@@ -46,7 +46,7 @@
             // _btn_editar
             // 
             this._btn_editar.Dock = System.Windows.Forms.DockStyle.Right;
-            this._btn_editar.Location = new System.Drawing.Point(190, 0);
+            this._btn_editar.Location = new System.Drawing.Point(196, 0);
             this._btn_editar.Name = "_btn_editar";
             this._btn_editar.Size = new System.Drawing.Size(65, 50);
             this._btn_editar.TabIndex = 1;
@@ -56,9 +56,10 @@
             // _lbl_nombre_entidad
             // 
             this._lbl_nombre_entidad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._lbl_nombre_entidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lbl_nombre_entidad.Location = new System.Drawing.Point(0, 0);
             this._lbl_nombre_entidad.Name = "_lbl_nombre_entidad";
-            this._lbl_nombre_entidad.Size = new System.Drawing.Size(190, 50);
+            this._lbl_nombre_entidad.Size = new System.Drawing.Size(196, 50);
             this._lbl_nombre_entidad.TabIndex = 2;
             this._lbl_nombre_entidad.Text = "Nombre";
             this._lbl_nombre_entidad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

@@ -33,7 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this._p_forms = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this._p_usuarios = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -82,16 +82,16 @@
             this._p_forms.Size = new System.Drawing.Size(450, 400);
             this._p_forms.TabIndex = 7;
             // 
-            // panel1
+            // _p_usuarios
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this._p_usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Plum;
-            this.panel1.Location = new System.Drawing.Point(14, 108);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(330, 280);
-            this.panel1.TabIndex = 8;
+            this._p_usuarios.BackColor = System.Drawing.Color.Thistle;
+            this._p_usuarios.Location = new System.Drawing.Point(14, 108);
+            this._p_usuarios.Name = "_p_usuarios";
+            this._p_usuarios.Size = new System.Drawing.Size(330, 280);
+            this._p_usuarios.TabIndex = 8;
             // 
             // Opciones_Usuario
             // 
@@ -99,7 +99,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(800, 400);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this._p_usuarios);
             this.Controls.Add(this._p_forms);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnInsertar);
@@ -120,6 +120,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel _p_forms;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel _p_usuarios;
     }
 }

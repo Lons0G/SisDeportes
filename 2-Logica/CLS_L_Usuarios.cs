@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using _3_Entidades;
@@ -127,6 +128,7 @@ namespace _2_Logica
                 _conexion.Dispose();
             }
         }
+        //METODO PARA REALIZAR EL LOGIN//
         public void Login(ref CLS_Usuario obj_usuario)
         {
             try {
@@ -158,11 +160,12 @@ namespace _2_Logica
                 _conexion.Dispose();
             }
         }
+        //METODO PARA OBTENER EL DEPORTE DEL USUARIO//
         public bool ObtenerDeporte(ref CLS_Usuario obj_usuario) {
             try
             {
                 Conexion();
-                SqlCommand comando = new SqlCommand("SP_Login", _conexion)
+                SqlCommand comando = new SqlCommand("SP_OBTENER_DEPORTE", _conexion)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
@@ -186,6 +189,53 @@ namespace _2_Logica
                 _conexion.Close();
                 _conexion.Dispose();
             }
+        }
+        //METODO PARA MOSTRAR TODOS LOS USUARIOS//
+        public bool ObtenerUsuarios(ref List<CLS_Usuario> lista_usuario) {
+            try
+            {
+                Conexion();
+                SqlCommand comando = new SqlCommand("SP_MOSTRAR_USUARIOS", _conexion)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                _conexion.Open();
+                int fila = Convert.ToInt32(comando.ExecuteScalar());
+                if (fila != 0) {
+                    SqlDataReader reader = comando.ExecuteReader();
+                    while (reader.Read()) {
+                        lista_usuario.Add(ConvertirUsuario(reader));
+                    }
+                }
+                return true;
+            }
+            catch (Exception error)
+            {
+                CLS_Usuario obj_usuario = new CLS_Usuario();
+                obj_usuario.Error = error.Message;
+                lista_usuario.Add(obj_usuario);
+                return false;
+            }
+            finally { 
+                _conexion.Close();
+                _conexion.Dispose();
+            }
+        }
+        //METODO PARA AGREGAR USUARIOS EN LA LISTA DE USUARIOS//
+        private CLS_Usuario ConvertirUsuario(IDataReader reader) {
+            CLS_Usuario obj_usuario = new CLS_Usuario();
+
+            obj_usuario.Id = Convert.ToInt32(reader["IdUsuario"].ToString());
+            obj_usuario.Nombre = reader["Nombre"].ToString();
+            obj_usuario.Apellido = reader["Apellido"].ToString();
+            obj_usuario.Usuario = reader["Usuario"].ToString();
+            obj_usuario.Password = reader["Contrasena"].ToString();
+            obj_usuario.Telefono = reader["Telefono"].ToString();
+            obj_usuario.Correo = reader["Correo"].ToString();
+            obj_usuario.Sueldo = Convert.ToDecimal(reader["Sueldo"].ToString());
+            obj_usuario.Rol = Convert.ToInt32(reader["IdRol"].ToString());
+
+            return obj_usuario;
         }
     }
 }
