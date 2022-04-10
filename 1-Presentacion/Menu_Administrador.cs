@@ -15,21 +15,20 @@ namespace _1_Presentacion
         public Menu_Administrador(int rol)
         {
             InitializeComponent();
-            if (rol == 1) { _lbl_usuario.Text = "Administrador"; }
-            else { _lbl_usuario.Text = "Encargado"; }
+            //VERIFICA SI EL ROL SE TRATA DE ADMINISTRADOR O DE USUARIO
+            if (rol == 1) { 
+                _lbl_usuario.Text = "Administrador";
+                Agregar_BTN_Administrador();
+            }
+            else { 
+                _lbl_usuario.Text = "Encargado"; 
+            }
             _p_forms.Visible = false;
-            ///MODIFICAR LOS CONTROLES QUE APARECEN///
-            ///REALIZAR UN METODO PARA DETERMINAR QUE BOTONES MOSTRAR EN CASO 
-            ///DE QUE SEA UN ENCARGADO O UN ADMINISTRADOR///
         }
 
         private void Menu_Administrador_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void _btn_usuarios_Click(object sender, EventArgs e) {
-            AbrirForms(new Opciones_Usuario());
         }
 
         private void button4_Click(object sender, EventArgs e) {
@@ -38,17 +37,25 @@ namespace _1_Presentacion
         }
 
         private void AbrirForms(object FRM_secundario) {
+            //HACE INVISIBLE AL PICTURE BOX Y HACE VISIBLE AL PANEL DEL FORMS//
             pictureBox1.Visible = false;
             _p_forms.Visible = true;
-            if (this._p_forms.Controls.Count > 0) {
-                this._p_forms.Controls.RemoveAt(0);
-            }
+            
+            //SI EXISTE UN FORMS LO ELIMINA//
+            if (this._p_forms.Controls.Count > 0) { this._p_forms.Controls.RemoveAt(0); }
+
+            //INSTANCIA UN NUEVO FORMS Y LE COLOCA LAS PROPIEDADES//
             Form secundario = FRM_secundario as Form;
             secundario.TopLevel = false;
             secundario.Dock = DockStyle.Fill;
+
+            //AGREGA EL FORMS AL PANEL DEL FORMS//
             this._p_forms.Controls.Add(secundario);
             this._p_forms.Tag = secundario;
+            
+            //MUESTRA EL FORMS//
             secundario.Show();
+            
             //SE CREA UN NUEVO EVENTO QUE DETECTA CUANDO SE CERRO EL FORMS SECUNDARIO//
             secundario.FormClosing += new FormClosingEventHandler(Agregar_Usuario_Close);
         }
@@ -57,6 +64,31 @@ namespace _1_Presentacion
         {
             _p_forms.Visible = false;
             pictureBox1.Visible = true;
+        }
+        //NETODO PARA GENERAR BOTONES DINAMICAMENTE//
+        private void Agregar_BTN_Administrador() {
+            //INSTANCIA UN NUEVO BOTON Y LE COLOCA LAS PROPIEDADES//
+            Button btn_usuarios = new Button();
+            btn_usuarios.Name = "btn_usuarios";
+            btn_usuarios.Text = "Usuarios";
+            btn_usuarios.Width = 120;
+            btn_usuarios.Height = 50;
+            btn_usuarios.Top = 50 + (12 * 1);
+            
+            //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON//
+            btn_usuarios.Click += Btn_Usuarios_Click;
+            
+            //SE AGREGA EL BOTON AL PANEL DE CONTROLES//
+            _p_controles.Controls.Add(btn_usuarios);
+        }
+        //METODO GENERADO PARA LLAMARSE CADA VEZ QUE SE DE CLICK AL BOTON//
+        private void Btn_Usuarios_Click(object sender, EventArgs e) {
+            AbrirForms(new Opciones_Usuario());
+        }
+
+        private void Agregar_BTN_Usuario()
+        {
+
         }
     }
 }
