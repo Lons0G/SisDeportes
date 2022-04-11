@@ -67,28 +67,42 @@ namespace _1_Presentacion
         }
         //NETODO PARA GENERAR BOTONES DINAMICAMENTE//
         private void Agregar_BTN_Administrador() {
-            //INSTANCIA UN NUEVO BOTON Y LE COLOCA LAS PROPIEDADES//
+            //INSTANCIA UN NUEVO BOTON USUARIO Y LE COLOCA LAS PROPIEDADES//
             Button btn_usuarios = new Button();
             btn_usuarios.Name = "btn_usuarios";
             btn_usuarios.Text = "Usuarios";
             btn_usuarios.Width = 120;
             btn_usuarios.Height = 50;
-            btn_usuarios.Top = 50 + (12 * 1);
-            
-            //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON//
+            btn_usuarios.Top = (50 + 12) * 1;
+
+            //INSTANCIA UN NUEVO BOTON DEPORTES Y LE COLOCA LAS PROPIEDADES
+            Button btn_deportes = new Button();
+            btn_deportes.Name = "btn_deportes";
+            btn_deportes.Text = "Deportes";
+            btn_deportes.Width = 120;
+            btn_deportes.Height = 50;
+            btn_deportes.Top = (50 + 12) * 2;
+
+            //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON USUARIO//
             btn_usuarios.Click += Btn_Usuarios_Click;
-            
-            //SE AGREGA EL BOTON AL PANEL DE CONTROLES//
+            btn_deportes.Click += Btn_Deportes_Click;
+
+            //SE AGREGA EL BOTON USUARIO AL PANEL DE CONTROLES//
             _p_controles.Controls.Add(btn_usuarios);
+            _p_controles.Controls.Add(btn_deportes);
         }
+
         //METODO GENERADO PARA LLAMARSE CADA VEZ QUE SE DE CLICK AL BOTON//
         private void Btn_Usuarios_Click(object sender, EventArgs e) {
+            //ABRE EL FORMS DE OPCIONES_USUARIO//
             AbrirForms(new Opciones_Usuario());
         }
-
+        private void Btn_Deportes_Click(object sender, EventArgs e) {
+            //REALIZAR EL FORMS QUE PERMITIRA VISUALIZAR LOS DEPORTES//
+        }
         private void Agregar_BTN_Usuario()
         {
-
+            //REALIZAR LOS BOTONES FALTANTES PARA EL MENU DEL USUARIO//
         }
     }
 }
