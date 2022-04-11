@@ -1,5 +1,6 @@
 ﻿using _3_Entidades;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -61,6 +62,44 @@ namespace _2_Logica.Logica
                 _conexion.Close();
                 _conexion.Dispose();
             }
+        }
+        public bool Obtener_Deportes(List<CLS_Deporte> lista_deportes)
+        {
+            try {
+                Conexion();
+                SqlCommand comando = new SqlCommand("SP_MOSTRAR_DEPORTES", _conexion)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                _conexion.Open();
+                int fila = Convert.ToInt32(comando.ExecuteScalar());
+                if (fila != 0) {
+                    SqlDataReader reader = comando.ExecuteReader();
+                    while (reader.Read()) { lista_deportes.Add(ConvertirDeporte(reader)); }
+                }
+                return true;
+            }
+            catch (Exception error) {
+                CLS_Deporte obj_deporte = new CLS_Deporte();
+                obj_deporte.Error = error.Message;
+                lista_deportes.Add(obj_deporte);
+                return false;
+            }
+            finally {
+                _conexion.Close();
+                _conexion.Dispose();
+            }
+        }
+
+        private CLS_Deporte ConvertirDeporte(IDataReader reader) {
+            CLS_Deporte obj_deporte = new CLS_Deporte();
+
+            obj_deporte.IdDeporte = Convert.ToInt32(reader["IdDeporte"].ToString());
+            obj_deporte.IdUsuario = Convert.ToInt32(reader["IdUsuario"].ToString());
+            obj_deporte.Nombre = reader["Nombre"].ToString();
+            obj_deporte.IdTipoDeporte = Convert.ToInt32(reader["IdTipoDeporte"].ToString());
+
+            return obj_deporte;
         }
     }
 }

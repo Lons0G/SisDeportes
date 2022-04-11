@@ -99,9 +99,9 @@ namespace _1_Presentacion
         }
         private void Btn_Deportes_Click(object sender, EventArgs e) {
             //REALIZAR EL FORMS QUE PERMITIRA VISUALIZAR LOS DEPORTES//
+
         }
-        private void Agregar_BTN_Usuario()
-        {
+        private void Agregar_BTN_Usuario() {
             //REALIZAR LOS BOTONES FALTANTES PARA EL MENU DEL USUARIO//
         }
     }
