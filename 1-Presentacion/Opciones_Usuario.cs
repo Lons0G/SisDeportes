@@ -66,5 +66,10 @@ namespace _1_Presentacion
             }
 
         }
+
+        private void _p_forms_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

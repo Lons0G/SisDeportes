@@ -27,5 +27,9 @@ namespace _1_Presentacion
             //this.Location = new Point(20, 20);
         }
 
+        private void _btn_eliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

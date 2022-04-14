@@ -21,7 +21,8 @@ namespace _1_Presentacion
                 Agregar_BTN_Administrador();
             }
             else { 
-                _lbl_usuario.Text = "Encargado"; 
+                _lbl_usuario.Text = "Encargado";
+                Agregar_BTN_Usuario();
             }
             _p_forms.Visible = false;
         }
@@ -101,8 +102,43 @@ namespace _1_Presentacion
             //REALIZAR EL FORMS QUE PERMITIRA VISUALIZAR LOS DEPORTES//
 
         }
+        private void Btn_Equipos_Click(object sender, EventArgs e)
+        {
+            //ABRE EL FORMS DE OPCIONES_Equipo//
+           
+        }
+
+        private void Btn_Integrantes_Click(object sender, EventArgs e)
+        {
+            //ABRE EL FORMS DE OPCIONES_Integrante//
+
+        }
         private void Agregar_BTN_Usuario() {
             //REALIZAR LOS BOTONES FALTANTES PARA EL MENU DEL USUARIO//
+
+            //INSTANCIA UN NUEVO BOTON USUARIO Y LE COLOCA LAS PROPIEDADES//
+            Button btn_Equipos = new Button();
+            btn_Equipos.Name = "btn_Equipos";
+            btn_Equipos.Text = "Equipos";
+            btn_Equipos.Width = 120;
+            btn_Equipos.Height = 50;
+            btn_Equipos.Top = (50 + 12) * 1;
+
+            //INSTANCIA UN NUEVO BOTON DEPORTES Y LE COLOCA LAS PROPIEDADES
+            Button btn_integrantes = new Button();
+            btn_integrantes.Name = "btn_Integrantes";
+            btn_integrantes.Text = "Integrantes";
+            btn_integrantes.Width = 120;
+            btn_integrantes.Height = 50;
+            btn_integrantes.Top = (50 + 12) * 2;
+
+            //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON USUARIO//
+            btn_Equipos.Click += Btn_Equipos_Click;
+            btn_integrantes.Click += Btn_Integrantes_Click;
+
+            //SE AGREGA EL BOTON USUARIO AL PANEL DE CONTROLES//
+            _p_controles.Controls.Add(btn_Equipos);
+            _p_controles.Controls.Add(btn_integrantes);
         }
     }
 }
