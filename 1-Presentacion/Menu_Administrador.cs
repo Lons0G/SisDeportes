@@ -111,6 +111,7 @@ namespace _1_Presentacion
         private void Btn_Integrantes_Click(object sender, EventArgs e)
         {
             //ABRE EL FORMS DE OPCIONES_Integrante//
+            AbrirForms(new FRM_Integrantes());
 
         }
         private void Agregar_BTN_Usuario() {
@@ -142,8 +143,8 @@ namespace _1_Presentacion
 
             //INSTANCIA UN NUEVO BOTON ACTIVIDAD Y LE COLOCA LAS PROPIEDADES
             Button btn_actividad = new Button();
-            btn_actividad.Name = "btn_deportes";
-            btn_actividad.Text = "Deportes";
+            btn_actividad.Name = "btn_Actividad"; 
+            btn_actividad.Text = "Actividad";
             btn_actividad.Width = 120;
             btn_actividad.Height = 50;
             btn_actividad.Top = (50 + 12) * 4;
@@ -152,13 +153,19 @@ namespace _1_Presentacion
             btn_Equipos.Click += Btn_Equipos_Click;
             btn_integrantes.Click += Btn_Integrantes_Click;
             btn_deportes.Click += Btn_Deportes_Click;
-            btn_actividad.Click += Btn_Deportes_Click;
+            btn_actividad.Click += Btn_Actividad_Click;
 
             //SE AGREGA EL BOTON USUARIO AL PANEL DE CONTROLES//
             _p_controles.Controls.Add(btn_Equipos);
             _p_controles.Controls.Add(btn_integrantes);
             _p_controles.Controls.Add(btn_deportes);
             _p_controles.Controls.Add(btn_actividad);
+        }
+
+        private void Btn_Actividad_Click(object sender, EventArgs e)
+        {
+            //ABRE EL FORMS DE OPCIONES_Integrante//
+            AbrirForms(new Creación_Actividades());
         }
     }
 }
