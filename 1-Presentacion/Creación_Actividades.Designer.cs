@@ -30,14 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtActividad = new System.Windows.Forms.TextBox();
-            this.cmbDeporte = new System.Windows.Forms.ComboBox();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.cmbContri1 = new System.Windows.Forms.ComboBox();
             this.cmbContri2 = new System.Windows.Forms.ComboBox();
@@ -52,7 +50,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(149, 32);
+            this.label1.Location = new System.Drawing.Point(219, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(267, 31);
             this.label1.TabIndex = 0;
@@ -67,19 +65,10 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Actividad:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Deporte:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 145);
+            this.label4.Location = new System.Drawing.Point(6, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 19);
             this.label4.TabIndex = 3;
@@ -88,7 +77,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 196);
+            this.label5.Location = new System.Drawing.Point(6, 144);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 19);
             this.label5.TabIndex = 4;
@@ -97,7 +86,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 246);
+            this.label6.Location = new System.Drawing.Point(6, 194);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 19);
             this.label6.TabIndex = 5;
@@ -106,7 +95,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 294);
+            this.label7.Location = new System.Drawing.Point(6, 242);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 19);
             this.label7.TabIndex = 6;
@@ -115,7 +104,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 345);
+            this.label8.Location = new System.Drawing.Point(6, 293);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(94, 19);
             this.label8.TabIndex = 7;
@@ -128,27 +117,18 @@
             this.txtActividad.Size = new System.Drawing.Size(407, 26);
             this.txtActividad.TabIndex = 8;
             // 
-            // cmbDeporte
-            // 
-            this.cmbDeporte.FormattingEnabled = true;
-            this.cmbDeporte.Location = new System.Drawing.Point(168, 83);
-            this.cmbDeporte.Name = "cmbDeporte";
-            this.cmbDeporte.Size = new System.Drawing.Size(407, 27);
-            this.cmbDeporte.TabIndex = 9;
-            // 
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(168, 137);
+            this.cmbCategoria.Location = new System.Drawing.Point(168, 85);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(407, 27);
             this.cmbCategoria.TabIndex = 10;
-            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
             // 
             // cmbContri1
             // 
             this.cmbContri1.FormattingEnabled = true;
-            this.cmbContri1.Location = new System.Drawing.Point(168, 286);
+            this.cmbContri1.Location = new System.Drawing.Point(168, 234);
             this.cmbContri1.Name = "cmbContri1";
             this.cmbContri1.Size = new System.Drawing.Size(407, 27);
             this.cmbContri1.TabIndex = 12;
@@ -156,14 +136,14 @@
             // cmbContri2
             // 
             this.cmbContri2.FormattingEnabled = true;
-            this.cmbContri2.Location = new System.Drawing.Point(168, 337);
+            this.cmbContri2.Location = new System.Drawing.Point(168, 285);
             this.cmbContri2.Name = "cmbContri2";
             this.cmbContri2.Size = new System.Drawing.Size(407, 27);
             this.cmbContri2.TabIndex = 13;
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(168, 188);
+            this.dtpFecha.Location = new System.Drawing.Point(168, 136);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(407, 26);
             this.dtpFecha.TabIndex = 14;
@@ -174,7 +154,6 @@
             this.groupBox1.Controls.Add(this.cmbHora);
             this.groupBox1.Controls.Add(this.btnAceptar);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dtpFecha);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.cmbContri2);
@@ -183,7 +162,6 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cmbCategoria);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.cmbDeporte);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtActividad);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -206,7 +184,7 @@
             "18.00",
             "20.00",
             "22.00"});
-            this.cmbHora.Location = new System.Drawing.Point(168, 238);
+            this.cmbHora.Location = new System.Drawing.Point(168, 186);
             this.cmbHora.Name = "cmbHora";
             this.cmbHora.Size = new System.Drawing.Size(407, 27);
             this.cmbHora.TabIndex = 17;
@@ -215,7 +193,7 @@
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.White;
             this.btnAceptar.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnAceptar.Location = new System.Drawing.Point(215, 394);
+            this.btnAceptar.Location = new System.Drawing.Point(248, 338);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(107, 50);
             this.btnAceptar.TabIndex = 16;
@@ -249,14 +227,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtActividad;
-        private System.Windows.Forms.ComboBox cmbDeporte;
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.ComboBox cmbContri1;
         private System.Windows.Forms.ComboBox cmbContri2;

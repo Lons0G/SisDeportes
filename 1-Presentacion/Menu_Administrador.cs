@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _3_Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,13 @@ namespace _1_Presentacion
 {
     public partial class Menu_Administrador : Form
     {
-        public Menu_Administrador(int rol)
+        CLS_Usuario obj_usuario = new CLS_Usuario();
+        public Menu_Administrador(ref CLS_Usuario usuario)
         {
             InitializeComponent();
             //VERIFICA SI EL ROL SE TRATA DE ADMINISTRADOR O DE USUARIO
-            if (rol == 1) { 
+            obj_usuario = usuario;
+            if (usuario.Rol == 1) { 
                 _lbl_usuario.Text = "Administrador";
                 Agregar_BTN_Administrador();
             }
@@ -164,8 +167,8 @@ namespace _1_Presentacion
 
         private void Btn_Actividad_Click(object sender, EventArgs e)
         {
-            //ABRE EL FORMS DE OPCIONES_Integrante//
-            AbrirForms(new Creación_Actividades());
+            //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
+            AbrirForms(new Creación_Actividades(obj_usuario.Deporte)); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
         }
     }
 }

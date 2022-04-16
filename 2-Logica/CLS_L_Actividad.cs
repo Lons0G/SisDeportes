@@ -5,7 +5,7 @@ using _3_Entidades;
 
 namespace _2_Logica
 {
-    internal class CLS_L_Actividad
+    public class CLS_L_Actividad
     {
         SqlConnection _conexion;
         private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }

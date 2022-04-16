@@ -3,12 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-namespace _2_Logica.Logica
+namespace _2_Logica
 {
-    internal class CLS_L_Categoria
+    public class CLS_L_Categoria
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
         //METODO PARA INSERTAR CATEGORIA//
         public bool Insertar_Categoria(ref CLS_Categoria obj_categoria) {
             try {
@@ -76,14 +76,14 @@ namespace _2_Logica.Logica
             }
         }
         //METODO PARA OBTENER LAS CATEGORIAS SEGUN EL DEPORTE
-        public bool Obtener_Categoria(List<CLS_Categoria> lista_categoria, CLS_Usuario obj_usuario) {
+        public bool Obtener_Categoria(List<CLS_Categoria> lista_categoria, int id_deporte) {
             try {
                 Conexion();
                 SqlCommand comando = new SqlCommand("SP_MOSTRAR_CATEGORIAS", _conexion)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
-                comando.Parameters.AddWithValue("@IdDeporte", obj_usuario.Deporte);
+                comando.Parameters.AddWithValue("@IdDeporte", id_deporte);
                 _conexion.Open();
                 int fila = Convert.ToInt32(comando.ExecuteScalar());
                 if (fila != 0) {
