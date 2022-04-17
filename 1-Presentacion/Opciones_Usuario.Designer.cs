@@ -62,6 +62,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -78,7 +79,7 @@
             // 
             this._p_forms.Dock = System.Windows.Forms.DockStyle.Right;
             this._p_forms.Location = new System.Drawing.Point(467, 0);
-            this._p_forms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._p_forms.Margin = new System.Windows.Forms.Padding(4);
             this._p_forms.Name = "_p_forms";
             this._p_forms.Size = new System.Drawing.Size(600, 492);
             this._p_forms.TabIndex = 7;
@@ -91,7 +92,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this._p_usuarios.BackColor = System.Drawing.Color.Thistle;
             this._p_usuarios.Location = new System.Drawing.Point(19, 133);
-            this._p_usuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._p_usuarios.Margin = new System.Windows.Forms.Padding(4);
             this._p_usuarios.Name = "_p_usuarios";
             this._p_usuarios.Size = new System.Drawing.Size(440, 345);
             this._p_usuarios.TabIndex = 8;

@@ -71,5 +71,15 @@ namespace _1_Presentacion
         {
 
         }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
