@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using _3_Entidades;
 
-namespace _2_Logica.Logica
+namespace _2_Logica
 {
     internal class CLS_L_Tipo
     {

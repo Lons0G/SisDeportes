@@ -32,6 +32,7 @@
             this.CbJugador = new System.Windows.Forms.CheckBox();
             this.CbEntrenador = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbNombreEquipo = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -48,7 +49,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.lbNombreEquipo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,6 +88,15 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo de Integrante";
+            // 
+            // lbNombreEquipo
+            // 
+            this.lbNombreEquipo.AutoSize = true;
+            this.lbNombreEquipo.Location = new System.Drawing.Point(113, 32);
+            this.lbNombreEquipo.Name = "lbNombreEquipo";
+            this.lbNombreEquipo.Size = new System.Drawing.Size(10, 13);
+            this.lbNombreEquipo.TabIndex = 3;
+            this.lbNombreEquipo.Text = "-";
             // 
             // label7
             // 
@@ -238,15 +247,6 @@
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // lbNombreEquipo
-            // 
-            this.lbNombreEquipo.AutoSize = true;
-            this.lbNombreEquipo.Location = new System.Drawing.Point(113, 32);
-            this.lbNombreEquipo.Name = "lbNombreEquipo";
-            this.lbNombreEquipo.Size = new System.Drawing.Size(10, 13);
-            this.lbNombreEquipo.TabIndex = 3;
-            this.lbNombreEquipo.Text = "-";
-            // 
             // FRM_Integrantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,6 +257,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRM_Integrantes";
             this.Text = "Integrantes";
             this.Load += new System.EventHandler(this.Form1_Load);

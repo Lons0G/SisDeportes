@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _3_Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,13 @@ namespace _1_Presentacion
 {
     public partial class Menu_Administrador : Form
     {
-        public Menu_Administrador(int rol)
+        CLS_Usuario obj_usuario = new CLS_Usuario();
+        public Menu_Administrador(ref CLS_Usuario usuario)
         {
             InitializeComponent();
             //VERIFICA SI EL ROL SE TRATA DE ADMINISTRADOR O DE USUARIO
-            if (rol == 1) { 
+            obj_usuario = usuario;
+            if (usuario.Rol == 1) { 
                 _lbl_usuario.Text = "Administrador";
                 Agregar_BTN_Administrador();
             }
@@ -111,6 +114,7 @@ namespace _1_Presentacion
         private void Btn_Integrantes_Click(object sender, EventArgs e)
         {
             //ABRE EL FORMS DE OPCIONES_Integrante//
+            AbrirForms(new FRM_Integrantes());
 
         }
         private void Agregar_BTN_Usuario() {
@@ -142,8 +146,8 @@ namespace _1_Presentacion
 
             //INSTANCIA UN NUEVO BOTON ACTIVIDAD Y LE COLOCA LAS PROPIEDADES
             Button btn_actividad = new Button();
-            btn_actividad.Name = "btn_deportes";
-            btn_actividad.Text = "Deportes";
+            btn_actividad.Name = "btn_Actividad"; 
+            btn_actividad.Text = "Actividad";
             btn_actividad.Width = 120;
             btn_actividad.Height = 50;
             btn_actividad.Top = (50 + 12) * 4;
@@ -152,13 +156,19 @@ namespace _1_Presentacion
             btn_Equipos.Click += Btn_Equipos_Click;
             btn_integrantes.Click += Btn_Integrantes_Click;
             btn_deportes.Click += Btn_Deportes_Click;
-            btn_actividad.Click += Btn_Deportes_Click;
+            btn_actividad.Click += Btn_Actividad_Click;
 
             //SE AGREGA EL BOTON USUARIO AL PANEL DE CONTROLES//
             _p_controles.Controls.Add(btn_Equipos);
             _p_controles.Controls.Add(btn_integrantes);
             _p_controles.Controls.Add(btn_deportes);
             _p_controles.Controls.Add(btn_actividad);
+        }
+
+        private void Btn_Actividad_Click(object sender, EventArgs e)
+        {
+            //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
+            AbrirForms(new Creación_Actividades(obj_usuario.Deporte)); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
         }
     }
 }
