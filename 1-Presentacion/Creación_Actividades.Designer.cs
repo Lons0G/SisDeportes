@@ -235,7 +235,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Creación_Actividades";
-            this.Text = "Actividad";
+            this.Text = "4";
             this.Load += new System.EventHandler(this.Creación_Actividades_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
