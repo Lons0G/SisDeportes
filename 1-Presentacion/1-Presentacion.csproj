@@ -46,30 +46,85 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agregar_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar_Usuario.Designer.cs">
+      <DependentUpon>Agregar_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creación_Actividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creación_Actividades.Designer.cs">
+      <DependentUpon>Creación_Actividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Integrantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Integrantes.designer.cs">
+      <DependentUpon>FRM_Integrantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu_Administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Administrador.Designer.cs">
+      <DependentUpon>Menu_Administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opciones_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones_Usuario.Designer.cs">
+      <DependentUpon>Opciones_Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_boton_entidad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_boton_entidad.Designer.cs">
+      <DependentUpon>UC_boton_entidad.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Agregar_Usuario.resx">
+      <DependentUpon>Agregar_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creación_Actividades.resx">
+      <DependentUpon>Creación_Actividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Integrantes.resx">
+      <DependentUpon>FRM_Integrantes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Administrador.resx">
+      <DependentUpon>Menu_Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opciones_Usuario.resx">
+      <DependentUpon>Opciones_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="UC_boton_entidad.resx">
+      <DependentUpon>UC_boton_entidad.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -84,10 +139,13 @@
       <Project>{94755cc8-9471-4f28-8167-5c7f1688b1ba}</Project>
       <Name>2-Logica</Name>
     </ProjectReference>
-    <ProjectReference Include="..\4-Entidades\4-Entidades.csproj">
+    <ProjectReference Include="..\4-Entidades\3-Entidades.csproj">
       <Project>{2f8c0991-a95f-4b04-b27a-bc5dd695b0a0}</Project>
-      <Name>4-Entidades</Name>
+      <Name>3-Entidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Imagenes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

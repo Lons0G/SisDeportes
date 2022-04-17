@@ -41,17 +41,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLS_L_Actividad.cs" />
+    <Compile Include="CLS_L_Categoria.cs" />
+    <Compile Include="CLS_L_Deporte.cs" />
+    <Compile Include="CLS_L_Equipo.cs" />
+    <Compile Include="CLS_L_Integrante.cs" />
+    <Compile Include="CLS_L_Tipo.cs" />
+    <Compile Include="CLS_L_Torneo.cs" />
+    <Compile Include="CLS_L_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\3-Acceso Datos\3-Acceso Datos.csproj">
-      <Project>{0a5c22d2-b9e7-4a03-aeae-ac9870d9d08d}</Project>
-      <Name>3-Acceso Datos</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\4-Entidades\4-Entidades.csproj">
+    <ProjectReference Include="..\4-Entidades\3-Entidades.csproj">
       <Project>{2f8c0991-a95f-4b04-b27a-bc5dd695b0a0}</Project>
-      <Name>4-Entidades</Name>
+      <Name>3-Entidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
