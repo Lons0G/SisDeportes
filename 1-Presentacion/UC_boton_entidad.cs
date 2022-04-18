@@ -21,9 +21,9 @@ namespace _1_Presentacion
         /// ACTUALIZAR Y ELIMINAR
         /// </summary>
         /// 
-        int v;
+        int v, ro; string n, ap, usu, pass, tel, corr; decimal sue; //cree variables temporales
         Opciones_Usuario p;
-        public UC_boton_entidad(int Id, string nombre, string apellido, Opciones_Usuario op_user, int x)
+        public UC_boton_entidad(int Id, string nombre, string apellido, string usuario, string password, string telefono, string correo, decimal sueldo, int rol , Opciones_Usuario op_user, int x)
         {
             InitializeComponent();
             this.Width = x - 10;
@@ -34,6 +34,14 @@ namespace _1_Presentacion
             _lbl_nombre_entidad.Text = nombre + " " + apellido;
             p = op_user;
             v = Id; //envia el id y lo guarda en una variable temporal
+            n = nombre;
+            ap = apellido;
+            usu = usuario; //almacema todos los valores y se los asigna
+            pass = password;
+            tel = telefono;
+            corr = correo;
+            sue = sueldo;
+            ro = rol;
             //this.Location = new Point(20, 20);
         }
         private void _btn_eliminar_Click(object sender, EventArgs e)
@@ -65,5 +73,12 @@ namespace _1_Presentacion
             p.Cargar_Usuarios();
         }
 
+        private void _btn_editar_Click(object sender, EventArgs e)
+        {
+            Actualizar_Usuario actualizar = new Actualizar_Usuario();
+            actualizar.Show();
+
+            actualizar.RecibeDatos(v, n, ap, usu, pass, tel, corr, sue, ro); //envia los datos al metodo que esta en actualizar usuario
+        }
     }
 }
