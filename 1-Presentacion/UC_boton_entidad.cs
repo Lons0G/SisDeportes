@@ -22,13 +22,17 @@ namespace _1_Presentacion
         /// </summary>
         /// 
         int v;
-        public UC_boton_entidad(int Id, string nombre, string apellido)
+        Opciones_Usuario p;
+        public UC_boton_entidad(int Id, string nombre, string apellido, Opciones_Usuario op_user, int x)
         {
             InitializeComponent();
+            this.Width = x - 10;
+            this.Height = 50;
+            this.Anchor = AnchorStyles.None;
             this.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
             this.Name = Id.ToString();
-            _lbl_nombre_entidad.Text = "id= "+ Id+ "  "+ nombre + " " + apellido;
-
+            _lbl_nombre_entidad.Text = nombre + " " + apellido;
+            p = op_user;
             v = Id; //envia el id y lo guarda en una variable temporal
             //this.Location = new Point(20, 20);
         }
@@ -58,7 +62,7 @@ namespace _1_Presentacion
                     MessageBox.Show("error");
                 }
             }
-
+            p.Cargar_Usuarios();
         }
 
     }
