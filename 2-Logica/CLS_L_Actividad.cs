@@ -19,6 +19,7 @@ namespace _2_Logica
                     CommandType = CommandType.StoredProcedure 
                 };
                 comando.Parameters.AddWithValue("@Fecha", obj_actividad.Fecha);
+                comando.Parameters.AddWithValue("@Hora", obj_actividad.Hora);
                 comando.Parameters.AddWithValue("@IdContricante_1", obj_actividad.IdContricante_1);
                 comando.Parameters.AddWithValue("@IdContricante_2", obj_actividad.IdContricante_2);
                 comando.Parameters.AddWithValue("@Categoria", obj_actividad.IdCategoria);
@@ -49,6 +50,7 @@ namespace _2_Logica
                 };
                 comando.Parameters.AddWithValue("@IdActividad", obj_actividad.IdActividad);
                 comando.Parameters.AddWithValue("@Fecha", obj_actividad.Fecha);
+                comando.Parameters.AddWithValue("@Hora", obj_actividad.Hora);
                 comando.Parameters.AddWithValue("@IdContricante_1", obj_actividad.IdContricante_1);
                 comando.Parameters.AddWithValue("@IdContricante_2", obj_actividad.IdContricante_2);
                 comando.Parameters.AddWithValue("@IdCategoria", obj_actividad.IdCategoria);
@@ -56,7 +58,7 @@ namespace _2_Logica
                 comando.Parameters.AddWithValue("@IdDeporte", obj_actividad.IdDeporte);
                 comando.Parameters.AddWithValue("@IdTipo", obj_actividad.IdTipo);
                 comando.Parameters.AddWithValue("@IdTorneo", obj_actividad.IdTorneo);
-                comando.Parameters.AddWithValue("@@Nombre", obj_actividad.Nombre);
+                comando.Parameters.AddWithValue("@Nombre", obj_actividad.Nombre);
                 comando.ExecuteNonQuery();
                 return true;
             }

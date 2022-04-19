@@ -7,6 +7,7 @@ namespace _3_Entidades //_3_Entidades
     {
         private int _idActividad;
         private DateTime _fecha;
+        private DateTime _hora;
         private int _idContricante_1;
         private int _idContricante_2;
         private int _idCategoria;
@@ -28,5 +29,6 @@ namespace _3_Entidades //_3_Entidades
         public int IdTorneo { get => _idTorneo; set => _idTorneo = value; }
         public string Nombre { get => _nombre; set => _nombre = value; }
         public string Error { get => _error; set => _error = value; }
+        public DateTime Hora { get => _hora; set => _hora = value; }
     }
 }
