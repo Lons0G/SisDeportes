@@ -15,7 +15,10 @@ namespace _1_Presentacion
 {
     public partial class Creación_Actividades : Form
     {
+        SqlConnection _conexion = new SqlConnection("Persist Security Info=False;Integrated Security=SSPI;Initial Catalog=DB_Deportes;Data Source=DESKTOP-43BVESG");
         
+        //SqlConnection _conexion; private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Brandon); }
+
         public Creación_Actividades(int deporte)
         {
             InitializeComponent();
@@ -26,7 +29,7 @@ namespace _1_Presentacion
         {
 
         }
-
+        
         public void Cargar_Categoria(int idDeporte)
         {
             try
@@ -51,6 +54,18 @@ namespace _1_Presentacion
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             //PENDIENTE, REALIZAR LA FUNCION PARA GENERAR UNA ACTIVIDAD//
+            string query = "INSERT INTO TBL_ACTIVIDAD (idDeporte,Nombre,idCategoria,Fecha,Hora,idContricante_1,idContricante_2) VALUES (@deporte,@nombre,@categoria,@fecha,@hora,@contri1,@contri2)";
+            _conexion.Open();
+            SqlCommand comando = new SqlCommand(query, _conexion);
+            comando.Parameters.AddWithValue("@deporte", cmbDeporte.Text);
+            comando.Parameters.AddWithValue("@nombre", txtActividad.Text);
+            comando.Parameters.AddWithValue("@categoria", cmbCategoria.Text);
+            comando.Parameters.AddWithValue("@fecha", dtpFecha.Value);
+            comando.Parameters.AddWithValue("@hora", cmbHora.Text);
+            comando.Parameters.AddWithValue("@contri1", cmbContri1.Text);
+            comando.Parameters.AddWithValue("@contri2", cmbContri2.Text);
+            comando.ExecuteNonQuery();
+            MessageBox.Show("Se ha generado la Actividad con Exito","Actividad Generada");
         }
 
     }

@@ -43,6 +43,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbHora = new System.Windows.Forms.ComboBox();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.cmbDeporte = new System.Windows.Forms.ComboBox();
+            this.label = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,9 +52,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(219, 34);
+            this.label1.Location = new System.Drawing.Point(133, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 31);
+            this.label1.Size = new System.Drawing.Size(387, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registro de Actividad";
             // 
@@ -61,52 +63,52 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 19);
+            this.label2.Size = new System.Drawing.Size(112, 27);
             this.label2.TabIndex = 1;
             this.label2.Text = "Actividad:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 88);
+            this.label4.Location = new System.Drawing.Point(6, 135);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 19);
+            this.label4.Size = new System.Drawing.Size(111, 27);
             this.label4.TabIndex = 3;
             this.label4.Text = "Categoria:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 144);
+            this.label5.Location = new System.Drawing.Point(6, 183);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 19);
+            this.label5.Size = new System.Drawing.Size(76, 27);
             this.label5.TabIndex = 4;
             this.label5.Text = "Fecha:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 194);
+            this.label6.Location = new System.Drawing.Point(6, 233);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 19);
+            this.label6.Size = new System.Drawing.Size(66, 27);
             this.label6.TabIndex = 5;
             this.label6.Text = "Hora:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 242);
+            this.label7.Location = new System.Drawing.Point(6, 281);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 19);
+            this.label7.Size = new System.Drawing.Size(149, 27);
             this.label7.TabIndex = 6;
             this.label7.Text = "Contricante 1:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 293);
+            this.label8.Location = new System.Drawing.Point(6, 332);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 19);
+            this.label8.Size = new System.Drawing.Size(149, 27);
             this.label8.TabIndex = 7;
             this.label8.Text = "Contricante 2:";
             // 
@@ -114,45 +116,49 @@
             // 
             this.txtActividad.Location = new System.Drawing.Point(168, 33);
             this.txtActividad.Name = "txtActividad";
-            this.txtActividad.Size = new System.Drawing.Size(407, 26);
+            this.txtActividad.Size = new System.Drawing.Size(407, 35);
             this.txtActividad.TabIndex = 8;
             // 
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(168, 85);
+            this.cmbCategoria.Location = new System.Drawing.Point(168, 127);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(407, 27);
+            this.cmbCategoria.Size = new System.Drawing.Size(407, 35);
             this.cmbCategoria.TabIndex = 10;
+            this.cmbCategoria.Text = "-Selecciona una Categoria-";
             // 
             // cmbContri1
             // 
             this.cmbContri1.FormattingEnabled = true;
-            this.cmbContri1.Location = new System.Drawing.Point(168, 234);
+            this.cmbContri1.Location = new System.Drawing.Point(168, 273);
             this.cmbContri1.Name = "cmbContri1";
-            this.cmbContri1.Size = new System.Drawing.Size(407, 27);
+            this.cmbContri1.Size = new System.Drawing.Size(407, 35);
             this.cmbContri1.TabIndex = 12;
+            this.cmbContri1.Text = "-Seleccione el Contricante 1-";
             // 
             // cmbContri2
             // 
             this.cmbContri2.FormattingEnabled = true;
-            this.cmbContri2.Location = new System.Drawing.Point(168, 285);
+            this.cmbContri2.Location = new System.Drawing.Point(168, 324);
             this.cmbContri2.Name = "cmbContri2";
-            this.cmbContri2.Size = new System.Drawing.Size(407, 27);
+            this.cmbContri2.Size = new System.Drawing.Size(407, 35);
             this.cmbContri2.TabIndex = 13;
+            this.cmbContri2.Text = "-Seleccione el Contricante 2-";
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(168, 136);
+            this.dtpFecha.Location = new System.Drawing.Point(168, 175);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(407, 26);
+            this.dtpFecha.Size = new System.Drawing.Size(407, 35);
             this.dtpFecha.TabIndex = 14;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.label);
+            this.groupBox1.Controls.Add(this.cmbDeporte);
             this.groupBox1.Controls.Add(this.cmbHora);
-            this.groupBox1.Controls.Add(this.btnAceptar);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dtpFecha);
             this.groupBox1.Controls.Add(this.label4);
@@ -167,7 +173,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(48, 98);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(586, 450);
+            this.groupBox1.Size = new System.Drawing.Size(586, 385);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
@@ -184,16 +190,17 @@
             "18.00",
             "20.00",
             "22.00"});
-            this.cmbHora.Location = new System.Drawing.Point(168, 186);
+            this.cmbHora.Location = new System.Drawing.Point(168, 225);
             this.cmbHora.Name = "cmbHora";
-            this.cmbHora.Size = new System.Drawing.Size(407, 27);
+            this.cmbHora.Size = new System.Drawing.Size(407, 35);
             this.cmbHora.TabIndex = 17;
+            this.cmbHora.Text = "-Selecciona una Hora-";
             // 
             // btnAceptar
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.White;
             this.btnAceptar.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnAceptar.Location = new System.Drawing.Point(248, 338);
+            this.btnAceptar.Location = new System.Drawing.Point(270, 508);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(107, 50);
             this.btnAceptar.TabIndex = 16;
@@ -201,14 +208,33 @@
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // cmbDeporte
+            // 
+            this.cmbDeporte.FormattingEnabled = true;
+            this.cmbDeporte.Location = new System.Drawing.Point(168, 81);
+            this.cmbDeporte.Name = "cmbDeporte";
+            this.cmbDeporte.Size = new System.Drawing.Size(407, 35);
+            this.cmbDeporte.TabIndex = 18;
+            this.cmbDeporte.Text = "-Selecciona un Deporte-";
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(6, 89);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(105, 27);
+            this.label.TabIndex = 19;
+            this.label.Text = "Deportes:";
+            // 
             // Creación_Actividades
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(692, 634);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnAceptar);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -240,5 +266,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.ComboBox cmbHora;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.ComboBox cmbDeporte;
     }
 }
