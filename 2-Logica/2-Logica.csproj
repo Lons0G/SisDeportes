@@ -47,6 +47,7 @@
     <Compile Include="CLS_L_Equipo.cs" />
     <Compile Include="CLS_L_Integrante.cs" />
     <Compile Include="CLS_L_Tipo.cs" />
+    <Compile Include="CLS_L_TipoDeporte.cs" />
     <Compile Include="CLS_L_Torneo.cs" />
     <Compile Include="CLS_L_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

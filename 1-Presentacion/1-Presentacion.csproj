@@ -64,6 +64,12 @@
     <Compile Include="Creación_Actividades.Designer.cs">
       <DependentUpon>Creación_Actividades.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_Deportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Deportes.Designer.cs">
+      <DependentUpon>FRM_Deportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_Integrantes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Creación_Actividades.resx">
       <DependentUpon>Creación_Actividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Deportes.resx">
+      <DependentUpon>FRM_Deportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_Integrantes.resx">
       <DependentUpon>FRM_Integrantes.cs</DependentUpon>

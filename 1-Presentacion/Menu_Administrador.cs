@@ -103,7 +103,7 @@ namespace _1_Presentacion
         }
         private void Btn_Deportes_Click(object sender, EventArgs e) {
             //REALIZAR EL FORMS QUE PERMITIRA VISUALIZAR LOS DEPORTES//
-
+            AbrirForms(new FRM_Deportes(obj_usuario.Id, obj_usuario.Usuario));
         }
         private void Btn_Equipos_Click(object sender, EventArgs e)
         {

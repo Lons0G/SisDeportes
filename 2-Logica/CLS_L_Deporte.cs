@@ -6,10 +6,10 @@ using System.Data.SqlClient;
 
 namespace _2_Logica
 {
-    internal class CLS_L_Deporte
+    public class CLS_L_Deporte
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
 
         //METODO PARA INSERTAR DEPORTE//
         public bool Insertar_Deporte(ref CLS_Deporte obj_deporte)
