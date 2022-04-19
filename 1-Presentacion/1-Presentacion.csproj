@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actualizar_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Actualizar_Usuario.Designer.cs">
+      <DependentUpon>Actualizar_Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Agregar_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="UC_boton_entidad.Designer.cs">
       <DependentUpon>UC_boton_entidad.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Actualizar_Usuario.resx">
+      <DependentUpon>Actualizar_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Agregar_Usuario.resx">
       <DependentUpon>Agregar_Usuario.cs</DependentUpon>
     </EmbeddedResource>
