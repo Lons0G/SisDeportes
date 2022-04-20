@@ -52,6 +52,5 @@ namespace _1_Presentacion
         {
             //PENDIENTE, REALIZAR LA FUNCION PARA GENERAR UNA ACTIVIDAD//
         }
-
     }
 }
