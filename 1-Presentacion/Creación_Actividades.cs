@@ -51,6 +51,19 @@ namespace _1_Presentacion
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             //PENDIENTE, REALIZAR LA FUNCION PARA GENERAR UNA ACTIVIDAD//
+            CLS_Actividad obj_actividad = new CLS_Actividad();
+            CLS_L_Actividad L_actividad = new CLS_L_Actividad();
+
+            obj_actividad.Nombre = txtActividad.Text;
+            obj_actividad.IdDeporte = cmbDeporte.SelectedIndex;
+            obj_actividad.IdCategoria = cmbCategoria.SelectedIndex;
+            obj_actividad.Fecha = dtpFecha.Value;
+            obj_actividad.Hora = dtpHora.Value;
+            obj_actividad.IdContricante_1 = cmbContri1.SelectedIndex;
+            obj_actividad.IdContricante_2 = cmbContri2.SelectedIndex;
+
+
+            L_actividad.Insertar_Actividad(ref obj_actividad);
         }
     }
 }
