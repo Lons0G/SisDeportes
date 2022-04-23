@@ -120,6 +120,7 @@ namespace _1_Presentacion
         private void Btn_Equipos_Click(object sender, EventArgs e)
         {
             //ABRE EL FORMS DE OPCIONES_Equipo//
+            AbrirForms(new Opciones_Equipo(obj_usuario.Id, obj_usuario.Usuario));
            
         }
         private void Btn_Categoria_Click(object sender, EventArgs e)
@@ -169,6 +170,7 @@ namespace _1_Presentacion
             btn_actividad.Width = 120;
             btn_actividad.Height = 50;
             btn_actividad.Top = (50 + 12) * 4;
+
 
             //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON USUARIO//
             btn_Equipos.Click += Btn_Equipos_Click;

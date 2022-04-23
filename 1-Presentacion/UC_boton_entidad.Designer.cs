@@ -39,7 +39,7 @@ namespace _1_Presentacion
             // 
             this._btn_eliminar.Dock = System.Windows.Forms.DockStyle.Right;
             this._btn_eliminar.Location = new System.Drawing.Point(348, 0);
-            this._btn_eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._btn_eliminar.Margin = new System.Windows.Forms.Padding(4);
             this._btn_eliminar.Name = "_btn_eliminar";
             this._btn_eliminar.Size = new System.Drawing.Size(79, 62);
             this._btn_eliminar.TabIndex = 0;
@@ -51,7 +51,7 @@ namespace _1_Presentacion
             // 
             this._btn_editar.Dock = System.Windows.Forms.DockStyle.Right;
             this._btn_editar.Location = new System.Drawing.Point(261, 0);
-            this._btn_editar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._btn_editar.Margin = new System.Windows.Forms.Padding(4);
             this._btn_editar.Name = "_btn_editar";
             this._btn_editar.Size = new System.Drawing.Size(87, 62);
             this._btn_editar.TabIndex = 1;
@@ -70,6 +70,7 @@ namespace _1_Presentacion
             this._lbl_nombre_entidad.TabIndex = 2;
             this._lbl_nombre_entidad.Text = "Nombre";
             this._lbl_nombre_entidad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this._lbl_nombre_entidad.Click += new System.EventHandler(this._lbl_nombre_entidad_Click);
             // 
             // UC_boton_entidad
             // 
@@ -79,7 +80,7 @@ namespace _1_Presentacion
             this.Controls.Add(this._lbl_nombre_entidad);
             this.Controls.Add(this._btn_editar);
             this.Controls.Add(this._btn_eliminar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_boton_entidad";
             this.Size = new System.Drawing.Size(427, 62);
             this.ResumeLayout(false);

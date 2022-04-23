@@ -21,7 +21,14 @@ namespace _1_Presentacion
         /// ACTUALIZAR Y ELIMINAR
         /// </summary>
         /// 
-        int v, ro; string n, ap, usu, pass, tel, corr; decimal sue; //cree variables temporales
+        int v, ro; string n, ap, usu, pass, tel, corr;
+
+        private void _lbl_nombre_entidad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        decimal sue; //cree variables temporales
         Opciones_Usuario p;
         public UC_boton_entidad(int Id, string nombre, string apellido, string usuario, string password, string telefono, string correo, decimal sueldo, int rol , Opciones_Usuario op_user, int x)
         {

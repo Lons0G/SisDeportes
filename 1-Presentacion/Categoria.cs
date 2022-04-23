@@ -19,7 +19,7 @@ namespace _1_Presentacion
             InitializeComponent();
         }
 
-        private void CargarDeporte()
+        public void CargarDeporte()
         {
             List<CLS_Deporte> lista_deportes = new List<CLS_Deporte>();
             CLS_L_Deporte L_deportes = new CLS_L_Deporte();

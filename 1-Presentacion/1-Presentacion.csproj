@@ -70,6 +70,12 @@
     <Compile Include="Creación_Actividades.Designer.cs">
       <DependentUpon>Creación_Actividades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Equipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos.Designer.cs">
+      <DependentUpon>Equipos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_Deportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     </Compile>
     <Compile Include="Menu_Administrador.Designer.cs">
       <DependentUpon>Menu_Administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opciones_Equipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones_Equipo.Designer.cs">
+      <DependentUpon>Opciones_Equipo.cs</DependentUpon>
     </Compile>
     <Compile Include="Opciones_Usuario.cs">
       <SubType>Form</SubType>
@@ -120,6 +132,9 @@
     <EmbeddedResource Include="Creación_Actividades.resx">
       <DependentUpon>Creación_Actividades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Equipos.resx">
+      <DependentUpon>Equipos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRM_Deportes.resx">
       <DependentUpon>FRM_Deportes.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_Administrador.resx">
       <DependentUpon>Menu_Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opciones_Equipo.resx">
+      <DependentUpon>Opciones_Equipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Opciones_Usuario.resx">
       <DependentUpon>Opciones_Usuario.cs</DependentUpon>
