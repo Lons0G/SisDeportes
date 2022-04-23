@@ -34,8 +34,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtcategoria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this._lbl_nombre = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this._gb_datos.SuspendLayout();
             this.SuspendLayout();
@@ -47,8 +45,6 @@
             this._gb_datos.Controls.Add(this.label4);
             this._gb_datos.Controls.Add(this.txtcategoria);
             this._gb_datos.Controls.Add(this.label3);
-            this._gb_datos.Controls.Add(this._lbl_nombre);
-            this._gb_datos.Controls.Add(this.label1);
             this._gb_datos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._gb_datos.Location = new System.Drawing.Point(51, 74);
             this._gb_datos.Margin = new System.Windows.Forms.Padding(4);
@@ -61,19 +57,20 @@
             // 
             // btnCatego
             // 
-            this.btnCatego.Location = new System.Drawing.Point(237, 204);
+            this.btnCatego.Location = new System.Drawing.Point(283, 203);
             this.btnCatego.Margin = new System.Windows.Forms.Padding(4);
             this.btnCatego.Name = "btnCatego";
             this.btnCatego.Size = new System.Drawing.Size(139, 38);
             this.btnCatego.TabIndex = 6;
             this.btnCatego.Text = "Registrar";
             this.btnCatego.UseVisualStyleBackColor = true;
+            this.btnCatego.Click += new System.EventHandler(this.btnCatego_Click);
             // 
             // cboidequipo
             // 
             this.cboidequipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboidequipo.FormattingEnabled = true;
-            this.cboidequipo.Location = new System.Drawing.Point(243, 76);
+            this.cboidequipo.Location = new System.Drawing.Point(262, 76);
             this.cboidequipo.Margin = new System.Windows.Forms.Padding(4);
             this.cboidequipo.Name = "cboidequipo";
             this.cboidequipo.Size = new System.Drawing.Size(160, 28);
@@ -82,17 +79,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 79);
+            this.label4.Location = new System.Drawing.Point(20, 75);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(162, 25);
+            this.label4.Size = new System.Drawing.Size(87, 25);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Tipo del Deporte:";
+            this.label4.Text = "Deporte:";
             // 
             // txtcategoria
             // 
             this.txtcategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcategoria.Location = new System.Drawing.Point(243, 125);
+            this.txtcategoria.Location = new System.Drawing.Point(262, 126);
             this.txtcategoria.Margin = new System.Windows.Forms.Padding(4);
             this.txtcategoria.Name = "txtcategoria";
             this.txtcategoria.Size = new System.Drawing.Size(160, 26);
@@ -107,26 +104,6 @@
             this.label3.Size = new System.Drawing.Size(224, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nombre de la Categoria:";
-            // 
-            // _lbl_nombre
-            // 
-            this._lbl_nombre.AutoSize = true;
-            this._lbl_nombre.Location = new System.Drawing.Point(225, 34);
-            this._lbl_nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this._lbl_nombre.Name = "_lbl_nombre";
-            this._lbl_nombre.Size = new System.Drawing.Size(108, 25);
-            this._lbl_nombre.TabIndex = 1;
-            this._lbl_nombre.Text = "lbl_nombre";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre del Usuario: ";
             // 
             // label2
             // 
@@ -147,8 +124,10 @@
             this.ClientSize = new System.Drawing.Size(634, 429);
             this.Controls.Add(this.label2);
             this.Controls.Add(this._gb_datos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Categoria";
             this.Text = "Categoria";
+            this.Load += new System.EventHandler(this.Categoria_Load);
             this._gb_datos.ResumeLayout(false);
             this._gb_datos.PerformLayout();
             this.ResumeLayout(false);
@@ -164,8 +143,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtcategoria;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label _lbl_nombre;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }
 }

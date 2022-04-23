@@ -17,6 +17,7 @@ namespace _2_Logica
                 {
                     CommandType = CommandType.StoredProcedure
                 };
+                _conexion.Open();
                 comando.Parameters.AddWithValue("@IdDeporte", obj_categoria.IdDeporte);
                 comando.Parameters.AddWithValue("@Nombre", obj_categoria.Nombre);
                 comando.ExecuteNonQuery();
