@@ -62,7 +62,6 @@ namespace _1_Presentacion
             obj_actividad.IdContricante_1 = cmbContri1.SelectedIndex;
             obj_actividad.IdContricante_2 = cmbContri2.SelectedIndex;
 
-
             L_actividad.Insertar_Actividad(ref obj_actividad);
         }
     }
