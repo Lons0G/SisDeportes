@@ -51,6 +51,17 @@ namespace _1_Presentacion
             ro = rol;
             //this.Location = new Point(20, 20);
         }
+
+        public UC_boton_entidad(int id, string nombre, int x) {
+            InitializeComponent();
+            this.Width = x - 10;
+            this.Height = 50;
+            this.Anchor = AnchorStyles.None;
+            this.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
+            this.Name = id.ToString();
+            _lbl_nombre_entidad.Text = nombre;
+        }
+        //SOLUCIONAR BUG SOBRE LAS DIFERENTES ENTIDADES
         private void _btn_eliminar_Click(object sender, EventArgs e)
         {
             MessageBoxButtons botones = MessageBoxButtons.YesNoCancel;

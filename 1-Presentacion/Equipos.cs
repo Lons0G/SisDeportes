@@ -18,9 +18,9 @@ namespace _1_Presentacion
         private string _name;
         public Equipos(int Id, string Nombre)
         {
+            InitializeComponent();
             _id = Id;
             _name = Nombre;
-            InitializeComponent();
         }
         public void CargarDeporte()
         {
