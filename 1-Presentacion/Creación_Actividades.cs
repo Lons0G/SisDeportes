@@ -15,7 +15,7 @@ namespace _1_Presentacion
 {
     public partial class Creación_Actividades : Form
     {
-        
+
         public Creación_Actividades(int deporte)
         {
             InitializeComponent();
@@ -24,6 +24,19 @@ namespace _1_Presentacion
 
         private void Creación_Actividades_Load(object sender, EventArgs e)
         {
+
+        }
+
+        public void Cargar_Deporte()
+        {
+            List<CLS_Deporte> lista_deportes = new List<CLS_Deporte>();
+            CLS_L_Deporte L_deportes = new CLS_L_Deporte();
+
+            L_deportes.Obtener_Deportes(lista_deportes);
+
+            cmbDeporte.DisplayMember = "Nombre";
+            cmbDeporte.ValueMember = "IdTipoDeporte";
+            cmbDeporte.DataSource = lista_deportes;
 
         }
 
