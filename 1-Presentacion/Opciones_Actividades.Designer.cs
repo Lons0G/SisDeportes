@@ -43,8 +43,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1200, 615);
+            this.pictureBox1.Size = new System.Drawing.Size(800, 400);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -52,10 +53,9 @@
             // _p_forms
             // 
             this._p_forms.Dock = System.Windows.Forms.DockStyle.Right;
-            this._p_forms.Location = new System.Drawing.Point(525, 0);
-            this._p_forms.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this._p_forms.Location = new System.Drawing.Point(350, 0);
             this._p_forms.Name = "_p_forms";
-            this._p_forms.Size = new System.Drawing.Size(675, 615);
+            this._p_forms.Size = new System.Drawing.Size(450, 400);
             this._p_forms.TabIndex = 8;
             // 
             // panel1
@@ -64,19 +64,19 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Salmon;
-            this.panel1.Location = new System.Drawing.Point(13, 167);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(9, 109);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(504, 434);
+            this.panel1.Size = new System.Drawing.Size(336, 282);
             this.panel1.TabIndex = 10;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(33, 17);
+            this.pictureBox2.Location = new System.Drawing.Point(22, 11);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(112, 63);
+            this.pictureBox2.Size = new System.Drawing.Size(75, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
@@ -85,25 +85,28 @@
             // 
             this.btnInsertar.BackColor = System.Drawing.Color.OrangeRed;
             this.btnInsertar.ForeColor = System.Drawing.Color.White;
-            this.btnInsertar.Location = new System.Drawing.Point(18, 88);
+            this.btnInsertar.Location = new System.Drawing.Point(12, 57);
+            this.btnInsertar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(138, 49);
+            this.btnInsertar.Size = new System.Drawing.Size(92, 32);
             this.btnInsertar.TabIndex = 12;
             this.btnInsertar.Text = "Insertar Actividad";
             this.btnInsertar.UseVisualStyleBackColor = false;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // Opciones_Actividades
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Crimson;
-            this.ClientSize = new System.Drawing.Size(1200, 615);
+            this.ClientSize = new System.Drawing.Size(800, 400);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this._p_forms);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Opciones_Actividades";
             this.Text = "Opciones_Actividades";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
