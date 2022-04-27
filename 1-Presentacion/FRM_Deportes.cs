@@ -37,8 +37,8 @@ namespace _1_Presentacion
 
         private void _btn_registrar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(_cb_tipo_deporte.SelectedValue.ToString());
-            bool Estado;
+            //MessageBox.Show(_cb_tipo_deporte.SelectedValue.ToString());
+            //bool Estado;
             if (_txt_nombre_deporte.Text != "")
             {
                 CLS_Deporte obj_deporte = new CLS_Deporte();
@@ -48,7 +48,17 @@ namespace _1_Presentacion
                 obj_deporte.Nombre = _txt_nombre_deporte.Text;
                 obj_deporte.IdTipoDeporte = Convert.ToInt32(_cb_tipo_deporte.SelectedValue);
                 
-                L_Deporte.Insertar_Deporte(ref obj_deporte);
+                bool resultado = L_Deporte.Insertar_Deporte(ref obj_deporte);
+
+                if(resultado == true)
+                {
+                    MessageBox.Show("Deporte Guardado con Exito!");
+                }
+                else
+                {
+                    MessageBox.Show(obj_deporte.Error);
+                }
+
             }
         }
 

@@ -115,7 +115,7 @@ namespace _1_Presentacion
         }
         private void Btn_Deportes_Click(object sender, EventArgs e) {
             //REALIZAR EL FORMS QUE PERMITIRA VISUALIZAR LOS DEPORTES//
-            AbrirForms(new FRM_Deportes(obj_usuario.Id, obj_usuario.Usuario));
+            AbrirForms(new Opciones_Deportes(obj_usuario.Id, obj_usuario.Usuario));
         }
         private void Btn_Equipos_Click(object sender, EventArgs e)
         {
@@ -133,7 +133,7 @@ namespace _1_Presentacion
         private void Btn_Integrantes_Click(object sender, EventArgs e)
         {
             //ABRE EL FORMS DE OPCIONES_Integrante//
-            AbrirForms(new FRM_Integrantes());
+            AbrirForms(new Opciones_Integrantes());
 
         }
         private void Agregar_BTN_Usuario() {

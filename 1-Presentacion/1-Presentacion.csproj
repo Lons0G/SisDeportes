@@ -112,11 +112,23 @@
     <Compile Include="Opciones_Actividades.Designer.cs">
       <DependentUpon>Opciones_Actividades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Opciones_Deportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones_Deportes.Designer.cs">
+      <DependentUpon>Opciones_Deportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Opciones_Equipo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Opciones_Equipo.Designer.cs">
       <DependentUpon>Opciones_Equipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opciones_Integrantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones_Integrantes.Designer.cs">
+      <DependentUpon>Opciones_Integrantes.cs</DependentUpon>
     </Compile>
     <Compile Include="Opciones_Torneo.cs">
       <SubType>Form</SubType>
@@ -183,8 +195,14 @@
     <EmbeddedResource Include="Opciones_Actividades.resx">
       <DependentUpon>Opciones_Actividades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Opciones_Deportes.resx">
+      <DependentUpon>Opciones_Deportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Opciones_Equipo.resx">
       <DependentUpon>Opciones_Equipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opciones_Integrantes.resx">
+      <DependentUpon>Opciones_Integrantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Opciones_Torneo.resx">
       <DependentUpon>Opciones_Torneo.cs</DependentUpon>

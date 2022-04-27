@@ -27,8 +27,8 @@ namespace _1_Presentacion
             obj_torneo.Fecha = Convert.ToDateTime(this.dtfechatorneo.Text);
             obj_torneo.IdCategoria = 2;
             obj_torneo.IdUsuario = 1;
-            obj_torneo.IdTipo = 2;
-            obj_torneo.Nombre = obj_torneo.IdTipo.ToString();
+            obj_torneo.IdTipo = 3;
+            obj_torneo.Nombre = "";
            
 
             bool resultado = l_Torneo.Insertar_Torneo(ref obj_torneo);

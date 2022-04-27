@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label6 = new System.Windows.Forms.Label();
-            this.txtnombretorneo = new System.Windows.Forms.TextBox();
             this.fdd = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dtfechatorneo = new System.Windows.Forms.DateTimePicker();
             this.btntorneocrear = new System.Windows.Forms.Button();
+            this.cboact = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label6
@@ -45,14 +45,6 @@
             this.label6.Size = new System.Drawing.Size(332, 38);
             this.label6.TabIndex = 55;
             this.label6.Text = "Registro de Torneos";
-            // 
-            // txtnombretorneo
-            // 
-            this.txtnombretorneo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnombretorneo.Location = new System.Drawing.Point(230, 173);
-            this.txtnombretorneo.Name = "txtnombretorneo";
-            this.txtnombretorneo.Size = new System.Drawing.Size(301, 35);
-            this.txtnombretorneo.TabIndex = 54;
             // 
             // fdd
             // 
@@ -91,16 +83,24 @@
             this.btntorneocrear.UseVisualStyleBackColor = true;
             this.btntorneocrear.Click += new System.EventHandler(this.btntorneocrear_Click);
             // 
+            // cboact
+            // 
+            this.cboact.FormattingEnabled = true;
+            this.cboact.Location = new System.Drawing.Point(230, 173);
+            this.cboact.Name = "cboact";
+            this.cboact.Size = new System.Drawing.Size(301, 28);
+            this.cboact.TabIndex = 58;
+            // 
             // Torneo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(617, 560);
+            this.Controls.Add(this.cboact);
             this.Controls.Add(this.btntorneocrear);
             this.Controls.Add(this.dtfechatorneo);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtnombretorneo);
             this.Controls.Add(this.fdd);
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -113,10 +113,10 @@
 
         #endregion
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtnombretorneo;
         private System.Windows.Forms.Label fdd;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtfechatorneo;
         private System.Windows.Forms.Button btntorneocrear;
+        private System.Windows.Forms.ComboBox cboact;
     }
 }

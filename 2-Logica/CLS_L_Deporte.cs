@@ -21,6 +21,7 @@ namespace _2_Logica
                 {
                     CommandType = CommandType.StoredProcedure
                 };
+                _conexion.Open();
                 comando.Parameters.AddWithValue("@IdUsuario", obj_deporte.IdUsuario);
                 comando.Parameters.AddWithValue("@Nombre", obj_deporte.Nombre);
                 comando.Parameters.AddWithValue("@IdTipoDeporte", obj_deporte.IdTipoDeporte);
