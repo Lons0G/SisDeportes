@@ -1,5 +1,6 @@
 ﻿using _3_Entidades;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 namespace _2_Logica
@@ -79,6 +80,55 @@ namespace _2_Logica
                 _conexion.Close();
                 _conexion.Dispose();
             }
+        }
+        public bool ObtenerTorneos(ref List<CLS_Torneo> lista_torneo)
+        {
+            try
+            {
+                Conexion();
+                SqlCommand comando = new SqlCommand("SP_MOSTRAR_TORNEOS", _conexion)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                _conexion.Open();
+                int fila = Convert.ToInt32(comando.ExecuteScalar());
+                if (fila != 0)
+                {
+                    SqlDataReader reader = comando.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        lista_torneo.Add(ConvertirTorneo(reader));
+                    }
+                }
+                return true;
+            }
+            catch (Exception error)
+            {
+                CLS_Torneo obj_torneo = new CLS_Torneo();
+                obj_torneo.Error = error.Message;
+                lista_torneo.Add(obj_torneo);
+                return false;
+            }
+            finally
+            {
+                _conexion.Close();
+                _conexion.Dispose();
+            }
+        }
+        //METODO PARA AGREGAR USUARIOS EN LA LISTA DE USUARIOS//
+        private CLS_Torneo ConvertirTorneo(IDataReader reader)
+        {
+            CLS_Torneo obj_torneo = new CLS_Torneo();
+
+            obj_torneo.IdTorneo = Convert.ToInt32(reader["IdTorneo"].ToString());
+            obj_torneo.Nombre = reader["Nombre"].ToString();
+            obj_torneo.Fecha = Convert.ToDateTime(reader["Fecha"].ToString());
+            obj_torneo.IdCategoria = Convert.ToInt32(reader["IdCategoria"].ToString());
+            obj_torneo.IdUsuario = Convert.ToInt32(reader["IdUsuario"].ToString());
+            obj_torneo.IdTipo = Convert.ToInt32(reader["IdTipo"].ToString());
+            obj_torneo.IdDeporte = Convert.ToInt32(reader["IdDeporte"].ToString());
+
+            return obj_torneo;
         }
     }
 }
