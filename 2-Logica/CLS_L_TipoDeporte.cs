@@ -12,7 +12,7 @@ namespace _2_Logica
     public class CLS_L_TipoDeporte
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
         public bool Insertar_Deporte(ref CLS_TipoDeporte obj_tipo_deporte) {
             try {
                 Conexion();

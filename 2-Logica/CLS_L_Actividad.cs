@@ -8,7 +8,7 @@ namespace _2_Logica
     public class CLS_L_Actividad
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
 
         //METODO PARA INSERTAR UNA ACTIVIDAD
         public bool Insertar_Actividad(ref CLS_Actividad obj_actividad) {

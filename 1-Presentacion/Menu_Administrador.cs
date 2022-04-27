@@ -157,28 +157,44 @@ namespace _1_Presentacion
 
             //INSTANCIA UN NUEVO BOTON ACTIVIDAD Y LE COLOCA LAS PROPIEDADES
             Button btn_actividad = new Button();
-            btn_actividad.Name = "btn_Actividad"; 
+            btn_actividad.Name = "btn_Actividad";
             btn_actividad.Text = "Actividad";
             btn_actividad.Width = 120;
             btn_actividad.Height = 50;
             btn_actividad.Top = (50 + 12) * 3;
+
+            //INSTANCIA UN NUEVO BOTON EQUIPO Y LE COLOCA LAS PROPIEDADES//
+            Button btn_Torneo = new Button();
+            btn_Torneo.Name = "btn_Torneo";
+            btn_Torneo.Text = "Torneos";
+            btn_Torneo.Width = 120;
+            btn_Torneo.Height = 50;
+            btn_Torneo.Top = (50 + 12) * 4;
+
 
 
             //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON USUARIO//
             btn_Equipos.Click += Btn_Equipos_Click;
             btn_integrantes.Click += Btn_Integrantes_Click;
             btn_actividad.Click += Btn_Actividad_Click;
+            btn_Torneo.Click += Btn_Torneo_Click;
 
             //SE AGREGA EL BOTON USUARIO AL PANEL DE CONTROLES//
             _p_controles.Controls.Add(btn_Equipos);
             _p_controles.Controls.Add(btn_integrantes);
             _p_controles.Controls.Add(btn_actividad);
+            _p_controles.Controls.Add(btn_Torneo);
         }
 
         private void Btn_Actividad_Click(object sender, EventArgs e)
         {
             //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
             AbrirForms(new Opciones_Actividades(obj_usuario.Deporte)); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
+        }
+        private void Btn_Torneo_Click(object sender, EventArgs e)
+        {
+            //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
+            AbrirForms(new Opciones_Torneo()); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
         }
 
         private void _p_controles_Paint(object sender, PaintEventArgs e)

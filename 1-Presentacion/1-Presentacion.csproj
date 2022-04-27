@@ -112,6 +112,12 @@
     <Compile Include="Opciones_Equipo.Designer.cs">
       <DependentUpon>Opciones_Equipo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Opciones_Torneo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones_Torneo.Designer.cs">
+      <DependentUpon>Opciones_Torneo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Opciones_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Torneo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Torneo.Designer.cs">
+      <DependentUpon>Torneo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_boton_entidad.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -159,6 +171,9 @@
     <EmbeddedResource Include="Opciones_Equipo.resx">
       <DependentUpon>Opciones_Equipo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Opciones_Torneo.resx">
+      <DependentUpon>Opciones_Torneo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Opciones_Usuario.resx">
       <DependentUpon>Opciones_Usuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +181,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Torneo.resx">
+      <DependentUpon>Torneo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_boton_entidad.resx">
       <DependentUpon>UC_boton_entidad.cs</DependentUpon>
