@@ -5,7 +5,7 @@ using _3_Entidades;
 
 namespace _2_Logica
 {
-    internal class CLS_L_Tipo
+    public class CLS_L_Tipo
     {
         SqlConnection _conexion;
         private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
@@ -17,6 +17,7 @@ namespace _2_Logica
                 {
                     CommandType = CommandType.StoredProcedure
                 };
+                _conexion.Open();
                 comando.Parameters.AddWithValue("@Descripcion", obj_tipoActividad.Descripcion);
                 comando.Parameters.AddWithValue("@Nombre", obj_tipoActividad.Nombre);
                 comando.ExecuteNonQuery();

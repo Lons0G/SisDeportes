@@ -17,6 +17,7 @@ namespace _2_Logica
                 {
                     CommandType = CommandType.StoredProcedure
                 };
+                _conexion.Open();
                 comando.Parameters.AddWithValue("@Fecha", obj_torneo.Fecha);
                 comando.Parameters.AddWithValue("@IdCategoria", obj_torneo.IdCategoria);
                 comando.Parameters.AddWithValue("@IdUsuario", obj_torneo.IdUsuario);

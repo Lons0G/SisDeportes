@@ -171,6 +171,14 @@ namespace _1_Presentacion
             btn_Torneo.Height = 50;
             btn_Torneo.Top = (50 + 12) * 4;
 
+            //INSTANCIA UN NUEVO BOTON EQUIPO Y LE COLOCA LAS PROPIEDADES//
+            Button btn_TipoAct = new Button();
+            btn_TipoAct.Name = "btn_Tipo_Act";
+            btn_TipoAct.Text = "Tipo Act";
+            btn_TipoAct.Width = 120;
+            btn_TipoAct.Height = 50;
+            btn_TipoAct.Top = (50 + 12) * 5;
+
 
 
             //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON USUARIO//
@@ -178,12 +186,15 @@ namespace _1_Presentacion
             btn_integrantes.Click += Btn_Integrantes_Click;
             btn_actividad.Click += Btn_Actividad_Click;
             btn_Torneo.Click += Btn_Torneo_Click;
+            btn_TipoAct.Click += Btn_Tipo_Act_Click;
+
 
             //SE AGREGA EL BOTON USUARIO AL PANEL DE CONTROLES//
             _p_controles.Controls.Add(btn_Equipos);
             _p_controles.Controls.Add(btn_integrantes);
             _p_controles.Controls.Add(btn_actividad);
             _p_controles.Controls.Add(btn_Torneo);
+            _p_controles.Controls.Add(btn_TipoAct);
         }
 
         private void Btn_Actividad_Click(object sender, EventArgs e)
@@ -196,7 +207,11 @@ namespace _1_Presentacion
             //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
             AbrirForms(new Opciones_Torneo()); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
         }
-
+        private void Btn_Tipo_Act_Click(object sender, EventArgs e)
+        {
+            //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
+            AbrirForms(new OpcionesTipo_Act()); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
+        }
         private void _p_controles_Paint(object sender, PaintEventArgs e)
         {
 

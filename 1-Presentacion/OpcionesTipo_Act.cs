@@ -10,15 +10,16 @@ using System.Windows.Forms;
 
 namespace _1_Presentacion
 {
-    public partial class Opciones_Torneo : Form
+    public partial class OpcionesTipo_Act : Form
     {
-        int cate, _id, tip;
-        public Opciones_Torneo(/*int categoria,int id, int tp*/)
+        public OpcionesTipo_Act()
         {
-        //    cate = categoria;
-        //    _id = id;
-        //    tip = tp;
             InitializeComponent();
+        }
+
+        private void _p_equipos_Paint(object sender, PaintEventArgs e)
+        {
+
         }
         private void AbrirForms(object FRM_secundario)
         {
@@ -37,19 +38,10 @@ namespace _1_Presentacion
             //secundario.FormClosing += new FormClosingEventHandler(Agregar_Usuario_Close);
 
         }
-        private void _p_forms2_Paint(object sender, PaintEventArgs e)
+
+        private void btnInsertartpAct_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Opciones_Torneo_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnInsertarTorneo_Click(object sender, EventArgs e)
-        {
-            AbrirForms(new Torneo());
+            AbrirForms(new Tipo_Act());
         }
     }
 }

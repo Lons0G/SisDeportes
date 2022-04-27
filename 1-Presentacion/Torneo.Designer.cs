@@ -32,7 +32,7 @@
             this.txtnombretorneo = new System.Windows.Forms.TextBox();
             this.fdd = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtfechatorneo = new System.Windows.Forms.DateTimePicker();
             this.btntorneocrear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -74,12 +74,12 @@
             this.label4.TabIndex = 51;
             this.label4.Text = "Fecha:";
             // 
-            // dateTimePicker1
+            // dtfechatorneo
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(230, 127);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(301, 26);
-            this.dateTimePicker1.TabIndex = 56;
+            this.dtfechatorneo.Location = new System.Drawing.Point(230, 127);
+            this.dtfechatorneo.Name = "dtfechatorneo";
+            this.dtfechatorneo.Size = new System.Drawing.Size(301, 26);
+            this.dtfechatorneo.TabIndex = 56;
             // 
             // btntorneocrear
             // 
@@ -89,6 +89,7 @@
             this.btntorneocrear.TabIndex = 57;
             this.btntorneocrear.Text = "Crear";
             this.btntorneocrear.UseVisualStyleBackColor = true;
+            this.btntorneocrear.Click += new System.EventHandler(this.btntorneocrear_Click);
             // 
             // Torneo
             // 
@@ -97,7 +98,7 @@
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(617, 560);
             this.Controls.Add(this.btntorneocrear);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtfechatorneo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtnombretorneo);
             this.Controls.Add(this.fdd);
@@ -115,7 +116,7 @@
         private System.Windows.Forms.TextBox txtnombretorneo;
         private System.Windows.Forms.Label fdd;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtfechatorneo;
         private System.Windows.Forms.Button btntorneocrear;
     }
 }
