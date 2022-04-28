@@ -12,7 +12,7 @@ namespace _2_Logica
     public class CLS_L_Equipo
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
 
         //METODO PARA INSERTAR EQUIPO//
         public bool Insertar_Equipo(ref CLS_Equipo obj_equipo)
@@ -53,6 +53,7 @@ namespace _2_Logica
                 {
                     CommandType = CommandType.StoredProcedure
                 };
+                _conexion.Open();
                 comando.Parameters.AddWithValue("@IdEquipo", obj_equipo);
                 comando.Parameters.AddWithValue("@IdUsuario", obj_equipo.IdUsuario);
                 comando.Parameters.AddWithValue("@IdDeporte", obj_equipo.IdDeporte);
@@ -80,6 +81,7 @@ namespace _2_Logica
                 {
                     CommandType = CommandType.StoredProcedure
                 };
+                _conexion.Open();
                 comando.Parameters.AddWithValue("@IdEquipo", obj_equipo.IdEquipo);
                 comando.ExecuteNonQuery();
                 return true;

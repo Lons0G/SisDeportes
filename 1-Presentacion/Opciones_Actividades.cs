@@ -44,5 +44,10 @@ namespace _1_Presentacion
         {
             //AbrirForms(new Creación_Actividades(id_deporte));
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

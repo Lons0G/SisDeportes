@@ -93,14 +93,14 @@ namespace _1_Presentacion
                         bool resultado = L_Usuario.Eliminar_Usuario(ref obj_usuario);
 
                         if (resultado == true) { MessageBox.Show("Usuario Eliminado Correctamente", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-                        else { MessageBox.Show("error"); }
+                        else { MessageBox.Show(obj_usuario.Error); }
                     }
                     p.Cargar_Usuarios();
                     break;
                 //CASO PARA TORNEO
                 case 2:
                     MessageBoxButtons btn_torneo = MessageBoxButtons.YesNoCancel;
-                    DialogResult dr_torneo = MessageBox.Show("¿Deseas Eliminar este usuario?", "Eliminar", btn_torneo, MessageBoxIcon.Question);
+                    DialogResult dr_torneo = MessageBox.Show("¿Deseas Eliminar este Torneo?", "Eliminar", btn_torneo, MessageBoxIcon.Question);
 
                     if (dr_torneo == DialogResult.Yes)
                     {
@@ -109,15 +109,15 @@ namespace _1_Presentacion
                         obj_torneo.IdTorneo = v; //recibe el valor del id y lo elimina
                         bool resultado = L_torneo.Eliminar_Torneo(ref obj_torneo);
 
-                        if (resultado == true) { MessageBox.Show("Usuario Eliminado Correctamente", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-                        else { MessageBox.Show("error"); }
+                        if (resultado == true) { MessageBox.Show("Torneo Eliminado Correctamente", "Torneo Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                        else { MessageBox.Show(obj_torneo.Error); }
                     }
                     //p.Cargar_Usuarios();
                     break;
                 //CASO PARA TIPO DEPORTE
                 case 3:
                     MessageBoxButtons btn_tipodeporte = MessageBoxButtons.YesNoCancel;
-                    DialogResult dr_tipodeporte = MessageBox.Show("¿Deseas Eliminar este usuario?", "Eliminar", btn_tipodeporte, MessageBoxIcon.Question);
+                    DialogResult dr_tipodeporte = MessageBox.Show("¿Deseas Eliminar este Tipo de Deporte?", "Eliminar", btn_tipodeporte, MessageBoxIcon.Question);
 
                     if (dr_tipodeporte == DialogResult.Yes)
                     {
@@ -126,15 +126,15 @@ namespace _1_Presentacion
                         obj_tipodeporte.IdTipoDeporte = v; //recibe el valor del id y lo elimina
                         bool resultado = false;// = L_tipodeporte.(ref obj_tipodeporte);
 
-                        if (resultado == true) { MessageBox.Show("Usuario Eliminado Correctamente", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-                        else { MessageBox.Show("error"); }
+                        if (resultado == true) { MessageBox.Show("Tipo de deporte Eliminado Correctamente", "Tipo Deporte Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                        else { MessageBox.Show(obj_tipodeporte.Error); }
                     }
                     //p.Cargar_Usuarios();
                     break;
                 //CASO PARA TIPO
                 case 4:
                     MessageBoxButtons btn_tipo = MessageBoxButtons.YesNoCancel;
-                    DialogResult dr_tipo = MessageBox.Show("¿Deseas Eliminar este usuario?", "Eliminar", btn_tipo, MessageBoxIcon.Question);
+                    DialogResult dr_tipo = MessageBox.Show("¿Deseas Eliminar esta Tipo de Actividad?", "Eliminar", btn_tipo, MessageBoxIcon.Question);
 
                     if (dr_tipo == DialogResult.Yes)
                     {
@@ -143,15 +143,15 @@ namespace _1_Presentacion
                         obj_tipo.IdTipo = v; //recibe el valor del id y lo elimina
                         bool resultado = false;// = L_tipodeporte.(ref obj_tipodeporte);
 
-                        if (resultado == true) { MessageBox.Show("Usuario Eliminado Correctamente", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-                        else { MessageBox.Show("error"); }
+                        if (resultado == true) { MessageBox.Show("Tipo de Actividad Eliminado Correctamente", "Tipo Act Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                        else { MessageBox.Show(obj_tipo.Error); }
                     }
                     //p.Cargar_Usuarios();
                     break;
                 //CASO PARA ROLES
                 case 5:
                     MessageBoxButtons btn_roles = MessageBoxButtons.YesNoCancel;
-                    DialogResult dr_roles = MessageBox.Show("¿Deseas Eliminar este usuario?", "Eliminar", btn_roles, MessageBoxIcon.Question);
+                    DialogResult dr_roles = MessageBox.Show("¿Deseas Eliminar este Rol?", "Eliminar", btn_roles, MessageBoxIcon.Question);
 
                     if (dr_roles == DialogResult.Yes)
                     {
@@ -160,15 +160,15 @@ namespace _1_Presentacion
                         //obj_torneo.IdTorneo = v; //recibe el valor del id y lo elimina
                         bool resultado = false; //L_torneo.Eliminar_Torneo(ref obj_torneo);
 
-                        if (resultado == true) { MessageBox.Show("Usuario Eliminado Correctamente", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-                        else { MessageBox.Show("error"); }
+                        if (resultado == true) { MessageBox.Show("Rol Eliminado Correctamente", "Rol Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                        else { MessageBox.Show(obj_torneo.Error); }
                     }
                     //p.Cargar_Usuarios();
                     break;
                 //CASO PARA INTEGRANTE
                 case 6:
                     MessageBoxButtons btn_integrante = MessageBoxButtons.YesNoCancel;
-                    DialogResult dr_integrante = MessageBox.Show("¿Deseas Eliminar este usuario?", "Eliminar", btn_integrante, MessageBoxIcon.Question);
+                    DialogResult dr_integrante = MessageBox.Show("¿Deseas Eliminar este Intregrante?", "Eliminar", btn_integrante, MessageBoxIcon.Question);
 
                     if (dr_integrante == DialogResult.Yes)
                     {
@@ -177,15 +177,15 @@ namespace _1_Presentacion
                         obj_integrante.IdIntegrante = v; //recibe el valor del id y lo elimina
                         bool resultado = L_integrante.Eliminar_Integrante(ref obj_integrante);
 
-                        if (resultado == true) { MessageBox.Show("Usuario Eliminado Correctamente", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-                        else { MessageBox.Show("error"); }
+                        if (resultado == true) { MessageBox.Show("Integrante Eliminado Correctamente", "Integrante Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                        else { MessageBox.Show(obj_integrante.Error); }
                     }
                     //p.Cargar_Usuarios();
                     break;
                 //CASO PARA EQUIPO
                 case 7:
                     MessageBoxButtons btn_equipo = MessageBoxButtons.YesNoCancel;
-                    DialogResult dr_equipo = MessageBox.Show("¿Deseas Eliminar este usuario?", "Eliminar", btn_equipo, MessageBoxIcon.Question);
+                    DialogResult dr_equipo = MessageBox.Show("¿Deseas Eliminar este Equipo?", "Eliminar", btn_equipo, MessageBoxIcon.Question);
 
                     if (dr_equipo == DialogResult.Yes)
                     {
@@ -194,15 +194,15 @@ namespace _1_Presentacion
                         obj_equipo.IdEquipo = v; //recibe el valor del id y lo elimina
                         bool resultado = L_equipo.Eliminar_Equipo(ref obj_equipo);
 
-                        if (resultado == true) { MessageBox.Show("Usuario Eliminado Correctamente", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-                        else { MessageBox.Show("error"); }
+                        if (resultado == true) { MessageBox.Show("Equipo Eliminado Correctamente", "Equipo Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                        else { MessageBox.Show(obj_equipo.Error); }
                     }
                     //p.Cargar_Usuarios();
                     break;
                 //CASO PARA DEPORTE
                 case 8:
                     MessageBoxButtons btn_deportes = MessageBoxButtons.YesNoCancel;
-                    DialogResult dr_deportes = MessageBox.Show("¿Deseas Eliminar este usuario?", "Eliminar", btn_deportes, MessageBoxIcon.Question);
+                    DialogResult dr_deportes = MessageBox.Show("¿Deseas Eliminar este Deporte?", "Eliminar", btn_deportes, MessageBoxIcon.Question);
 
                     if (dr_deportes == DialogResult.Yes)
                     {
@@ -211,15 +211,15 @@ namespace _1_Presentacion
                         obj_deporte.IdDeporte = v; //recibe el valor del id y lo elimina
                         bool resultado = L_deporte.Eliminar_Deporte(ref obj_deporte);
 
-                        if (resultado == true) { MessageBox.Show("Usuario Eliminado Correctamente", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-                        else { MessageBox.Show("error"); }
+                        if (resultado == true) { MessageBox.Show("Deporte Eliminado Correctamente", "Deporte Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                        else { MessageBox.Show(obj_deporte.Error); }
                     }
                     //p.Cargar_Usuarios();
                     break;
                 //CASO PARA CATEGORIA
                 case 9:
                     MessageBoxButtons btn_categoria = MessageBoxButtons.YesNoCancel;
-                    DialogResult dr_categoria = MessageBox.Show("¿Deseas Eliminar este usuario?", "Eliminar", btn_categoria, MessageBoxIcon.Question);
+                    DialogResult dr_categoria = MessageBox.Show("¿Deseas Eliminar esta Categoria?", "Eliminar", btn_categoria, MessageBoxIcon.Question);
 
                     if (dr_categoria == DialogResult.Yes)
                     {
@@ -228,15 +228,15 @@ namespace _1_Presentacion
                         obj_categoria.IdCategoria = v; //recibe el valor del id y lo elimina
                         bool resultado = L_categoria.Eliminar_Categoria(ref obj_categoria);
 
-                        if (resultado == true) { MessageBox.Show("Usuario Eliminado Correctamente", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-                        else { MessageBox.Show("error"); }
+                        if (resultado == true) { MessageBox.Show("Categoria Eliminado Correctamente", "Categoria Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                        else { MessageBox.Show(obj_categoria.Error); }
                     }
                     //p.Cargar_Usuarios();
                     break;
                 //CASO PARA ACTIVIDAD
                 case 10:
                     MessageBoxButtons btn_actividad = MessageBoxButtons.YesNoCancel;
-                    DialogResult dr_actividad = MessageBox.Show("¿Deseas Eliminar este usuario?", "Eliminar", btn_actividad, MessageBoxIcon.Question);
+                    DialogResult dr_actividad = MessageBox.Show("¿Deseas Eliminar este Actividad?", "Eliminar", btn_actividad, MessageBoxIcon.Question);
 
                     if (dr_actividad == DialogResult.Yes)
                     {
@@ -245,8 +245,8 @@ namespace _1_Presentacion
                         obj_actividad.IdActividad = v; //recibe el valor del id y lo elimina
                         bool resultado = L_actividad.Eliminar_Actividad(ref obj_actividad);
 
-                        if (resultado == true) { MessageBox.Show("Usuario Eliminado Correctamente", "Usuario Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-                        else { MessageBox.Show("error"); }
+                        if (resultado == true) { MessageBox.Show("Actividad Eliminado Correctamente", "Actividad Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+                        else { MessageBox.Show(obj_actividad.Error); }
                     }
                     //p.Cargar_Usuarios();
                     break;
@@ -255,10 +255,42 @@ namespace _1_Presentacion
 
         private void _btn_editar_Click(object sender, EventArgs e)
         {
-            Actualizar_Usuario actualizar = new Actualizar_Usuario();
-            actualizar.Show();
+            switch(dato_entidad)
+            {
+                case 1:
+                    Actualizar_Usuario actualizar = new Actualizar_Usuario();
+                    actualizar.Show();
 
-            actualizar.RecibeDatos(v, n, ap, usu, pass, tel, corr, sue, ro); //envia los datos al metodo que esta en actualizar usuario
+                    actualizar.RecibeDatos(v, n, ap, usu, pass, tel, corr, sue, ro); //envia los datos al metodo que esta en actualizar usuario
+                    break;
+                case 2:MessageBox.Show(dato_entidad.ToString());
+                    break;
+                case 3:
+                    MessageBox.Show(dato_entidad.ToString());
+                    break;
+                case 4:
+                    MessageBox.Show(dato_entidad.ToString());
+                    break;
+                case 5:
+                    MessageBox.Show(dato_entidad.ToString());
+                    break;
+                case 6:
+                    MessageBox.Show(dato_entidad.ToString());
+                    break;
+                case 7:
+                    MessageBox.Show(dato_entidad.ToString());
+                    break;
+                case 8:
+                    MessageBox.Show(dato_entidad.ToString());
+                    break;
+                case 9:
+                    MessageBox.Show(dato_entidad.ToString());
+                    break;
+                case 10:
+                    MessageBox.Show(dato_entidad.ToString());
+                    break;
+            }
+           
         }
     }
 }

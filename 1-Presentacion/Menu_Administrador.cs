@@ -14,6 +14,8 @@ namespace _1_Presentacion
     public partial class Menu_Administrador : Form
     {
         CLS_Usuario obj_usuario = new CLS_Usuario();
+        CLS_Equipo obj_equipo = new CLS_Equipo();
+        CLS_Deporte obj_deporte = new CLS_Deporte();
         public Menu_Administrador(ref CLS_Usuario usuario)
         {
             InitializeComponent();
@@ -120,7 +122,8 @@ namespace _1_Presentacion
         private void Btn_Equipos_Click(object sender, EventArgs e)
         {
             //ABRE EL FORMS DE OPCIONES_Equipo//
-            AbrirForms(new Opciones_Equipo(obj_usuario.Id, obj_usuario.Usuario));
+            AbrirForms(new Opciones_Equipo(obj_usuario.Id,obj_usuario.Nombre,obj_deporte.IdDeporte));
+            
            
         }
         private void Btn_Categoria_Click(object sender, EventArgs e)
@@ -213,6 +216,11 @@ namespace _1_Presentacion
             AbrirForms(new OpcionesTipo_Act()); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
         }
         private void _p_controles_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void _p_usuario_Paint(object sender, PaintEventArgs e)
         {
 
         }

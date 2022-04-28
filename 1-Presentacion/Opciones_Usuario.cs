@@ -89,5 +89,10 @@ namespace _1_Presentacion
         {
             Cargar_Usuarios();
         }
+
+        private void _p_usuarios_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

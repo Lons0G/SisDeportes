@@ -14,12 +14,13 @@ namespace _1_Presentacion
 {
     public partial class Opciones_Equipo : Form
     {
-        private int _id;
+        private int _id,id_de;
         private string _nome;
-        public Opciones_Equipo(int Id, string Nombre)
+        public Opciones_Equipo(int Id, string Nombre,int iddepor)
         {
             _id = Id;
             _nome = Nombre;
+            id_de = iddepor;
             InitializeComponent();
         }
         private void AbrirForms(object FRM_secundario)
@@ -71,7 +72,7 @@ namespace _1_Presentacion
 
         private void btnInsertarEquipo_Click(object sender, EventArgs e)
         {
-            AbrirForms(new Equipos(_id,_nome));
+            AbrirForms(new Equipos(_id,_nome,id_de));
         }
     }
 }

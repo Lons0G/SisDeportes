@@ -33,7 +33,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dtfechatorneo = new System.Windows.Forms.DateTimePicker();
             this.btntorneocrear = new System.Windows.Forms.Button();
-            this.cboact = new System.Windows.Forms.ComboBox();
+            this.txtnom = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label6
@@ -83,13 +83,12 @@
             this.btntorneocrear.UseVisualStyleBackColor = true;
             this.btntorneocrear.Click += new System.EventHandler(this.btntorneocrear_Click);
             // 
-            // cboact
+            // txtnom
             // 
-            this.cboact.FormattingEnabled = true;
-            this.cboact.Location = new System.Drawing.Point(230, 173);
-            this.cboact.Name = "cboact";
-            this.cboact.Size = new System.Drawing.Size(301, 28);
-            this.cboact.TabIndex = 58;
+            this.txtnom.Location = new System.Drawing.Point(230, 175);
+            this.txtnom.Name = "txtnom";
+            this.txtnom.Size = new System.Drawing.Size(301, 26);
+            this.txtnom.TabIndex = 58;
             // 
             // Torneo
             // 
@@ -97,7 +96,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(617, 560);
-            this.Controls.Add(this.cboact);
+            this.Controls.Add(this.txtnom);
             this.Controls.Add(this.btntorneocrear);
             this.Controls.Add(this.dtfechatorneo);
             this.Controls.Add(this.label6);
@@ -117,6 +116,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtfechatorneo;
         private System.Windows.Forms.Button btntorneocrear;
-        private System.Windows.Forms.ComboBox cboact;
+        private System.Windows.Forms.TextBox txtnom;
     }
 }

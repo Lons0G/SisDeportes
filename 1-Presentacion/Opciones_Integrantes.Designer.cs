@@ -92,6 +92,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Opciones_Integrantes";
             this.Text = "Opciones_Integrantes";
+            this.Load += new System.EventHandler(this.Opciones_Integrantes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 

@@ -14,13 +14,14 @@ namespace _1_Presentacion
 {
     public partial class Equipos : Form
     {
-        private int _id;
+        private int _id, id_depo;
         private string _name;
-        public Equipos(int Id, string Nombre)
+        public Equipos(int Id,string Nombre,int iddepo)
         {
             InitializeComponent();
             _id = Id;
             _name = Nombre;
+            //id_depo = iddepo;
         }
         public void CargarDeporte()
         {
@@ -32,6 +33,7 @@ namespace _1_Presentacion
             cboidequipo.DisplayMember = "Nombre";
             cboidequipo.ValueMember = "IdTipoDeporte";
             cboidequipo.DataSource = lista_deportes;
+  
 
         }
         private void Cargar_TiposCategoria()
@@ -45,6 +47,17 @@ namespace _1_Presentacion
             cboCategoria.DataSource = lista_TiposDeportes;
 
         }
+        //private void Cargar_TiposCategoria()
+        //{
+        //    List<CLS_Categoria> lista_categoria = new List<CLS_Categoria>();
+        //    CLS_L_Categoria L_Categoria = new CLS_L_Categoria();
+        //    L_Categoria.Obtener_Categoria(lista_categoria, 1);
+
+        //    cboCategoria.DisplayMember = "Nombre";
+        //    cboCategoria.ValueMember = "IdTipoDeporte";
+        //    cboCategoria.DataSource = lista_categoria;
+
+        //}
         private void btnRegEquipo_Click(object sender, EventArgs e)
         {
             CLS_Equipo obj_equipo = new CLS_Equipo();
