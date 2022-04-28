@@ -20,8 +20,9 @@ namespace _1_Presentacion
         {
             id__ = _id;
             InitializeComponent();
-            Cargar_Categoria(deporte);
-          //Cargar_Deporte();
+          //Cargar_Categoria(deporte);
+          //Cargar_Categoria();
+            Cargar_Deporte();
             Cargar_Equipos(id__);
             Cargar_Equipos2(id__);
         }
@@ -31,52 +32,93 @@ namespace _1_Presentacion
 
         }
 
-        //public void Cargar_Deporte()
-        //{
-        //    List<CLS_Deporte> lista_deportes = new List<CLS_Deporte>();
-        //    CLS_L_Deporte L_deportes = new CLS_L_Deporte();
-
-        //    L_deportes.Obtener_Deportes(lista_deportes);
-
-        //    cmbCategoria.DisplayMember = "Nombre";
-        //    cmbCategoria.ValueMember = "IdCategoria";
-        //    cmbCategoria.DataSource = lista_deportes;
-
-        //    if (cmbCategoria.SelectedValue.ToString() != null)
-        //    {
-        //        string idDeporte = cmbCategoria.SelectedValue.ToString();
-        //       //Cargar_Categoria(idDeporte);
-        //    }
-        //}
-
-        public void Cargar_Categoria()
-        {
-
-        }
-
-        public void Cargar_Categoria(int idDeporte)
+        public void Cargar_Deporte()
         {
             try
             {
-                //LISTA DE LAS CATEGORIAS QUE SE TIENEN EN ESTE DEPORTE//
-                List<CLS_Categoria> list_categoria = new List<CLS_Categoria>();
-                CLS_L_Categoria L_categoria = new CLS_L_Categoria();
+                List<CLS_Deporte> lista_deportes = new List<CLS_Deporte>();
+                CLS_L_Deporte L_deportes = new CLS_L_Deporte();
 
-                //SE EJECTUA EL METODO PARA OBTENER LAS CATEGORAIS//
-                L_categoria.Obtener_Categoria(list_categoria, idDeporte);
+                L_deportes.Obtener_Deportes(lista_deportes);
 
-                ////SE AGREGAN LAS CATEGORIAS AL COMBOBOX
-                //foreach (var categoria in list_categoria) {
-                //    cmbCategoria.Items.Add(categoria.IdCategoria); //PENDIENTE: AGREGAR TAMBIEN EL ID DE LA CATEGORIA
-                //}
                 cmbCategoria.DisplayMember = "Nombre";
                 cmbCategoria.ValueMember = "IdCategoria";
-                cmbCategoria.DataSource = list_categoria;
+                cmbCategoria.DataSource = lista_deportes;
 
+                if (cmbCategoria.SelectedValue.ToString() != null)
+                {
+                    string idDeporte = cmbCategoria.SelectedValue.ToString();
+                    //Cargar_Categoria(idDeporte);
+                    //Cargar_Categoria(int idDeporte);
+                    //Cargar_Categoria();
+                }
             }
             catch (Exception ex)
-            { MessageBox.Show(ex.Message); }
+            { MessageBox.Show(ex.Message); }            
         }
+
+        //public void Cargar_Categoria()
+        //{
+        //    try
+        //    {
+        //        //LISTA DE LAS CATEGORIAS QUE SE TIENEN EN ESTE DEPORTE//
+        //        List<CLS_Categoria> list_categoria = new List<CLS_Categoria>();
+        //        CLS_L_Categoria L_categoria = new CLS_L_Categoria();
+
+        //        //SE EJECTUA EL METODO PARA OBTENER LAS CATEGORAIS//
+        //        L_categoria.Obtener_Categoria(list_categoria);
+
+        //        cmbCategoria.DisplayMember = "Nombre";
+        //        cmbCategoria.ValueMember = "IdCategoria";
+        //        cmbCategoria.DataSource = list_categoria;
+
+        //        if (cmbCategoria.SelectedValue.ToString() != null)
+        //        {
+        //            string idDeporte = cmbCategoria.SelectedValue.ToString();
+        //            //Cargar_Categoria(idDeporte);
+        //            //Cargar_Categoria(int idDeporte);
+        //            //Cargar_Categoria();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    { MessageBox.Show(ex.Message); }
+        //}
+
+        //public void Cargar_Categoria(int idDeporte)
+        //{
+        //    try
+        //    {
+        //        //LISTA DE LAS CATEGORIAS QUE SE TIENEN EN ESTE DEPORTE//
+        //        List<CLS_Categoria> list_categoria = new List<CLS_Categoria>();
+        //        CLS_L_Categoria L_categoria = new CLS_L_Categoria();
+
+        //        //SE EJECTUA EL METODO PARA OBTENER LAS CATEGORAIS//
+        //        L_categoria.Obtener_Categoria(list_categoria , idDeporte );
+
+        //        ////SE AGREGAN LAS CATEGORIAS AL COMBOBOX
+        //        //foreach (var categoria in list_categoria)
+        //        //{
+        //        //    cmbCategoria.Items.Add(categoria.IdCategoria); //PENDIENTE: AGREGAR TAMBIEN EL ID DE LA CATEGORIA
+        //        //}
+
+        //        cmbCategoria.DisplayMember = "Nombre";
+        //        cmbCategoria.ValueMember = "IdCategoria";
+        //        cmbCategoria.DataSource = list_categoria;                
+        //    }
+        //    catch (Exception ex)
+        //    { MessageBox.Show(ex.Message); }
+        //}
+
+        //private void cmbDeporte_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (cmbCategoria.SelectedValue.ToString() != null)
+        //    {
+        //        string idDeporte = cmbCategoria.SelectedValue.ToString();
+        //        //Cargar_Categoria(idDeporte);
+        //        //Cargar_Categoria(int idDeporte);
+        //        //Cargar_Categoria();
+        //    }
+        //}
 
         //public void CargarEquipos()
         //{
@@ -142,13 +184,6 @@ namespace _1_Presentacion
             }
         }
 
-        //private void cmbDeporte_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    if (cmbDeporte.SelectedValue.ToString() != null)
-        //    {
-        //        string idDeporte = cmbDeporte.SelectedValue.ToString();
-        //        //Cargar_Categoria(idDeporte);
-        //    }
-        //}
+
     }
 }
