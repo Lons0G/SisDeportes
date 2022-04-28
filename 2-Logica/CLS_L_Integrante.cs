@@ -96,5 +96,59 @@ namespace _2_Logica
                 _conexion.Dispose();
             }
         }
+        public bool ObtenerIntegrantes(ref List<CLS_Integrantes> lista_integrante)
+        {
+            try
+            {
+                Conexion();
+                SqlCommand comando = new SqlCommand("SP_MOSTRAR_USUARIOS", _conexion)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                _conexion.Open();
+                int fila = Convert.ToInt32(comando.ExecuteScalar());
+                if (fila != 0)
+                {
+                    SqlDataReader reader = comando.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        lista_integrante.Add(ConvertirIntegrante(reader));
+                    }
+                }
+                return true;
+            }
+            catch (Exception error)
+            {
+                CLS_Integrantes obj_integrante = new CLS_Integrantes();
+                obj_integrante.Error = error.Message;
+                lista_integrante.Add(obj_integrante);
+                return false;
+            }
+            finally
+            {
+                _conexion.Close();
+                _conexion.Dispose();
+            }
+        }
+        //METODO PARA AGREGAR USUARIOS EN LA LISTA DE USUARIOS//
+        private CLS_Integrantes ConvertirIntegrante(IDataReader reader)
+        {
+            CLS_Integrantes obj_integrante = new CLS_Integrantes();
+
+            obj_integrante.IdIntegrante = Convert.ToInt32(reader["IdIntegrante"].ToString());
+            obj_integrante.IdUsuario = Convert.ToInt32(reader["IdUsuario"].ToString());
+            obj_integrante.IdEquipo = Convert.ToInt32(reader["IdEquipo"].ToString());
+            try { obj_integrante.IdEntrenador = Convert.ToInt32(reader["IdEntrenador"].ToString()); }
+            catch (Exception error) { obj_integrante.IdEntrenador = 0; }
+            obj_integrante.Nombre = reader["Nombre"].ToString();
+            obj_integrante.Apellido = reader["Apellido"].ToString();
+            obj_integrante.Edad = Convert.ToByte(reader["Edad"].ToString());
+            obj_integrante.Nacionalidad = reader["Nacionalidad"].ToString();
+            obj_integrante.Posicion = reader["Posicion"].ToString();
+            obj_integrante.Dorsal = Convert.ToInt32(reader["Dorsal"].ToString());
+            obj_integrante.Rol = reader["Rol"].ToString();
+
+            return obj_integrante;
+        }
     }
 }

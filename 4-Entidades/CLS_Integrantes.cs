@@ -11,8 +11,8 @@
         private byte _edad;
         private string _nacionalidad;
         private string _posicion;
-        private string _dorsal;
-        private int _idRol;
+        private int _dorsal;
+        private string _rol;
         private string _error;
         public int IdIntegrante { get => _IdIntegrante; set => _IdIntegrante = value; }
         public int IdEquipo { get => _IdEquipo; set => _IdEquipo = value; }
@@ -23,8 +23,8 @@
         public byte Edad { get => _edad; set => _edad = value; }
         public string Nacionalidad { get => _nacionalidad; set => _nacionalidad = value; }
         public string Posicion { get => _posicion; set => _posicion = value; }
-        public string Dorsal { get => _dorsal; set => _dorsal = value; }
-        public int IdRol { get => _idRol; set => _idRol = value; }
+        public int Dorsal { get => _dorsal; set => _dorsal = value; }
+        public string Rol { get => _rol; set => _rol = value; }
         public string Error { get => _error; set => _error = value; }
     }
 }
