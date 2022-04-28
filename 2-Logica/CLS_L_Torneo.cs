@@ -8,7 +8,7 @@ namespace _2_Logica
     public class CLS_L_Torneo
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Damian); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
 
         //METODO PARA INSERTAR TORNEO//
         public bool Insertar_Torneo(ref CLS_Torneo obj_torneo) {
@@ -23,6 +23,7 @@ namespace _2_Logica
                 comando.Parameters.AddWithValue("@IdUsuario", obj_torneo.IdUsuario);
                 comando.Parameters.AddWithValue("@IdTipo", obj_torneo.IdTipo);
                 comando.Parameters.AddWithValue("@Nombre", obj_torneo.Nombre);
+                comando.Parameters.AddWithValue("@IdDeporte", obj_torneo.IdDeporte);
                 _conexion.Open();
                 comando.ExecuteNonQuery();
                 return true;

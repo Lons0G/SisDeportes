@@ -12,7 +12,7 @@ namespace _2_Logica
     public class CLS_L_Integrante
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Damian); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
 
         //METODO PARA INSERTAR INTEGRANTE//
         public bool Insertar_Integrante(ref CLS_Integrantes obj_integrante) {
