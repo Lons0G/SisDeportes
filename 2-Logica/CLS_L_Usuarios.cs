@@ -9,7 +9,11 @@ namespace _2_Logica
     public class CLS_L_Usuarios
     {
         SqlConnection _conexion;
+<<<<<<< HEAD
         private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Damian); }
+=======
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
+>>>>>>> 8e0ea8566c24c1229b6e41a38848284d82c053f3
 
         public bool Insertar_Usuario(ref CLS_Usuario obj_usuario) {
             try {
