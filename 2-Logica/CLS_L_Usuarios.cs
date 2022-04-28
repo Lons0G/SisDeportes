@@ -174,10 +174,11 @@ namespace _2_Logica
                 if (fila != 0) {
                     SqlDataReader reader = comando.ExecuteReader();
                     while (reader.Read()) {
+
                         obj_usuario.Deporte = Convert.ToInt32(reader["IdDeporte"].ToString());
                     }
                 }
-                else { obj_usuario.Id = 0; }
+                
                 return true;
             }
             catch (Exception error) {

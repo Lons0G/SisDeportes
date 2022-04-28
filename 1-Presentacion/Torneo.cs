@@ -14,13 +14,18 @@ namespace _1_Presentacion
 {
     public partial class Torneo : Form
     {
-        int id_cate, id_usu, id_tipo;
-        public Torneo(int d1,int d2, int d3)
+        int id_depo, id_usu;
+        public Torneo(int d1,int d2)
         {
-            id_cate = d1;
-            id_usu = d2;
-            id_tipo = d3;
+           
             InitializeComponent();
+            id_depo = d1;
+            id_usu = d2;
+        }
+
+        private void Torneo_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void btntorneocrear_Click(object sender, EventArgs e)
@@ -29,10 +34,10 @@ namespace _1_Presentacion
             CLS_L_Torneo l_Torneo = new CLS_L_Torneo();
 
             obj_torneo.Fecha = Convert.ToDateTime(this.dtfechatorneo.Text);
-            obj_torneo.IdCategoria = id_cate;
+            obj_torneo.IdCategoria = 1;
             obj_torneo.IdUsuario = id_usu;
-            obj_torneo.IdTipo = id_tipo;
-            obj_torneo.IdDeporte = 1;
+            obj_torneo.IdTipo = 1;
+            obj_torneo.IdDeporte = id_depo;
             obj_torneo.Nombre = txtnom.Text;
            
 

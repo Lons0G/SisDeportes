@@ -93,6 +93,7 @@
             this.Name = "Opciones_Deportes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Opciones_Deportes";
+            this.Load += new System.EventHandler(this.Opciones_Deportes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
