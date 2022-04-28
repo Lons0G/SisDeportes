@@ -117,7 +117,7 @@ namespace _1_Presentacion
             if (cmbDeporte.SelectedValue.ToString() != null)
             {
                 string idDeporte = cmbDeporte.SelectedValue.ToString();
-                Cargar_Categoria(idDeporte);
+                //Cargar_Categoria(idDeporte);
             }
         }
     }

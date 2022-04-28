@@ -200,10 +200,7 @@ namespace _1_Presentacion
         private void Btn_Actividad_Click(object sender, EventArgs e)
         {
             //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
-<<<<<<< HEAD
             AbrirForms(new Creación_Actividades(obj_usuario.Deporte,obj_usuario.Id)); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
-=======
-            AbrirForms(new Opciones_Actividades(obj_usuario.Deporte)); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
         }
         private void Btn_Torneo_Click(object sender, EventArgs e)
         {
@@ -214,7 +211,6 @@ namespace _1_Presentacion
         {
             //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
             AbrirForms(new OpcionesTipo_Act()); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
->>>>>>> ec12d7f6165ba2d54e2303993b56d1d0c9dac99b
         }
         private void _p_controles_Paint(object sender, PaintEventArgs e)
         {
