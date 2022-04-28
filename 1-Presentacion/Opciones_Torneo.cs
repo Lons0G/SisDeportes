@@ -52,7 +52,7 @@ namespace _1_Presentacion
 
             foreach (var torneo in lista_torneos)
             {
-                UC_boton_entidad btn = new UC_boton_entidad(torneo.IdTorneo, torneo.Nombre, x);
+                UC_boton_entidad btn = new UC_boton_entidad(torneo.IdTorneo, torneo.Nombre, x, 2);
                 btn.Top = 52 * i;
                 _p_torneos.Controls.Add(btn);
                 i++;

@@ -62,7 +62,7 @@ namespace _1_Presentacion
             int x = _p_usuarios.Width;
 
             foreach (var usuario in lista_usuarios) {
-                UC_boton_entidad btn = new UC_boton_entidad(usuario.Id, usuario.Nombre, usuario.Apellido, usuario.Usuario, usuario.Password, usuario.Correo, usuario.Telefono, usuario.Sueldo, usuario.Rol, this, x);
+                UC_boton_entidad btn = new UC_boton_entidad(usuario.Id, usuario.Nombre, usuario.Apellido, usuario.Usuario, usuario.Password, usuario.Correo, usuario.Telefono, usuario.Sueldo, usuario.Rol, this, x, 1);
                 btn.Top = 52 * i;
                 _p_usuarios.Controls.Add(btn);
                 i++;

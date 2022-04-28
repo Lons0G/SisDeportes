@@ -42,7 +42,7 @@ namespace _1_Presentacion
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            AbrirForms(new Creación_Actividades(id_deporte));
+            //AbrirForms(new Creación_Actividades(id_deporte));
         }
     }
 }

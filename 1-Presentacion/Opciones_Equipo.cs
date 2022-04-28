@@ -51,7 +51,7 @@ namespace _1_Presentacion
             int x = _p_equipos.Width;
 
             foreach (var equipo in lista_equipos) {
-                UC_boton_entidad btn = new UC_boton_entidad(equipo.IdEquipo, equipo.Nombre, x);
+                UC_boton_entidad btn = new UC_boton_entidad(equipo.IdEquipo, equipo.Nombre, x, 7);
                 btn.Top = 52 * i;
                 _p_equipos.Controls.Add(btn);
                 i++;
