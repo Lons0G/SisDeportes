@@ -101,7 +101,7 @@ namespace _2_Logica
             try
             {
                 Conexion();
-                SqlCommand comando = new SqlCommand("SP_MOSTRAR_USUARIOS", _conexion)
+                SqlCommand comando = new SqlCommand("SP_MOSTRAR_INTEGRANTE", _conexion)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
