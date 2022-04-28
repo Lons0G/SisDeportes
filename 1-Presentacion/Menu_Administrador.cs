@@ -16,6 +16,9 @@ namespace _1_Presentacion
         CLS_Usuario obj_usuario = new CLS_Usuario();
         CLS_Equipo obj_equipo = new CLS_Equipo();
         CLS_Deporte obj_deporte = new CLS_Deporte();
+        CLS_TipoActividad obj_tipo_act = new CLS_TipoActividad();
+        CLS_Torneo obj_torneo = new CLS_Torneo();
+
         public Menu_Administrador(ref CLS_Usuario usuario)
         {
             InitializeComponent();
@@ -209,7 +212,7 @@ namespace _1_Presentacion
         private void Btn_Torneo_Click(object sender, EventArgs e)
         {
             //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
-            AbrirForms(new Opciones_Torneo()); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
+            AbrirForms(new Opciones_Torneo(obj_torneo.IdDeporte, obj_torneo.IdUsuario, obj_torneo.IdTipo)); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
         }
         private void Btn_Tipo_Act_Click(object sender, EventArgs e)
         {
@@ -222,6 +225,11 @@ namespace _1_Presentacion
         }
 
         private void _p_usuario_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void _lbl_usuario_Click(object sender, EventArgs e)
         {
 
         }
