@@ -38,9 +38,9 @@ namespace _1_Presentacion
 
             L_deportes.Obtener_Deportes(lista_deportes);
 
-            cmbDeporte.DisplayMember = "Nombre";
-            cmbDeporte.ValueMember = "IdTipoDeporte";
-            cmbDeporte.DataSource = lista_deportes;
+            cmbCategoria.DisplayMember = "Nombre";
+            cmbCategoria.ValueMember = "IdTipoDeporte";
+            cmbCategoria.DataSource = lista_deportes;
 
         }
 
@@ -113,7 +113,7 @@ namespace _1_Presentacion
             CLS_L_Actividad L_actividad = new CLS_L_Actividad();
 
             obj_actividad.Nombre = txtActividad.Text;
-            obj_actividad.IdDeporte = cmbDeporte.SelectedIndex;
+          //obj_actividad.IdDeporte = cmbDeporte.SelectedIndex;
             obj_actividad.IdCategoria = 1; /*cmbCategoria.SelectedIndex;*/
             obj_actividad.Fecha = dtpFecha.Value;
             obj_actividad.Hora = dtpHora.Value;
@@ -132,13 +132,13 @@ namespace _1_Presentacion
             }
         }
 
-        private void cmbDeporte_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbDeporte.SelectedValue.ToString() != null)
-            {
-                string idDeporte = cmbDeporte.SelectedValue.ToString();
-                //Cargar_Categoria(idDeporte);
-            }
-        }
+        //private void cmbDeporte_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (cmbDeporte.SelectedValue.ToString() != null)
+        //    {
+        //        string idDeporte = cmbDeporte.SelectedValue.ToString();
+        //        //Cargar_Categoria(idDeporte);
+        //    }
+        //}
     }
 }

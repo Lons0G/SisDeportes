@@ -42,8 +42,6 @@
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpHora = new System.Windows.Forms.DateTimePicker();
-            this.cmbDeporte = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -70,7 +68,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 139);
+            this.label4.Location = new System.Drawing.Point(6, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 27);
             this.label4.TabIndex = 3;
@@ -79,7 +77,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 195);
+            this.label5.Location = new System.Drawing.Point(6, 145);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 27);
             this.label5.TabIndex = 4;
@@ -88,7 +86,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 245);
+            this.label6.Location = new System.Drawing.Point(6, 195);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 27);
             this.label6.TabIndex = 5;
@@ -97,7 +95,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 293);
+            this.label7.Location = new System.Drawing.Point(6, 243);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(149, 27);
             this.label7.TabIndex = 6;
@@ -106,7 +104,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 344);
+            this.label8.Location = new System.Drawing.Point(6, 294);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(149, 27);
             this.label8.TabIndex = 7;
@@ -122,7 +120,7 @@
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(168, 136);
+            this.cmbCategoria.Location = new System.Drawing.Point(168, 86);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(407, 35);
             this.cmbCategoria.TabIndex = 10;
@@ -130,7 +128,7 @@
             // cmbContri1
             // 
             this.cmbContri1.FormattingEnabled = true;
-            this.cmbContri1.Location = new System.Drawing.Point(168, 285);
+            this.cmbContri1.Location = new System.Drawing.Point(168, 235);
             this.cmbContri1.Name = "cmbContri1";
             this.cmbContri1.Size = new System.Drawing.Size(407, 35);
             this.cmbContri1.TabIndex = 12;
@@ -138,14 +136,14 @@
             // cmbContri2
             // 
             this.cmbContri2.FormattingEnabled = true;
-            this.cmbContri2.Location = new System.Drawing.Point(168, 336);
+            this.cmbContri2.Location = new System.Drawing.Point(168, 286);
             this.cmbContri2.Name = "cmbContri2";
             this.cmbContri2.Size = new System.Drawing.Size(407, 35);
             this.cmbContri2.TabIndex = 13;
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(168, 187);
+            this.dtpFecha.Location = new System.Drawing.Point(168, 137);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(407, 35);
             this.dtpFecha.TabIndex = 14;
@@ -154,8 +152,6 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.dtpHora);
-            this.groupBox1.Controls.Add(this.cmbDeporte);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dtpFecha);
             this.groupBox1.Controls.Add(this.label4);
@@ -170,7 +166,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(48, 98);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(586, 390);
+            this.groupBox1.Size = new System.Drawing.Size(586, 341);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
@@ -178,34 +174,16 @@
             // dtpHora
             // 
             this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHora.Location = new System.Drawing.Point(168, 239);
+            this.dtpHora.Location = new System.Drawing.Point(168, 189);
             this.dtpHora.Name = "dtpHora";
             this.dtpHora.Size = new System.Drawing.Size(407, 35);
             this.dtpHora.TabIndex = 20;
-            // 
-            // cmbDeporte
-            // 
-            this.cmbDeporte.FormattingEnabled = true;
-            this.cmbDeporte.Location = new System.Drawing.Point(168, 83);
-            this.cmbDeporte.Name = "cmbDeporte";
-            this.cmbDeporte.Size = new System.Drawing.Size(407, 35);
-            this.cmbDeporte.TabIndex = 19;
-            this.cmbDeporte.SelectedIndexChanged += new System.EventHandler(this.cmbDeporte_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 27);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Deporte:";
             // 
             // btnAceptar
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.White;
             this.btnAceptar.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnAceptar.Location = new System.Drawing.Point(287, 505);
+            this.btnAceptar.Location = new System.Drawing.Point(289, 484);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(107, 50);
             this.btnAceptar.TabIndex = 16;
@@ -252,8 +230,6 @@
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbDeporte;
         private System.Windows.Forms.DateTimePicker dtpHora;
     }
 }
