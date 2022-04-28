@@ -88,7 +88,7 @@ namespace _1_Presentacion
             btn_deportes.Top = (50 + 12) * 2;
 
 
-            //INSTANCIA UN NUEVO BOTON DEPORTES Y LE COLOCA LAS PROPIEDADES
+            //INSTANCIA UN NUEVO BOTON CATEGORIAS Y LE COLOCA LAS PROPIEDADES
             Button btn_categoria = new Button();
             btn_categoria.Name = "btn_categoria";
             btn_categoria.Text = "Categoria";
@@ -115,7 +115,7 @@ namespace _1_Presentacion
         }
         private void Btn_Deportes_Click(object sender, EventArgs e) {
             //REALIZAR EL FORMS QUE PERMITIRA VISUALIZAR LOS DEPORTES//
-            AbrirForms(new FRM_Deportes(obj_usuario.Id, obj_usuario.Usuario));
+            AbrirForms(new Opciones_Deportes(obj_usuario.Id, obj_usuario.Usuario));
         }
         private void Btn_Equipos_Click(object sender, EventArgs e)
         {
@@ -133,7 +133,7 @@ namespace _1_Presentacion
         private void Btn_Integrantes_Click(object sender, EventArgs e)
         {
             //ABRE EL FORMS DE OPCIONES_Integrante//
-            AbrirForms(new FRM_Integrantes());
+            AbrirForms(new Opciones_Integrantes());
 
         }
         private void Agregar_BTN_Usuario() {
@@ -154,43 +154,68 @@ namespace _1_Presentacion
             btn_integrantes.Width = 120;
             btn_integrantes.Height = 50;
             btn_integrantes.Top = (50 + 12) * 2;
-            
-            //INSTANCIA UN NUEVO BOTON DEPORTES Y LE COLOCA LAS PROPIEDADES
-            Button btn_deportes = new Button();
-            btn_deportes.Name = "btn_deportes";
-            btn_deportes.Text = "Deportes";
-            btn_deportes.Width = 120;
-            btn_deportes.Height = 50;
-            btn_deportes.Top = (50 + 12) * 3;
 
             //INSTANCIA UN NUEVO BOTON ACTIVIDAD Y LE COLOCA LAS PROPIEDADES
             Button btn_actividad = new Button();
-            btn_actividad.Name = "btn_Actividad"; 
+            btn_actividad.Name = "btn_Actividad";
             btn_actividad.Text = "Actividad";
             btn_actividad.Width = 120;
             btn_actividad.Height = 50;
-            btn_actividad.Top = (50 + 12) * 4;
+            btn_actividad.Top = (50 + 12) * 3;
+
+            //INSTANCIA UN NUEVO BOTON EQUIPO Y LE COLOCA LAS PROPIEDADES//
+            Button btn_Torneo = new Button();
+            btn_Torneo.Name = "btn_Torneo";
+            btn_Torneo.Text = "Torneos";
+            btn_Torneo.Width = 120;
+            btn_Torneo.Height = 50;
+            btn_Torneo.Top = (50 + 12) * 4;
+
+            //INSTANCIA UN NUEVO BOTON EQUIPO Y LE COLOCA LAS PROPIEDADES//
+            Button btn_TipoAct = new Button();
+            btn_TipoAct.Name = "btn_Tipo_Act";
+            btn_TipoAct.Text = "Tipo Act";
+            btn_TipoAct.Width = 120;
+            btn_TipoAct.Height = 50;
+            btn_TipoAct.Top = (50 + 12) * 5;
+
 
 
             //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON USUARIO//
             btn_Equipos.Click += Btn_Equipos_Click;
             btn_integrantes.Click += Btn_Integrantes_Click;
-            btn_deportes.Click += Btn_Deportes_Click;
             btn_actividad.Click += Btn_Actividad_Click;
+            btn_Torneo.Click += Btn_Torneo_Click;
+            btn_TipoAct.Click += Btn_Tipo_Act_Click;
+
 
             //SE AGREGA EL BOTON USUARIO AL PANEL DE CONTROLES//
             _p_controles.Controls.Add(btn_Equipos);
             _p_controles.Controls.Add(btn_integrantes);
-            _p_controles.Controls.Add(btn_deportes);
             _p_controles.Controls.Add(btn_actividad);
+            _p_controles.Controls.Add(btn_Torneo);
+            _p_controles.Controls.Add(btn_TipoAct);
         }
 
         private void Btn_Actividad_Click(object sender, EventArgs e)
         {
             //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
+<<<<<<< HEAD
             AbrirForms(new Creación_Actividades(obj_usuario.Deporte,obj_usuario.Id)); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
+=======
+            AbrirForms(new Opciones_Actividades(obj_usuario.Deporte)); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
         }
-
+        private void Btn_Torneo_Click(object sender, EventArgs e)
+        {
+            //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
+            AbrirForms(new Opciones_Torneo()); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
+        }
+        private void Btn_Tipo_Act_Click(object sender, EventArgs e)
+        {
+            //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
+            AbrirForms(new OpcionesTipo_Act()); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
+>>>>>>> ec12d7f6165ba2d54e2303993b56d1d0c9dac99b
+        }
         private void _p_controles_Paint(object sender, PaintEventArgs e)
         {
 

@@ -9,8 +9,13 @@ namespace _2_Logica
     public class CLS_L_Usuarios
     {
         SqlConnection _conexion;
+<<<<<<< HEAD
         //private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
         private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Brandon); }
+=======
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
+        
+>>>>>>> ec12d7f6165ba2d54e2303993b56d1d0c9dac99b
         //METODO PARA INSERTAR USUARIO//
         public bool Insertar_Usuario(ref CLS_Usuario obj_usuario) {
             try {

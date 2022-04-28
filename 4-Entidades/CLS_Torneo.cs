@@ -9,6 +9,7 @@ namespace _3_Entidades
         private int _idCategoria;
         private int _idUsuario;
         private int _idTipo;
+        private int _idDeporte;
         private string _nombre;
         private string _error;
         public int IdTorneo { get => _idTorneo; set => _idTorneo = value; }
@@ -18,5 +19,6 @@ namespace _3_Entidades
         public int IdTipo { get => _idTipo; set => _idTipo = value; }
         public string Nombre { get => _nombre; set => _nombre = value; }
         public string Error { get => _error; set => _error = value; }
+        public int IdDeporte { get => _idDeporte; set => _idDeporte = value; }
     }
 }

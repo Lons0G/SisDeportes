@@ -100,17 +100,41 @@
     <Compile Include="Menu_Administrador.Designer.cs">
       <DependentUpon>Menu_Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="OpcionesTipo_Act.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpcionesTipo_Act.Designer.cs">
+      <DependentUpon>OpcionesTipo_Act.cs</DependentUpon>
+    </Compile>
     <Compile Include="Opciones_Actividades.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Opciones_Actividades.Designer.cs">
       <DependentUpon>Opciones_Actividades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Opciones_Deportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones_Deportes.Designer.cs">
+      <DependentUpon>Opciones_Deportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Opciones_Equipo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Opciones_Equipo.Designer.cs">
       <DependentUpon>Opciones_Equipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opciones_Integrantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones_Integrantes.Designer.cs">
+      <DependentUpon>Opciones_Integrantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opciones_Torneo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones_Torneo.Designer.cs">
+      <DependentUpon>Opciones_Torneo.cs</DependentUpon>
     </Compile>
     <Compile Include="Opciones_Usuario.cs">
       <SubType>Form</SubType>
@@ -120,6 +144,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tipo_Act.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tipo_Act.Designer.cs">
+      <DependentUpon>Tipo_Act.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Torneo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Torneo.Designer.cs">
+      <DependentUpon>Torneo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_boton_entidad.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,11 +189,23 @@
     <EmbeddedResource Include="Menu_Administrador.resx">
       <DependentUpon>Menu_Administrador.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OpcionesTipo_Act.resx">
+      <DependentUpon>OpcionesTipo_Act.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Opciones_Actividades.resx">
       <DependentUpon>Opciones_Actividades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Opciones_Deportes.resx">
+      <DependentUpon>Opciones_Deportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Opciones_Equipo.resx">
       <DependentUpon>Opciones_Equipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opciones_Integrantes.resx">
+      <DependentUpon>Opciones_Integrantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opciones_Torneo.resx">
+      <DependentUpon>Opciones_Torneo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Opciones_Usuario.resx">
       <DependentUpon>Opciones_Usuario.cs</DependentUpon>
@@ -166,6 +214,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tipo_Act.resx">
+      <DependentUpon>Tipo_Act.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Torneo.resx">
+      <DependentUpon>Torneo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_boton_entidad.resx">
       <DependentUpon>UC_boton_entidad.cs</DependentUpon>
