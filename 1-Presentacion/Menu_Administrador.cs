@@ -204,6 +204,7 @@ namespace _1_Presentacion
         {
             //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
             AbrirForms(new Creación_Actividades(obj_usuario.Deporte,obj_usuario.Id)); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
+            
         }
         private void Btn_Torneo_Click(object sender, EventArgs e)
         {

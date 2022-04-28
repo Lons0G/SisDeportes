@@ -9,8 +9,8 @@ namespace _2_Logica
     public class CLS_L_Deporte
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Damian); }
-
+        //private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Damian); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Brandon); }
         //METODO PARA INSERTAR DEPORTE//
         public bool Insertar_Deporte(ref CLS_Deporte obj_deporte)
         {
