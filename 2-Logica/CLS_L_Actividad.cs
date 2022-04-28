@@ -10,8 +10,7 @@ namespace _2_Logica
     {
         SqlConnection _conexion;
         private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Damian); }
-
-
+      
         //METODO PARA INSERTAR UNA ACTIVIDAD
         public bool Insertar_Actividad(ref CLS_Actividad obj_actividad) {
             try {

@@ -58,7 +58,7 @@ namespace _1_Presentacion
             obj_Integrante.Edad = Convert.ToByte(this.TxtEdad.Text);
             obj_Integrante.Nacionalidad = this.TxtNacionalidad.Text;
             obj_Integrante.Posicion = this.TxtPosicion.Text;
-            obj_Integrante.Dorsal= this.TxtDorsal.Text;
+            obj_Integrante.Dorsal= Convert.ToInt32(this.TxtDorsal.Text);
 
             bool resultado = log_Integrante.Editar_Integrante(ref obj_Integrante);
 

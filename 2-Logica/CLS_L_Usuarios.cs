@@ -10,8 +10,7 @@ namespace _2_Logica
     {
         SqlConnection _conexion;
         private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
-
-
+        
         public bool Insertar_Usuario(ref CLS_Usuario obj_usuario) {
             try {
                 Conexion();

@@ -13,8 +13,7 @@ namespace _2_Logica
     {
         SqlConnection _conexion;
         private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Damian); }
-
-
+        
         //METODO PARA INSERTAR EQUIPO//
         public bool Insertar_Equipo(ref CLS_Equipo obj_equipo)
         {
