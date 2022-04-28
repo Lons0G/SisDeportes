@@ -93,24 +93,18 @@ namespace _1_Presentacion
             btn_deportes.Top = (50 + 12) * 2;
 
 
-            //INSTANCIA UN NUEVO BOTON CATEGORIAS Y LE COLOCA LAS PROPIEDADES
-            Button btn_categoria = new Button();
-            btn_categoria.Name = "btn_categoria";
-            btn_categoria.Text = "Categoria";
-            btn_categoria.Width = 120;
-            btn_categoria.Height = 50;
-            btn_categoria.Top = (50 + 12) * 3;
+          
 
 
             //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON USUARIO//
             btn_usuarios.Click += Btn_Usuarios_Click;
             btn_deportes.Click += Btn_Deportes_Click;
-            btn_categoria.Click += Btn_Categoria_Click;
+           
 
             //SE AGREGA EL BOTON USUARIO AL PANEL DE CONTROLES//
             _p_controles.Controls.Add(btn_usuarios);
             _p_controles.Controls.Add(btn_deportes);
-            _p_controles.Controls.Add(btn_categoria);
+            
         }
 
         //METODO GENERADO PARA LLAMARSE CADA VEZ QUE SE DE CLICK AL BOTON//
@@ -185,6 +179,14 @@ namespace _1_Presentacion
             btn_TipoAct.Height = 50;
             btn_TipoAct.Top = (50 + 12) * 5;
 
+            //INSTANCIA UN NUEVO BOTON CATEGORIAS Y LE COLOCA LAS PROPIEDADES
+            Button btn_categoria = new Button();
+            btn_categoria.Name = "btn_categoria";
+            btn_categoria.Text = "Categoria";
+            btn_categoria.Width = 120;
+            btn_categoria.Height = 50;
+            btn_categoria.Top = (50 + 12) * 6;
+
 
 
             //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON USUARIO//
@@ -193,7 +195,7 @@ namespace _1_Presentacion
             btn_actividad.Click += Btn_Actividad_Click;
             btn_Torneo.Click += Btn_Torneo_Click;
             btn_TipoAct.Click += Btn_Tipo_Act_Click;
-
+            btn_categoria.Click += Btn_Categoria_Click;
 
             //SE AGREGA EL BOTON USUARIO AL PANEL DE CONTROLES//
             _p_controles.Controls.Add(btn_Equipos);
@@ -201,6 +203,7 @@ namespace _1_Presentacion
             _p_controles.Controls.Add(btn_actividad);
             _p_controles.Controls.Add(btn_Torneo);
             _p_controles.Controls.Add(btn_TipoAct);
+            _p_controles.Controls.Add(btn_categoria);
         }
 
         private void Btn_Actividad_Click(object sender, EventArgs e)
@@ -212,7 +215,7 @@ namespace _1_Presentacion
         private void Btn_Torneo_Click(object sender, EventArgs e)
         {
             //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
-            AbrirForms(new Opciones_Torneo(obj_torneo.IdDeporte, obj_torneo.IdUsuario, obj_torneo.IdTipo)); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
+            AbrirForms(new Opciones_Torneo(obj_usuario.Deporte, obj_usuario.Id)); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
         }
         private void Btn_Tipo_Act_Click(object sender, EventArgs e)
         {

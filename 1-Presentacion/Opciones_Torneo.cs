@@ -14,13 +14,13 @@ namespace _1_Presentacion
 {
     public partial class Opciones_Torneo : Form
     {
-        int cate, _id, tip;
-        public Opciones_Torneo(int categoria, int id, int tp)
+        int usu, _id;
+        public Opciones_Torneo(int id,int id_usu)
         {
-            cate = categoria;
-            _id = id;
-            tip = tp;
             InitializeComponent();
+            //cate = categoria;
+            _id = id;
+            usu = id_usu;
         }
         private void AbrirForms(object FRM_secundario)
         {
@@ -75,7 +75,7 @@ namespace _1_Presentacion
 
         private void btnInsertarTorneo_Click(object sender, EventArgs e)
         {
-            AbrirForms(new Torneo(cate, _id,tip)) ;
+            AbrirForms(new Torneo(usu, _id)) ;
         }
     }
 }

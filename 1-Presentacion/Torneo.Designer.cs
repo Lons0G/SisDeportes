@@ -105,6 +105,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Torneo";
             this.Text = "Torneo";
+            this.Load += new System.EventHandler(this.Torneo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

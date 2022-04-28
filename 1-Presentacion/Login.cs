@@ -24,18 +24,19 @@ namespace _1_Presentacion
 
             //SE EJECUTA EL METODO DEL LOGIN//
             L_usuario.Login(ref obj_usuario);
-
+            
             ////DESPUES DEL LOGIN, SE EJECUTA EL METODO DE OBTENER DEPORTE//
             //L_usuario.ObtenerDeporte(ref obj_usuario); // <-- SE REQUIERE DE SOLUCIONAR BUGS
 
             if (obj_usuario.Id != 0) //VERIFICA si mi rol de usuario existe, si es asi entra y muestra el menu de administrador
             {
+                L_usuario.ObtenerDeporte(ref obj_usuario);
                 this.Close();
                 this.Dispose();
                 th = new Thread(AbrirMenu);
                 th.SetApartmentState(ApartmentState.STA);
                 th.Start();
-
+               
             }
             else { MessageBox.Show("Usuario y/o Contraseña no existe"); }
         }
