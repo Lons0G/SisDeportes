@@ -8,7 +8,7 @@ namespace _2_Logica
     public class CLS_L_Tipo
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Damian); }
         //METODO PARA INSERTAR TIPO ACTIVIDAD//
         public bool Insertar_Tipo(ref CLS_TipoActividad obj_tipoActividad) {
             try {

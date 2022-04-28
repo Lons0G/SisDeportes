@@ -12,7 +12,7 @@ namespace _2_Logica
     public class CLS_L_Equipo
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Damian); }
 
         //METODO PARA INSERTAR EQUIPO//
         public bool Insertar_Equipo(ref CLS_Equipo obj_equipo)
@@ -46,7 +46,7 @@ namespace _2_Logica
             }
         }
         //METODO PARA EDITAR EQUIPO
-        public bool Editar_Usuario(ref CLS_Equipo obj_equipo) {
+        public bool Editar_Equipo(ref CLS_Equipo obj_equipo) {
             try {
                 Conexion();
                 SqlCommand comando = new SqlCommand("SP_EDITAR_EQUIPO", _conexion)

@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actualizar Torneos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Actualizar Torneos.Designer.cs">
+      <DependentUpon>Actualizar Torneos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actualizar_Equipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Actualizar_Equipo.Designer.cs">
+      <DependentUpon>Actualizar_Equipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Actualizar_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Actualizar_Usuario.Designer.cs">
       <DependentUpon>Actualizar_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actuzalizar_Integrantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Actuzalizar_Integrantes.Designer.cs">
+      <DependentUpon>Actuzalizar_Integrantes.cs</DependentUpon>
     </Compile>
     <Compile Include="Agregar_Usuario.cs">
       <SubType>Form</SubType>
@@ -162,8 +180,17 @@
     <Compile Include="UC_boton_entidad.Designer.cs">
       <DependentUpon>UC_boton_entidad.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Actualizar Torneos.resx">
+      <DependentUpon>Actualizar Torneos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Actualizar_Equipo.resx">
+      <DependentUpon>Actualizar_Equipo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Actualizar_Usuario.resx">
       <DependentUpon>Actualizar_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Actuzalizar_Integrantes.resx">
+      <DependentUpon>Actuzalizar_Integrantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Agregar_Usuario.resx">
       <DependentUpon>Agregar_Usuario.cs</DependentUpon>
