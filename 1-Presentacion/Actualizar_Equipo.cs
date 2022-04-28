@@ -35,7 +35,7 @@ namespace _1_Presentacion
 
             obj_Equipo.IdEquipo = id;
             obj_Equipo.Nombre=this.TxtNombreEquipo.Text;
-            
+
         }
     }
 }
