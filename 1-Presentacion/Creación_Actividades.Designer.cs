@@ -41,10 +41,10 @@
             this.cmbContri2 = new System.Windows.Forms.ComboBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbDeporte = new System.Windows.Forms.ComboBox();
             this.dtpHora = new System.Windows.Forms.DateTimePicker();
+            this.cmbDeporte = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,22 +170,27 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(48, 98);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(586, 409);
+            this.groupBox1.Size = new System.Drawing.Size(586, 390);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
-            // btnAceptar
+            // dtpHora
             // 
-            this.btnAceptar.BackColor = System.Drawing.Color.White;
-            this.btnAceptar.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnAceptar.Location = new System.Drawing.Point(285, 528);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(107, 50);
-            this.btnAceptar.TabIndex = 16;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHora.Location = new System.Drawing.Point(168, 239);
+            this.dtpHora.Name = "dtpHora";
+            this.dtpHora.Size = new System.Drawing.Size(407, 35);
+            this.dtpHora.TabIndex = 20;
+            // 
+            // cmbDeporte
+            // 
+            this.cmbDeporte.FormattingEnabled = true;
+            this.cmbDeporte.Location = new System.Drawing.Point(168, 83);
+            this.cmbDeporte.Name = "cmbDeporte";
+            this.cmbDeporte.Size = new System.Drawing.Size(407, 35);
+            this.cmbDeporte.TabIndex = 19;
+            this.cmbDeporte.SelectedIndexChanged += new System.EventHandler(this.cmbDeporte_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -196,28 +201,24 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Deporte:";
             // 
-            // cmbDeporte
+            // btnAceptar
             // 
-            this.cmbDeporte.FormattingEnabled = true;
-            this.cmbDeporte.Location = new System.Drawing.Point(168, 83);
-            this.cmbDeporte.Name = "cmbDeporte";
-            this.cmbDeporte.Size = new System.Drawing.Size(407, 35);
-            this.cmbDeporte.TabIndex = 19;
-            // 
-            // dtpHora
-            // 
-            this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHora.Location = new System.Drawing.Point(168, 239);
-            this.dtpHora.Name = "dtpHora";
-            this.dtpHora.Size = new System.Drawing.Size(407, 35);
-            this.dtpHora.TabIndex = 20;
+            this.btnAceptar.BackColor = System.Drawing.Color.White;
+            this.btnAceptar.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnAceptar.Location = new System.Drawing.Point(287, 505);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(107, 50);
+            this.btnAceptar.TabIndex = 16;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // Creación_Actividades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(692, 634);
+            this.ClientSize = new System.Drawing.Size(692, 613);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.label1);
