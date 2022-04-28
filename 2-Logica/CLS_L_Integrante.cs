@@ -15,7 +15,7 @@ namespace _2_Logica
         private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
 
         //METODO PARA INSERTAR INTEGRANTE//
-        public bool Insertar_Equipo(ref CLS_Integrantes obj_integrante) {
+        public bool Insertar_Integrante(ref CLS_Integrantes obj_integrante) {
             try {
                 Conexion();
                 SqlCommand comando = new SqlCommand("SP_INSERTAR_INTEGRANTE", _conexion)
@@ -45,7 +45,7 @@ namespace _2_Logica
             }
         }
         //METODO PARA EDITAR INTEGRANTE//
-        public bool Editar_Usuario(ref CLS_Integrantes obj_integrante) {
+        public bool Editar_Integrante(ref CLS_Integrantes obj_integrante) {
             try {
                 Conexion();
                 SqlCommand comando = new SqlCommand("SP_EDITAR_INTEGRANTE", _conexion)
@@ -76,7 +76,7 @@ namespace _2_Logica
             }
         }
         //METODO PARA ELIMINAR INTEGRANTE//
-        public bool Eliminar_Equipo(ref CLS_Integrantes obj_integrante) {
+        public bool Eliminar_Integrante(ref CLS_Integrantes obj_integrante) {
             try {
                 Conexion();
                 SqlCommand comando = new SqlCommand("SP_ELIMINAR_INTEGRANTE", _conexion)
