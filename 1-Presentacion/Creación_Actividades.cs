@@ -21,7 +21,7 @@ namespace _1_Presentacion
             id__ = _id;
             InitializeComponent();
             Cargar_Categoria(deporte);
-            Cargar_Deporte();
+          //Cargar_Deporte();
             Cargar_Equipos(id__);
             Cargar_Equipos2(id__);
         }
@@ -31,16 +31,26 @@ namespace _1_Presentacion
 
         }
 
-        public void Cargar_Deporte()
+        //public void Cargar_Deporte()
+        //{
+        //    List<CLS_Deporte> lista_deportes = new List<CLS_Deporte>();
+        //    CLS_L_Deporte L_deportes = new CLS_L_Deporte();
+
+        //    L_deportes.Obtener_Deportes(lista_deportes);
+
+        //    cmbCategoria.DisplayMember = "Nombre";
+        //    cmbCategoria.ValueMember = "IdCategoria";
+        //    cmbCategoria.DataSource = lista_deportes;
+
+        //    if (cmbCategoria.SelectedValue.ToString() != null)
+        //    {
+        //        string idDeporte = cmbCategoria.SelectedValue.ToString();
+        //       //Cargar_Categoria(idDeporte);
+        //    }
+        //}
+
+        public void Cargar_Categoria()
         {
-            List<CLS_Deporte> lista_deportes = new List<CLS_Deporte>();
-            CLS_L_Deporte L_deportes = new CLS_L_Deporte();
-
-            L_deportes.Obtener_Deportes(lista_deportes);
-
-            cmbCategoria.DisplayMember = "Nombre";
-            cmbCategoria.ValueMember = "IdTipoDeporte";
-            cmbCategoria.DataSource = lista_deportes;
 
         }
 

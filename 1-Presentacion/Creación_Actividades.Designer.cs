@@ -183,7 +183,7 @@
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.White;
             this.btnAceptar.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnAceptar.Location = new System.Drawing.Point(289, 484);
+            this.btnAceptar.Location = new System.Drawing.Point(287, 493);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(107, 50);
             this.btnAceptar.TabIndex = 16;
