@@ -8,7 +8,7 @@ namespace _2_Logica
     public class CLS_L_Torneo
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
         //METODO PARA INSERTAR TORNEO//
         public bool Insertar_Torneo(ref CLS_Torneo obj_torneo) {
             try {
@@ -17,12 +17,12 @@ namespace _2_Logica
                 {
                     CommandType = CommandType.StoredProcedure
                 };
-                _conexion.Open();
                 comando.Parameters.AddWithValue("@Fecha", obj_torneo.Fecha);
                 comando.Parameters.AddWithValue("@IdCategoria", obj_torneo.IdCategoria);
                 comando.Parameters.AddWithValue("@IdUsuario", obj_torneo.IdUsuario);
                 comando.Parameters.AddWithValue("@IdTipo", obj_torneo.IdTipo);
                 comando.Parameters.AddWithValue("@Nombre", obj_torneo.Nombre);
+                _conexion.Open();
                 comando.ExecuteNonQuery();
                 return true;
             }
@@ -49,6 +49,7 @@ namespace _2_Logica
                 comando.Parameters.AddWithValue("@IdUsuario", obj_torneo.IdUsuario);
                 comando.Parameters.AddWithValue("@IdTipo", obj_torneo.IdTipo);
                 comando.Parameters.AddWithValue("@Nombre", obj_torneo.Nombre);
+                _conexion.Open();
                 comando.ExecuteNonQuery();
                 return true;
             }
@@ -70,6 +71,7 @@ namespace _2_Logica
                     CommandType = CommandType.StoredProcedure
                 };
                 comando.Parameters.AddWithValue("@IdTorneo", obj_torneo.IdTorneo);
+                _conexion.Open();
                 comando.ExecuteNonQuery();
                 return true;
             }
@@ -91,6 +93,8 @@ namespace _2_Logica
                 {
                     CommandType = CommandType.StoredProcedure
                 };
+                //COLOCAR EL ID DEPORTE DEL USUARIO//
+                comando.Parameters.AddWithValue("@IdDeporte", 1);
                 _conexion.Open();
                 int fila = Convert.ToInt32(comando.ExecuteScalar());
                 if (fila != 0)

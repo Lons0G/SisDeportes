@@ -30,6 +30,7 @@ namespace _1_Presentacion
 
         decimal sue; //cree variables temporales
         Opciones_Usuario p;
+        //CONSTRUCTOR PARA USUARIOS
         public UC_boton_entidad(int Id, string nombre, string apellido, string usuario, string password, string telefono, string correo, decimal sueldo, int rol , Opciones_Usuario op_user, int x)
         {
             InitializeComponent();
@@ -51,7 +52,7 @@ namespace _1_Presentacion
             ro = rol;
             //this.Location = new Point(20, 20);
         }
-
+        //CONSTRUCTOR PARA EQUIPOS, TORNEOS
         public UC_boton_entidad(int id, string nombre, int x) {
             InitializeComponent();
             this.Width = x - 10;
@@ -61,6 +62,7 @@ namespace _1_Presentacion
             this.Name = id.ToString();
             _lbl_nombre_entidad.Text = nombre;
         }
+
         //SOLUCIONAR BUG SOBRE LAS DIFERENTES ENTIDADES
         private void _btn_eliminar_Click(object sender, EventArgs e)
         {
