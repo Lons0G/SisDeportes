@@ -42,7 +42,7 @@ namespace _1_Presentacion
                 CLS_L_Categoria L_categoria = new CLS_L_Categoria();
 
                 //SE EJECTUA EL METODO PARA OBTENER LAS CATEGORAIS//
-                L_categoria.Obtener_Categoria(list_categoria,id__);
+                L_categoria.Obtener_Categoria(ref list_categoria,id__);
 
                 cmbCategoria.DisplayMember = "Nombre";
                 cmbCategoria.ValueMember = "IdCategoria";

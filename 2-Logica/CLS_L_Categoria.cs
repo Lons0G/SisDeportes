@@ -8,7 +8,7 @@ namespace _2_Logica
     public class CLS_L_Categoria
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
 
         public bool Insertar_Categoria(ref CLS_Categoria obj_categoria) {
             try {
@@ -77,7 +77,7 @@ namespace _2_Logica
             }
         }
         //METODO PARA OBTENER LAS CATEGORIAS SEGUN EL DEPORTE
-        public bool Obtener_Categoria(List<CLS_Categoria> lista_categoria, int id_deporte) {
+        public bool Obtener_Categoria(ref List<CLS_Categoria> lista_categoria, int id_deporte) {
             try {
                 Conexion();
                 SqlCommand comando = new SqlCommand("SP_MOSTRAR_CATEGORIAS", _conexion)
