@@ -33,6 +33,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this._p_integrantes = new System.Windows.Forms.Panel();
             this._p_forms = new System.Windows.Forms.Panel();
+            this._btn_editar_equipo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             this.btnInsertar.Location = new System.Drawing.Point(7, 50);
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(2);
             this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(92, 32);
+            this.btnInsertar.Size = new System.Drawing.Size(115, 32);
             this.btnInsertar.TabIndex = 16;
             this.btnInsertar.Text = "Insertar Integrante";
             this.btnInsertar.UseVisualStyleBackColor = false;
@@ -52,7 +53,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(17, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(31, 5);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(75, 41);
@@ -80,11 +81,25 @@
             this._p_forms.Size = new System.Drawing.Size(450, 400);
             this._p_forms.TabIndex = 13;
             // 
+            // _btn_editar_equipo
+            // 
+            this._btn_editar_equipo.BackColor = System.Drawing.Color.OrangeRed;
+            this._btn_editar_equipo.ForeColor = System.Drawing.Color.White;
+            this._btn_editar_equipo.Location = new System.Drawing.Point(126, 50);
+            this._btn_editar_equipo.Margin = new System.Windows.Forms.Padding(2);
+            this._btn_editar_equipo.Name = "_btn_editar_equipo";
+            this._btn_editar_equipo.Size = new System.Drawing.Size(92, 32);
+            this._btn_editar_equipo.TabIndex = 17;
+            this._btn_editar_equipo.Text = "Editar Equipo";
+            this._btn_editar_equipo.UseVisualStyleBackColor = false;
+            this._btn_editar_equipo.Click += new System.EventHandler(this._btn_editar_equipo_Click);
+            // 
             // Opciones_Integrantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 400);
+            this.Controls.Add(this._btn_editar_equipo);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this._p_integrantes);
@@ -106,5 +121,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel _p_integrantes;
         private System.Windows.Forms.Panel _p_forms;
+        private System.Windows.Forms.Button _btn_editar_equipo;
     }
 }

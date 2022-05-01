@@ -66,17 +66,17 @@ namespace _1_Presentacion
             //this.Location = new Point(20, 20);
         }
         //CONSTRUCTOR PARA EQUIPOS
-        bool visita;int id_usu, id_cate, id_depo,id_entre;
+        bool visita;int id_usuario, id_categoria, id_deporte,id_entrenador;
         public UC_boton_entidad(int id, string nombre,bool visitante,int id_usu,int id_cate,int id_depo,int id_entre, int x, int dato, Menu_Administrador form) {
             InitializeComponent();
             dato_entidad = dato;
+            m_a = form;
             v = id;
             n = nombre;
-            this.id_usu = id_usu;
-            this.id_cate = id_cate;
-            this.id_depo = id_depo;
-            this.id_entre = id_entre;
-            m_a = form;
+            id_usuario = id_usu;
+            id_categoria = id_cate;
+            id_deporte = id_depo;
+            id_entrenador = id_entre;
             visita = visitante;
             this.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
             this.Width = x - 10;
@@ -298,12 +298,12 @@ namespace _1_Presentacion
                     MessageBox.Show(dato_entidad.ToString());
                     break;
                 case 7:
-                    Actualizar_Equipo actualizarEquipo = new Actualizar_Equipo();
+                    /*Actualizar_Equipo actualizarEquipo = new Actualizar_Equipo();
                     actualizarEquipo.Show();
-                    actualizarEquipo.recibe(v, n, visita,id_usu,id_depo,id_cate,id_entre);
+                    actualizarEquipo.recibe(v, n, visita,id_usu,id_depo,id_cate,id_entre);*/
 
-                    ////ABRE EL FORMS DE OPCIONES_Integrante//
-                    //m_a.AbrirForms(new Opciones_Integrantes(v));
+                    //ABRE EL FORMS DE OPCIONES_Integrante//
+                    m_a.AbrirForms(new Opciones_Integrantes(v, n, id_usuario, id_categoria, id_deporte, id_entrenador, visita));
                     break;
                 case 8:
                     MessageBox.Show(dato_entidad.ToString());

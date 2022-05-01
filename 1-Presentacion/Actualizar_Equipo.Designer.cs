@@ -71,7 +71,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(23, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 16);
+            this.label2.Size = new System.Drawing.Size(79, 16);
             this.label2.TabIndex = 128;
             this.label2.Text = "ID Equipo:";
             // 
@@ -92,7 +92,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(23, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 16);
+            this.label3.Size = new System.Drawing.Size(145, 16);
             this.label3.TabIndex = 130;
             this.label3.Text = "Nombre del Equipo:";
             // 
@@ -113,7 +113,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(23, 151);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 16);
+            this.label5.Size = new System.Drawing.Size(139, 16);
             this.label5.TabIndex = 132;
             this.label5.Text = "Local y/o Visitante:";
             // 
@@ -175,7 +175,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(30, 209);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 16);
+            this.label6.Size = new System.Drawing.Size(87, 16);
             this.label6.TabIndex = 142;
             this.label6.Text = "Entrenador:";
             // 
@@ -200,6 +200,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Actualizar_Equipo";
             this.Text = "Actualizar_Equipo";
             this.ResumeLayout(false);

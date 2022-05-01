@@ -15,9 +15,16 @@ namespace _1_Presentacion
 {
     public partial class Actualizar_Equipo : Form
     {
-        public Actualizar_Equipo()
+        public Actualizar_Equipo(int idequipo, string nombre, int usuario, int categoria, int deporte, int entreandor, bool visitante)
         {
             InitializeComponent();
+            id_ = idequipo;
+            nom = nombre;
+            visita = visitante;
+            id_u = usuario;
+            id_c = categoria;
+            id_d = deporte;
+            id_entre = entreandor;
         }
 
         private void TxtNombreEquipo_TextChanged(object sender, EventArgs e)
