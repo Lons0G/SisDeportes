@@ -66,11 +66,18 @@ namespace _1_Presentacion
             //this.Location = new Point(20, 20);
         }
         //CONSTRUCTOR PARA EQUIPOS
-        public UC_boton_entidad(int id, string nombre, int x, int dato, Menu_Administrador form) {
+        bool visita;int id_usu, id_cate, id_depo,id_entre;
+        public UC_boton_entidad(int id, string nombre,bool visitante,int id_usu,int id_cate,int id_depo,int id_entre, int x, int dato, Menu_Administrador form) {
             InitializeComponent();
             dato_entidad = dato;
             v = id;
+            n = nombre;
+            this.id_usu = id_usu;
+            this.id_cate = id_cate;
+            this.id_depo = id_depo;
+            this.id_entre = id_entre;
             m_a = form;
+            visita = visitante;
             this.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
             this.Width = x - 10;
             this.Height = 50;
@@ -291,8 +298,12 @@ namespace _1_Presentacion
                     MessageBox.Show(dato_entidad.ToString());
                     break;
                 case 7:
-                    //ABRE EL FORMS DE OPCIONES_Integrante//
-                    m_a.AbrirForms(new Opciones_Integrantes(v));
+                    Actualizar_Equipo actualizarEquipo = new Actualizar_Equipo();
+                    actualizarEquipo.Show();
+                    actualizarEquipo.recibe(v, n, visita,id_usu,id_depo,id_cate,id_entre);
+
+                    ////ABRE EL FORMS DE OPCIONES_Integrante//
+                    //m_a.AbrirForms(new Opciones_Integrantes(v));
                     break;
                 case 8:
                     MessageBox.Show(dato_entidad.ToString());

@@ -9,7 +9,7 @@ namespace _2_Logica
     public class CLS_L_Usuarios
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
 
         public bool Insertar_Usuario(ref CLS_Usuario obj_usuario) {
             try {
@@ -27,6 +27,7 @@ namespace _2_Logica
                 comando.Parameters.AddWithValue("@Correo", obj_usuario.Correo);
                 comando.Parameters.AddWithValue("@Sueldo", obj_usuario.Sueldo);
                 comando.Parameters.AddWithValue("@IdRol", obj_usuario.Rol);
+                comando.Parameters.AddWithValue("@Estado", obj_usuario.Estado);
                 comando.ExecuteNonQuery();
                 return true;
             }

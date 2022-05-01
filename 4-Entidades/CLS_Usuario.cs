@@ -14,6 +14,7 @@
         private int _rol;
         private int _deporte;
         private string _error;
+        private int _estado;
       
         // CAMPOS PUBLICOS
         public int Id { get => _id; set => _id = value; }
@@ -27,5 +28,6 @@
         public int Rol { get => _rol; set => _rol = value; }
         public string Error { get => _error; set => _error = value; }
         public int Deporte { get => _deporte; set => _deporte = value; }
+        public int Estado { get => _estado; set => _estado = value; }
     }
 }

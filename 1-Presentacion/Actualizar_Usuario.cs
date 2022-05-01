@@ -26,26 +26,30 @@ namespace _1_Presentacion
             cbotipo2.Items.Add("Usuario");
         }
 
-        private void txtnombre2_TextChanged(object sender, EventArgs e)
+        private void btnCargar_Click(object sender, EventArgs e)
         {
             this.lblid.Text = r.ToString(); //cuando escribamos una palabra en txtnombre se mostrara los datos actuales
-            this.lblname.Text = no;
-            this.lblfistname.Text = ap;
+            this.txtnombre2.Text = no;
+            this.txtApellido2.Text = ap;
             this.lblusu.Text = usu;
-            this.lblpass.Text = pass;
-            this.lbltel.Text = corr;
-            this.lblcorreo.Text = tel;
-            this.lblsuel.Text = suel.ToString(); ;
+            this.txtpassword2.Text = pass;
+            this.txtTelefono2.Text = corr;
+            this.txtCorreo2.Text = tel;
+            this.txtSueldo2.Text = suel.ToString();
 
             if (rol == 1)
             {
-                this.lblrol.Text = "Administrador";
+                cbotipo2.Text = "Administrador";
             }
             else
             {
-                this.lblrol.Text = "Encargado";
+                cbotipo2.Text = "Usuario";
             }
+        }
 
+        private void txtnombre2_TextChanged(object sender, EventArgs e)
+        {
+           
         }
 
         decimal suel;
@@ -81,7 +85,6 @@ namespace _1_Presentacion
 
             bool resultado = L_Usuario.Editar_Usuario(ref obj_usuario);
 
-
             //MessageBox.Show(obj_usuario.Error);
 
             if (resultado == true)
@@ -91,7 +94,7 @@ namespace _1_Presentacion
             }
             else
             {
-                MessageBox.Show("Datos No Actualizados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(obj_usuario.Error);
             }
         }
 
