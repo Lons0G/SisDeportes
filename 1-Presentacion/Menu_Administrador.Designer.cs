@@ -55,7 +55,6 @@
             this._lbl_usuario.Size = new System.Drawing.Size(107, 20);
             this._lbl_usuario.TabIndex = 3;
             this._lbl_usuario.Text = "Administrador";
-            this._lbl_usuario.Click += new System.EventHandler(this._lbl_usuario_Click);
             // 
             // _p_controles
             // 
@@ -67,7 +66,6 @@
             this._p_controles.Name = "_p_controles";
             this._p_controles.Size = new System.Drawing.Size(120, 605);
             this._p_controles.TabIndex = 4;
-            this._p_controles.Paint += new System.Windows.Forms.PaintEventHandler(this._p_controles_Paint);
             // 
             // _p_salir
             // 
@@ -99,7 +97,6 @@
             this._p_usuario.Name = "_p_usuario";
             this._p_usuario.Size = new System.Drawing.Size(120, 77);
             this._p_usuario.TabIndex = 5;
-            this._p_usuario.Paint += new System.Windows.Forms.PaintEventHandler(this._p_usuario_Paint);
             // 
             // pictureBox1
             // 

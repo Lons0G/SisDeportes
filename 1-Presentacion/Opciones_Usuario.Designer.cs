@@ -60,7 +60,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -80,7 +79,6 @@
             this._p_forms.Name = "_p_forms";
             this._p_forms.Size = new System.Drawing.Size(675, 615);
             this._p_forms.TabIndex = 7;
-            this._p_forms.Paint += new System.Windows.Forms.PaintEventHandler(this._p_forms_Paint);
             // 
             // _p_usuarios
             // 
@@ -93,7 +91,6 @@
             this._p_usuarios.Name = "_p_usuarios";
             this._p_usuarios.Size = new System.Drawing.Size(495, 431);
             this._p_usuarios.TabIndex = 8;
-            this._p_usuarios.Paint += new System.Windows.Forms.PaintEventHandler(this._p_usuarios_Paint);
             // 
             // Opciones_Usuario
             // 

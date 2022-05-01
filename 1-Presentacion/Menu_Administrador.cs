@@ -45,7 +45,7 @@ namespace _1_Presentacion
             this.Dispose();
         }
 
-        private void AbrirForms(object FRM_secundario) {
+        public void AbrirForms(object FRM_secundario) {
             //HACE INVISIBLE AL PICTURE BOX Y HACE VISIBLE AL PANEL DEL FORMS//
             pictureBox1.Visible = false;
             _p_forms.Visible = true;
@@ -92,15 +92,10 @@ namespace _1_Presentacion
             btn_deportes.Height = 50;
             btn_deportes.Top = (50 + 12) * 2;
 
-
-          
-
-
             //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON USUARIO//
             btn_usuarios.Click += Btn_Usuarios_Click;
             btn_deportes.Click += Btn_Deportes_Click;
            
-
             //SE AGREGA EL BOTON USUARIO AL PANEL DE CONTROLES//
             _p_controles.Controls.Add(btn_usuarios);
             _p_controles.Controls.Add(btn_deportes);
@@ -119,8 +114,7 @@ namespace _1_Presentacion
         private void Btn_Equipos_Click(object sender, EventArgs e)
         {
             //ABRE EL FORMS DE OPCIONES_Equipo//
-            AbrirForms(new Opciones_Equipo(obj_usuario.Id,obj_usuario.Nombre,obj_deporte.IdDeporte));
-            
+            AbrirForms(new Opciones_Equipo(obj_usuario.Id,obj_usuario.Nombre,obj_deporte.IdDeporte, this));  
            
         }
         private void Btn_Categoria_Click(object sender, EventArgs e)
@@ -133,7 +127,7 @@ namespace _1_Presentacion
         private void Btn_Integrantes_Click(object sender, EventArgs e)
         {
             //ABRE EL FORMS DE OPCIONES_Integrante//
-            AbrirForms(new Opciones_Integrantes());
+            //AbrirForms(new Opciones_Integrantes());
 
         }
         private void Agregar_BTN_Usuario() {
@@ -221,20 +215,6 @@ namespace _1_Presentacion
         {
             //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
             AbrirForms(new OpcionesTipo_Act()); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
-        }
-        private void _p_controles_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void _p_usuario_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void _lbl_usuario_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

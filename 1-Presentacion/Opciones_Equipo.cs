@@ -16,12 +16,14 @@ namespace _1_Presentacion
     {
         private int _id,id_de;
         private string _nome;
-        public Opciones_Equipo(int Id, string Nombre,int iddepor)
+        Menu_Administrador m_a;
+        public Opciones_Equipo(int Id, string Nombre,int iddepor, Menu_Administrador form)
         {
+            InitializeComponent();
             _id = Id;
             _nome = Nombre;
             id_de = iddepor;
-            InitializeComponent();
+            m_a = form;
         }
         private void AbrirForms(object FRM_secundario)
         {
@@ -52,7 +54,7 @@ namespace _1_Presentacion
             int x = _p_equipos.Width;
 
             foreach (var equipo in lista_equipos) {
-                UC_boton_entidad btn = new UC_boton_entidad(equipo.IdEquipo, equipo.Nombre, x, 7);
+                UC_boton_entidad btn = new UC_boton_entidad(equipo.IdEquipo, equipo.Nombre, x, 7, m_a);
                 btn.Top = 52 * i;
                 _p_equipos.Controls.Add(btn);
                 i++;

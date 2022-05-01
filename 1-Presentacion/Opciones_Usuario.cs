@@ -74,25 +74,9 @@ namespace _1_Presentacion
         {
             if (_p_usuarios.Controls.Count > 0) { _p_usuarios.Controls.Clear(); }
         }
-
-        private void _p_forms_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Opciones_Usuario_Load(object sender, EventArgs e)
         {
             Cargar_Usuarios();
-        }
-
-        private void _p_usuarios_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

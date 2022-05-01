@@ -1,4 +1,6 @@
-﻿using System;
+﻿using _2_Logica;
+using _3_Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +14,13 @@ namespace _1_Presentacion
 {
     public partial class Opciones_Integrantes : Form
     {
-        public Opciones_Integrantes()
+        int id_equipo;
+        public Opciones_Integrantes(int idequipo)
         {
             InitializeComponent();
+            id_equipo = idequipo;
         }
 
-        private void _p_forms_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private void AbrirForms(object FRM_secundario)
         {
             _p_forms.Visible = true;
@@ -42,28 +42,29 @@ namespace _1_Presentacion
         {
             AbrirForms(new FRM_Integrantes());
         }
-        //public void Cargar_Integrantes()
-        //{
+        private void Cargar_Integrantes() {
+            List<CLS_Integrantes> lista_integrantes = new List<CLS_Integrantes>();
+            CLS_L_Integrante L_integrante = new CLS_L_Integrante();
+            L_integrante.ObtenerIntegrantes(ref lista_integrantes, id_equipo);
 
-        //    List<CLS_Torneo> lista_torneos = new List<CLS_Torneo>();
-        //    CLS_L_Torneo L_torneo = new CLS_L_Torneo();
-        //    L_torneo.ObtenerTorneos(ref lista_torneos);
+            int i = 0;
+            int x = _p_integrantes.Width;
 
-        //    int i = 0;
-        //    int x = _p_torneos.Width;
+            foreach (var integrante in lista_integrantes)
+            {
+                UC_boton_entidad btn = new UC_boton_entidad(integrante.IdIntegrante, integrante.Nombre, x, 2);
+                btn.Top = 52 * i;
+                _p_integrantes.Controls.Add(btn);
+                i++;
+            }
 
-        //    foreach (var torneo in lista_torneos)
-        //    {
-        //        UC_boton_entidad btn = new UC_boton_entidad(torneo.IdTorneo, torneo.Nombre, x, 2);
-        //        btn.Top = 52 * i;
-        //        _p_torneos.Controls.Add(btn);
-        //        i++;
-        //    }
+        }
+        private void Opciones_Integrantes_Load(object sender, EventArgs e) {
+            Cargar_Integrantes();
+        }
 
-        //}
-        private void Opciones_Integrantes_Load(object sender, EventArgs e)
+        private void Opciones_Integrantes_Resize(object sender, EventArgs e)
         {
-
         }
     }
 }

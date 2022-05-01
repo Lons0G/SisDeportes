@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Opciones_Integrantes));
             this.btnInsertar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this._p_integrantes = new System.Windows.Forms.Panel();
             this._p_forms = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -40,9 +40,10 @@
             // 
             this.btnInsertar.BackColor = System.Drawing.Color.OrangeRed;
             this.btnInsertar.ForeColor = System.Drawing.Color.White;
-            this.btnInsertar.Location = new System.Drawing.Point(11, 77);
+            this.btnInsertar.Location = new System.Drawing.Point(7, 50);
+            this.btnInsertar.Margin = new System.Windows.Forms.Padding(2);
             this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(138, 49);
+            this.btnInsertar.Size = new System.Drawing.Size(92, 32);
             this.btnInsertar.TabIndex = 16;
             this.btnInsertar.Text = "Insertar Integrante";
             this.btnInsertar.UseVisualStyleBackColor = false;
@@ -51,48 +52,49 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(26, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(17, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(112, 63);
+            this.pictureBox2.Size = new System.Drawing.Size(75, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
             // 
-            // panel1
+            // _p_integrantes
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this._p_integrantes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Salmon;
-            this.panel1.Location = new System.Drawing.Point(7, 157);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(512, 434);
-            this.panel1.TabIndex = 14;
+            this._p_integrantes.AutoScroll = true;
+            this._p_integrantes.BackColor = System.Drawing.Color.Salmon;
+            this._p_integrantes.Location = new System.Drawing.Point(14, 108);
+            this._p_integrantes.Name = "_p_integrantes";
+            this._p_integrantes.Size = new System.Drawing.Size(330, 280);
+            this._p_integrantes.TabIndex = 14;
             // 
             // _p_forms
             // 
             this._p_forms.Dock = System.Windows.Forms.DockStyle.Right;
-            this._p_forms.Location = new System.Drawing.Point(527, 0);
-            this._p_forms.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this._p_forms.Location = new System.Drawing.Point(350, 0);
             this._p_forms.Name = "_p_forms";
-            this._p_forms.Size = new System.Drawing.Size(675, 581);
+            this._p_forms.Size = new System.Drawing.Size(450, 400);
             this._p_forms.TabIndex = 13;
-            this._p_forms.Paint += new System.Windows.Forms.PaintEventHandler(this._p_forms_Paint);
             // 
             // Opciones_Integrantes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1202, 581);
+            this.ClientSize = new System.Drawing.Size(800, 400);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this._p_integrantes);
             this.Controls.Add(this._p_forms);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Opciones_Integrantes";
             this.Text = "Opciones_Integrantes";
             this.Load += new System.EventHandler(this.Opciones_Integrantes_Load);
+            this.Resize += new System.EventHandler(this.Opciones_Integrantes_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -102,7 +104,7 @@
 
         private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel _p_integrantes;
         private System.Windows.Forms.Panel _p_forms;
     }
 }

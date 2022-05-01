@@ -41,6 +41,7 @@ namespace _1_Presentacion
 
         decimal sue; //cree variables temporales
         Opciones_Usuario p;
+        Menu_Administrador m_a;
         //CONSTRUCTOR PARA USUARIOS
         public UC_boton_entidad(int Id, string nombre, string apellido, string usuario, string password, string telefono, string correo, decimal sueldo, int rol , Opciones_Usuario op_user, int x, int dato)
         {
@@ -64,15 +65,27 @@ namespace _1_Presentacion
             ro = rol;
             //this.Location = new Point(20, 20);
         }
-        //CONSTRUCTOR PARA EQUIPOS, TORNEOS
-        public UC_boton_entidad(int id, string nombre, int x, int dato) {
+        //CONSTRUCTOR PARA EQUIPOS
+        public UC_boton_entidad(int id, string nombre, int x, int dato, Menu_Administrador form) {
             InitializeComponent();
             dato_entidad = dato;
             v = id;
+            m_a = form;
+            this.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
             this.Width = x - 10;
             this.Height = 50;
-            this.Anchor = AnchorStyles.None;
-            this.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
+            this.Name = id.ToString();
+            _lbl_nombre_entidad.Text = nombre;
+        }
+        //CONSTRUCTOR PARA LAS DEMAS ENTIDADES
+        public UC_boton_entidad(int id, string nombre, int x, int dato)
+        {
+            InitializeComponent();
+            dato_entidad = dato;
+            v = id;
+            this.Anchor = AnchorStyles.Left | AnchorStyles.Top;
+            this.Width = x - 10;
+            this.Height = 50;
             this.Name = id.ToString();
             _lbl_nombre_entidad.Text = nombre;
         }
@@ -278,7 +291,8 @@ namespace _1_Presentacion
                     MessageBox.Show(dato_entidad.ToString());
                     break;
                 case 7:
-                    MessageBox.Show(dato_entidad.ToString());
+                    //ABRE EL FORMS DE OPCIONES_Integrante//
+                    m_a.AbrirForms(new Opciones_Integrantes(v));
                     break;
                 case 8:
                     MessageBox.Show(dato_entidad.ToString());
