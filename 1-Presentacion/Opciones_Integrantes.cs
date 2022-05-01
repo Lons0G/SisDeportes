@@ -65,6 +65,9 @@ namespace _1_Presentacion
 
         private void Opciones_Integrantes_Resize(object sender, EventArgs e)
         {
+            foreach (UC_boton_entidad integrante in _p_integrantes.Controls) {
+                integrante.Width = _p_integrantes.Width - 20;
+            }
         }
     }
 }
