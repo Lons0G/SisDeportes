@@ -48,11 +48,12 @@ namespace _1_Presentacion
             CLS_Equipo obj_equipo = new CLS_Equipo();
             CLS_L_Equipo l_Equipo = new CLS_L_Equipo();
 
+            obj_equipo.IdEquipo = id_;
             obj_equipo.IdUsuario = id_u;
             obj_equipo.IdDeporte = id_d;
-            obj_equipo.IdCategoria = id_c;
-            obj_equipo.IdEntrenador = id_entre;
-            obj_equipo.Nombre = this.TxtNombreEquipo.Text;
+            obj_equipo.IdCategoria = 1;
+            obj_equipo.IdEntrenador = 0;
+            obj_equipo.Nombre = TxtNombreEquipo.Text;
             obj_equipo.Visitante = Convert.ToBoolean(txtvisita.Text);
 
             bool resultado = l_Equipo.Editar_Equipo(ref obj_equipo);

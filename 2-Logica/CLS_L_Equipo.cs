@@ -53,14 +53,14 @@ namespace _2_Logica
                 {
                     CommandType = CommandType.StoredProcedure
                 };
-                _conexion.Open();
-                comando.Parameters.AddWithValue("@IdEquipo", obj_equipo);
+                comando.Parameters.AddWithValue("@IdEquipo", obj_equipo.IdEquipo);
                 comando.Parameters.AddWithValue("@IdUsuario", obj_equipo.IdUsuario);
                 comando.Parameters.AddWithValue("@IdDeporte", obj_equipo.IdDeporte);
                 comando.Parameters.AddWithValue("@IdCategoria", obj_equipo.IdCategoria);
                 comando.Parameters.AddWithValue("@IdEntrenador", obj_equipo.IdEntrenador);
                 comando.Parameters.AddWithValue("@Nombre", obj_equipo.Nombre);
                 comando.Parameters.AddWithValue("@Visitante", obj_equipo.Visitante);
+                _conexion.Open();
                 comando.ExecuteNonQuery();
                 return true;
             }
