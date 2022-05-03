@@ -8,7 +8,7 @@ namespace _2_Logica
     public class CLS_L_Categoria
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Damian); }
 
         public bool Insertar_Categoria(ref CLS_Categoria obj_categoria) {
             try {
