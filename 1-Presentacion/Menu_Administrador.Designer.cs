@@ -66,6 +66,7 @@
             this._p_controles.Name = "_p_controles";
             this._p_controles.Size = new System.Drawing.Size(120, 605);
             this._p_controles.TabIndex = 4;
+            this._p_controles.Paint += new System.Windows.Forms.PaintEventHandler(this._p_controles_Paint);
             // 
             // _p_salir
             // 
@@ -103,7 +104,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1224, 682);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -139,7 +140,7 @@
             this.Controls.Add(this._p_forms);
             this.Controls.Add(this._p_lateral);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu_Administrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu_Administrador";

@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using _2_Logica;
+using _3_Entidades;
 namespace _1_Presentacion
 {
     public partial class Opciones_Actividades : Form
     {
-        int id_deporte;
-        public Opciones_Actividades(int id)
+        int id_u,id_deporte;
+        public Opciones_Actividades(int id,int u)
         {
             InitializeComponent();
+            Cargar_Actividad();
+            id_u = u;
             id_deporte = id;
         }
 
@@ -39,15 +42,40 @@ namespace _1_Presentacion
             //secundario.FormClosing += new FormClosingEventHandler(Creacion_Actividad_Close);
 
         }
+        public void Cargar_Actividad()
+        {
+            //Limpiar_Equipos();
+
+            List<CLS_Actividad> lista_actividad = new List<CLS_Actividad>();
+            CLS_L_Actividad L_actividad = new CLS_L_Actividad();
+            L_actividad.ObtenerActividades(ref lista_actividad);
+
+            int i = 0;
+            int x = panelact.Width;
+
+            foreach (var actividad in lista_actividad)
+            {
+                UC_boton_entidad btn = new UC_boton_entidad(actividad.IdActividad, actividad.Nombre, x, 4);
+                btn.Top = 52 * i;
+                panelact.Controls.Add(btn);
+                i++;
+            }
+
+        }
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            //AbrirForms(new Creación_Actividades(id_deporte));
+            AbrirForms(new Creación_Actividades(id_deporte,id_u));
+        }
+
+        private void _p_forms_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

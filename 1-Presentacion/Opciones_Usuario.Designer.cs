@@ -42,9 +42,10 @@
             // 
             this.btnInsertar.BackColor = System.Drawing.Color.Maroon;
             this.btnInsertar.ForeColor = System.Drawing.Color.White;
-            this.btnInsertar.Location = new System.Drawing.Point(18, 88);
+            this.btnInsertar.Location = new System.Drawing.Point(12, 57);
+            this.btnInsertar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(138, 49);
+            this.btnInsertar.Size = new System.Drawing.Size(92, 32);
             this.btnInsertar.TabIndex = 0;
             this.btnInsertar.Text = "Insertar Usuario";
             this.btnInsertar.UseVisualStyleBackColor = false;
@@ -55,8 +56,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1200, 615);
+            this.pictureBox1.Size = new System.Drawing.Size(800, 400);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -64,9 +66,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(33, 17);
+            this.pictureBox2.Location = new System.Drawing.Point(22, 11);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(112, 63);
+            this.pictureBox2.Size = new System.Drawing.Size(75, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -74,10 +77,9 @@
             // _p_forms
             // 
             this._p_forms.Dock = System.Windows.Forms.DockStyle.Right;
-            this._p_forms.Location = new System.Drawing.Point(525, 0);
-            this._p_forms.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this._p_forms.Location = new System.Drawing.Point(350, 0);
             this._p_forms.Name = "_p_forms";
-            this._p_forms.Size = new System.Drawing.Size(675, 615);
+            this._p_forms.Size = new System.Drawing.Size(450, 400);
             this._p_forms.TabIndex = 7;
             // 
             // _p_usuarios
@@ -86,24 +88,25 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._p_usuarios.BackColor = System.Drawing.Color.Plum;
-            this._p_usuarios.Location = new System.Drawing.Point(21, 166);
-            this._p_usuarios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this._p_usuarios.Location = new System.Drawing.Point(14, 108);
             this._p_usuarios.Name = "_p_usuarios";
-            this._p_usuarios.Size = new System.Drawing.Size(495, 431);
+            this._p_usuarios.Size = new System.Drawing.Size(330, 280);
             this._p_usuarios.TabIndex = 8;
+            this._p_usuarios.Paint += new System.Windows.Forms.PaintEventHandler(this._p_usuarios_Paint);
             // 
             // Opciones_Usuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
-            this.ClientSize = new System.Drawing.Size(1200, 615);
+            this.ClientSize = new System.Drawing.Size(800, 400);
             this.Controls.Add(this._p_usuarios);
             this.Controls.Add(this._p_forms);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Opciones_Usuario";
             this.Text = "Opciones_Usuario";
             this.Load += new System.EventHandler(this.Opciones_Usuario_Load);

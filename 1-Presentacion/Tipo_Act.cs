@@ -38,10 +38,6 @@ namespace _1_Presentacion
             {
                 MessageBox.Show(obj_tipoActividad.Error);
             }
-
-
-
-
         }
     }
 }

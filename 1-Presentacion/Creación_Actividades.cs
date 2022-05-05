@@ -65,7 +65,6 @@ namespace _1_Presentacion
         //metodo que carga los equipos
         public void Cargar_Equipos(int id)
         {
-
             List<CLS_Equipo> lista_equipos = new List<CLS_Equipo>();
             CLS_L_Equipo L_equipo = new CLS_L_Equipo();
             L_equipo.ObtenerEquipos(ref lista_equipos, id);
@@ -83,12 +82,10 @@ namespace _1_Presentacion
             cboAct.DisplayMember = "Nombre";
             cboAct.ValueMember = "IdTipoDeporte";
             cboAct.DataSource = lista_act;
-
         }
         //metodo que carga los equipos
         public void Cargar_Equipos2(int id)
         {
-
             List<CLS_Equipo> lista_equipos = new List<CLS_Equipo>();
             CLS_L_Equipo L_equipo = new CLS_L_Equipo();
             L_equipo.ObtenerEquipos(ref lista_equipos, id);

@@ -72,6 +72,11 @@ namespace _1_Presentacion
             Cargar_Equipos(_id);
         }
 
+        private void _p_equipos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void btnInsertarEquipo_Click(object sender, EventArgs e)
         {
             AbrirForms(new Equipos(_id,_nome,id_de));

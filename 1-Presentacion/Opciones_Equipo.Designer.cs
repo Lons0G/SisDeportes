@@ -77,6 +77,7 @@
             this._p_equipos.Name = "_p_equipos";
             this._p_equipos.Size = new System.Drawing.Size(330, 280);
             this._p_equipos.TabIndex = 9;
+            this._p_equipos.Paint += new System.Windows.Forms.PaintEventHandler(this._p_equipos_Paint);
             // 
             // Opciones_Equipo
             // 
