@@ -9,7 +9,7 @@ namespace _2_Logica
     public class CLS_L_Actividad
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Damian); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
 
         //METODO PARA INSERTAR UNA ACTIVIDAD
         public bool Insertar_Actividad(ref CLS_Actividad obj_actividad) {
@@ -24,7 +24,7 @@ namespace _2_Logica
                 comando.Parameters.AddWithValue("@Hora", obj_actividad.Hora);
                 comando.Parameters.AddWithValue("@IdContricante_1", obj_actividad.IdContricante_1);
                 comando.Parameters.AddWithValue("@IdContricante_2", obj_actividad.IdContricante_2);
-                comando.Parameters.AddWithValue("@Categoria", obj_actividad.IdCategoria);
+                comando.Parameters.AddWithValue("@IdCategoria", obj_actividad.IdCategoria);
                 comando.Parameters.AddWithValue("@IdUsuario", obj_actividad.IdUsuario);
                 comando.Parameters.AddWithValue("@IdDeporte", obj_actividad.IdDeporte);
                 comando.Parameters.AddWithValue("@IdTipo", obj_actividad.IdTipo);

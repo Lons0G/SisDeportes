@@ -43,6 +43,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpHora = new System.Windows.Forms.DateTimePicker();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.cboAct = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cboTorneo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 61);
+            this.label2.Location = new System.Drawing.Point(23, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 19);
             this.label2.TabIndex = 1;
@@ -68,7 +72,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 122);
+            this.label4.Location = new System.Drawing.Point(29, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 19);
             this.label4.TabIndex = 3;
@@ -77,7 +81,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 202);
+            this.label5.Location = new System.Drawing.Point(30, 204);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 19);
             this.label5.TabIndex = 4;
@@ -86,7 +90,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 279);
+            this.label6.Location = new System.Drawing.Point(30, 258);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 19);
             this.label6.TabIndex = 5;
@@ -95,7 +99,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 353);
+            this.label7.Location = new System.Drawing.Point(28, 314);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 19);
             this.label7.TabIndex = 6;
@@ -104,7 +108,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(29, 429);
+            this.label8.Location = new System.Drawing.Point(29, 382);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(94, 19);
             this.label8.TabIndex = 7;
@@ -112,45 +116,50 @@
             // 
             // txtActividad
             // 
-            this.txtActividad.Location = new System.Drawing.Point(105, 54);
+            this.txtActividad.Location = new System.Drawing.Point(128, 58);
             this.txtActividad.Name = "txtActividad";
-            this.txtActividad.Size = new System.Drawing.Size(370, 26);
+            this.txtActividad.Size = new System.Drawing.Size(348, 26);
             this.txtActividad.TabIndex = 8;
             // 
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(106, 119);
+            this.cmbCategoria.Location = new System.Drawing.Point(130, 151);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(369, 27);
+            this.cmbCategoria.Size = new System.Drawing.Size(347, 27);
             this.cmbCategoria.TabIndex = 10;
             // 
             // cmbContri1
             // 
             this.cmbContri1.FormattingEnabled = true;
-            this.cmbContri1.Location = new System.Drawing.Point(129, 350);
+            this.cmbContri1.Location = new System.Drawing.Point(128, 311);
             this.cmbContri1.Name = "cmbContri1";
             this.cmbContri1.Size = new System.Drawing.Size(346, 27);
             this.cmbContri1.TabIndex = 12;
+            this.cmbContri1.SelectedIndexChanged += new System.EventHandler(this.cmbContri1_SelectedIndexChanged);
             // 
             // cmbContri2
             // 
             this.cmbContri2.FormattingEnabled = true;
-            this.cmbContri2.Location = new System.Drawing.Point(129, 426);
+            this.cmbContri2.Location = new System.Drawing.Point(129, 379);
             this.cmbContri2.Name = "cmbContri2";
             this.cmbContri2.Size = new System.Drawing.Size(346, 27);
             this.cmbContri2.TabIndex = 13;
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(84, 196);
+            this.dtpFecha.Location = new System.Drawing.Point(128, 198);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(391, 26);
+            this.dtpFecha.Size = new System.Drawing.Size(348, 26);
             this.dtpFecha.TabIndex = 14;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.LightCoral;
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.cboTorneo);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.cboAct);
             this.groupBox1.Controls.Add(this.dtpHora);
             this.groupBox1.Controls.Add(this.btnAceptar);
             this.groupBox1.Controls.Add(this.label2);
@@ -171,26 +180,61 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dtpHora
             // 
             this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHora.Location = new System.Drawing.Point(78, 273);
+            this.dtpHora.Location = new System.Drawing.Point(128, 251);
             this.dtpHora.Name = "dtpHora";
-            this.dtpHora.Size = new System.Drawing.Size(397, 26);
+            this.dtpHora.Size = new System.Drawing.Size(347, 26);
             this.dtpHora.TabIndex = 20;
             // 
             // btnAceptar
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.White;
             this.btnAceptar.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnAceptar.Location = new System.Drawing.Point(206, 495);
+            this.btnAceptar.Location = new System.Drawing.Point(368, 497);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(107, 50);
             this.btnAceptar.TabIndex = 16;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // cboAct
+            // 
+            this.cboAct.FormattingEnabled = true;
+            this.cboAct.Location = new System.Drawing.Point(130, 102);
+            this.cboAct.Name = "cboAct";
+            this.cboAct.Size = new System.Drawing.Size(346, 27);
+            this.cboAct.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 19);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Tipo Actividad:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(17, 436);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(105, 19);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Tipo de Torneo:";
+            // 
+            // cboTorneo
+            // 
+            this.cboTorneo.FormattingEnabled = true;
+            this.cboTorneo.Location = new System.Drawing.Point(129, 433);
+            this.cboTorneo.Name = "cboTorneo";
+            this.cboTorneo.Size = new System.Drawing.Size(346, 27);
+            this.cboTorneo.TabIndex = 23;
             // 
             // Creación_Actividades
             // 
@@ -231,5 +275,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.DateTimePicker dtpHora;
+        private System.Windows.Forms.ComboBox cboAct;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cboTorneo;
     }
 }

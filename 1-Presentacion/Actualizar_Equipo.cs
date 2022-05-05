@@ -44,7 +44,7 @@ namespace _1_Presentacion
         }
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
-           //marca error de asignacion de tipo de objeto _3_entidades
+         
             CLS_Equipo obj_equipo = new CLS_Equipo();
             CLS_L_Equipo l_Equipo = new CLS_L_Equipo();
 
