@@ -9,7 +9,7 @@ namespace _2_Logica
     public class CLS_L_Actividad
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
 
         //METODO PARA INSERTAR UNA ACTIVIDAD
         public bool Insertar_Actividad(ref CLS_Actividad obj_actividad) {
@@ -61,6 +61,7 @@ namespace _2_Logica
                 comando.Parameters.AddWithValue("@IdTipo", obj_actividad.IdTipo);
                 comando.Parameters.AddWithValue("@IdTorneo", obj_actividad.IdTorneo);
                 comando.Parameters.AddWithValue("@Nombre", obj_actividad.Nombre);
+                _conexion.Open();
                 comando.ExecuteNonQuery();
                 return true;
             }
@@ -82,6 +83,7 @@ namespace _2_Logica
                     CommandType = CommandType.StoredProcedure
                 };
                 comando.Parameters.AddWithValue("@IdActividad", obj_actividad.IdActividad);
+                _conexion.Open();
                 comando.ExecuteNonQuery();
                 return true;
             }
@@ -94,7 +96,7 @@ namespace _2_Logica
                 _conexion.Dispose();
             }
         }
-        public bool ObtenerActividades(ref List<CLS_Actividad> lista_actividad)
+        public bool ObtenerActividades(ref List<CLS_Actividad> lista_actividad, int id_deporte)
         {
             try
             {
@@ -103,6 +105,7 @@ namespace _2_Logica
                 {
                     CommandType = CommandType.StoredProcedure
                 };
+                comando.Parameters.AddWithValue("@IdDeporte", id_deporte);
                 _conexion.Open();
                 int fila = Convert.ToInt32(comando.ExecuteScalar());
                 if (fila != 0)
@@ -142,7 +145,8 @@ namespace _2_Logica
             obj_Actividad.IdUsuario = Convert.ToInt32(reader["IdUsuario"].ToString());
             obj_Actividad.IdDeporte = Convert.ToInt32(reader["IdDeporte"].ToString());
             obj_Actividad.IdTipo = Convert.ToInt32(reader["IdTipo"].ToString());
-            obj_Actividad.IdTorneo = Convert.ToInt32(reader["IdTorneo"].ToString());
+            try { obj_Actividad.IdTorneo = Convert.ToInt32(reader["IdTorneo"].ToString()); }
+            catch (Exception) { obj_Actividad.IdTorneo = 0; }
             obj_Actividad.Nombre = reader["Nombre"].ToString();
 
             return obj_Actividad;

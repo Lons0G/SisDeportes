@@ -17,9 +17,9 @@ namespace _1_Presentacion
         public Opciones_Actividades(int id,int u)
         {
             InitializeComponent();
-            Cargar_Actividad();
             id_u = u;
             id_deporte = id;
+            Cargar_Actividad();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -48,7 +48,7 @@ namespace _1_Presentacion
 
             List<CLS_Actividad> lista_actividad = new List<CLS_Actividad>();
             CLS_L_Actividad L_actividad = new CLS_L_Actividad();
-            L_actividad.ObtenerActividades(ref lista_actividad);
+            L_actividad.ObtenerActividades(ref lista_actividad, id_deporte);
 
             int i = 0;
             int x = panelact.Width;
