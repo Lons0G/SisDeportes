@@ -16,14 +16,18 @@ namespace _1_Presentacion
 {
     public partial class FRM_Integrantes : Form
     {
-        public FRM_Integrantes()
+        int id_equipo, id_usuario, id_entrenador;
+        public FRM_Integrantes(int id_equi,int id_usu, int id_entre)
         {
             InitializeComponent();
+            id_equipo = id_equi;
+            id_usuario = id_usu;
+            id_entrenador = id_entre;   
         }
         public void GuardarDatosJu(string Nombre,string Apellido,string Edad,string Nacionalidad,string Posicion,string Dorsal)//Guardar Datos Jugador
         {
-            CLS_Integrantes obj_Integrante = new CLS_Integrantes();
-            CLS_L_Integrante L_Integrante = new CLS_L_Integrante ();
+            //CLS_Integrantes obj_Integrante = new CLS_Integrantes();
+            //CLS_L_Integrante L_Integrante = new CLS_L_Integrante ();
             
             
         }
@@ -62,10 +66,58 @@ namespace _1_Presentacion
         {
             if (CbJugador.Checked == true)
             {
+                string rola = "Jugador";
+                CLS_Integrantes obj_Integrante = new CLS_Integrantes();
+                CLS_L_Integrante l_Integrante = new CLS_L_Integrante();
 
+                obj_Integrante.IdEquipo = id_equipo;
+                obj_Integrante.IdUsuario = id_usuario;
+                obj_Integrante.IdEntrenador = id_entrenador;
+                obj_Integrante.Nombre = txtNombre.Text;
+                obj_Integrante.Apellido = txtApellido.Text;
+                obj_Integrante.Edad = Convert.ToByte(txtEdad.Text);
+                obj_Integrante.Nacionalidad = txtNacionalidad.Text;
+                obj_Integrante.Posicion = this.txtPosicion.Text;
+                obj_Integrante.Dorsal = Convert.ToInt32(txtDorsal.Text);
+                obj_Integrante.Rol = rola;
+
+               bool resultado = l_Integrante.Insertar_Integrante(ref obj_Integrante);
+
+                if(resultado == true)
+                {
+                    MessageBox.Show("Integrante Guardado con Exito!");
+                }
+                else
+                {
+                    MessageBox.Show(obj_Integrante.Error);
+                }
+               
             }
             else
             {
+                CLS_Integrantes obj_Integrante = new CLS_Integrantes();
+                CLS_L_Integrante l_Integrante = new CLS_L_Integrante();
+
+                obj_Integrante.IdEquipo = id_equipo;
+                obj_Integrante.IdUsuario = id_usuario;
+                obj_Integrante.Nombre = txtNombre.Text;
+                obj_Integrante.Apellido = txtApellido.Text;
+                obj_Integrante.Edad = Convert.ToByte(txtEdad.Text);
+                obj_Integrante.Nacionalidad = txtNacionalidad.Text;
+                obj_Integrante.Posicion = "Null";
+                obj_Integrante.Dorsal = 0;
+                obj_Integrante.Rol = "Entrenador";
+
+                bool resultado = l_Integrante.Insertar_Integrante(ref obj_Integrante);
+
+                if (resultado == true)
+                {
+                    MessageBox.Show("Integrante Guardado con Exito!");
+                }
+                else
+                {
+                    MessageBox.Show(obj_Integrante.Error);
+                }
 
             }
         }

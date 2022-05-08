@@ -52,7 +52,7 @@ namespace _1_Presentacion
         }
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            AbrirForms(new FRM_Integrantes());
+            AbrirForms(new FRM_Integrantes(id_equipo,id_usuario,id_entrenador));
         }
         private void Cargar_Integrantes() {
             List<CLS_Integrantes> lista_integrantes = new List<CLS_Integrantes>();

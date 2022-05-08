@@ -12,7 +12,7 @@ namespace _2_Logica
     public class CLS_L_Integrante
     {
         SqlConnection _conexion;
-        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Angel); }
+        private void Conexion() { _conexion = new SqlConnection(Properties.Settings.Default.Conexion_Juan); }
 
         //METODO PARA INSERTAR INTEGRANTE//
         public bool Insertar_Integrante(ref CLS_Integrantes obj_integrante) {
@@ -22,6 +22,7 @@ namespace _2_Logica
                 {
                     CommandType = CommandType.StoredProcedure
                 };
+                _conexion.Open();
                 comando.Parameters.AddWithValue("@IdEquipo", obj_integrante.IdEquipo);
                 comando.Parameters.AddWithValue("@IdUsuario", obj_integrante.IdUsuario);
                 comando.Parameters.AddWithValue("@IdEntrenador", obj_integrante.IdEntrenador);
@@ -31,7 +32,7 @@ namespace _2_Logica
                 comando.Parameters.AddWithValue("@Nacionalidad", obj_integrante.Nacionalidad);
                 comando.Parameters.AddWithValue("@Posicion", obj_integrante.Posicion);
                 comando.Parameters.AddWithValue("@Dorsal", obj_integrante.Dorsal);
-                comando.Parameters.AddWithValue("@@IdRol", obj_integrante.Rol);
+                comando.Parameters.AddWithValue("@Rol", obj_integrante.Rol);
                 comando.ExecuteNonQuery();
                 return true;
             }
