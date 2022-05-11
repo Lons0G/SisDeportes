@@ -53,7 +53,8 @@ namespace _2_Logica
                 {
                     CommandType = CommandType.StoredProcedure
                 };
-                comando.Parameters.AddWithValue("@IdIntegrante", obj_integrante);
+                _conexion.Open();
+                comando.Parameters.AddWithValue("@IdIntegrante", obj_integrante.IdIntegrante);
                 comando.Parameters.AddWithValue("@IdEquipo", obj_integrante.IdEquipo);
                 comando.Parameters.AddWithValue("@IdUsuario", obj_integrante.IdUsuario);
                 comando.Parameters.AddWithValue("@IdEntrenador", obj_integrante.IdEntrenador);
@@ -63,7 +64,7 @@ namespace _2_Logica
                 comando.Parameters.AddWithValue("@Nacionalidad", obj_integrante.Nacionalidad);
                 comando.Parameters.AddWithValue("@Posicion", obj_integrante.Posicion);
                 comando.Parameters.AddWithValue("@Dorsal", obj_integrante.Dorsal);
-                comando.Parameters.AddWithValue("@@IdRol", obj_integrante.Rol);
+                comando.Parameters.AddWithValue("@Rol", obj_integrante.Rol);
                 comando.ExecuteNonQuery();
                 return true;
             }
@@ -84,7 +85,8 @@ namespace _2_Logica
                 {
                     CommandType = CommandType.StoredProcedure
                 };
-                comando.Parameters.AddWithValue("@IdIntegrante", obj_integrante.IdEquipo);
+                _conexion.Open();
+                comando.Parameters.AddWithValue("@IdIntegrante", obj_integrante.IdIntegrante);
                 comando.ExecuteNonQuery();
                 return true;
             }

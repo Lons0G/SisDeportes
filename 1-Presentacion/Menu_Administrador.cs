@@ -221,5 +221,10 @@ namespace _1_Presentacion
         {
 
         }
+
+        private void _p_usuario_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

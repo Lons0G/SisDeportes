@@ -57,6 +57,11 @@ namespace _1_Presentacion
 
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 

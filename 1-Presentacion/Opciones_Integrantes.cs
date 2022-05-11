@@ -64,7 +64,7 @@ namespace _1_Presentacion
 
             foreach (var integrante in lista_integrantes)
             {
-                UC_boton_entidad btn = new UC_boton_entidad(integrante.IdIntegrante, integrante.Nombre, x, 2);
+                UC_boton_entidad btn = new UC_boton_entidad(integrante.IdIntegrante,integrante.IdEquipo,integrante.IdUsuario,integrante.IdEntrenador, integrante.Nombre,integrante.Apellido,integrante.Edad, integrante.Nacionalidad,integrante.Posicion,integrante.Dorsal,integrante.Rol, x, 6);
                 btn.Top = 52 * i;
                 _p_integrantes.Controls.Add(btn);
                 i++;

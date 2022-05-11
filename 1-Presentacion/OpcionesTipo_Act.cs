@@ -53,7 +53,7 @@ namespace _1_Presentacion
 
             foreach (var tipo_act in lista_act)
             {
-                UC_boton_entidad btn = new UC_boton_entidad(tipo_act.IdTipo,tipo_act.Nombre,x, 4);
+                UC_boton_entidad btn = new UC_boton_entidad(tipo_act.IdTipo,tipo_act.Nombre,tipo_act.Descripcion,x, 4);
                 btn.Top = 52 * i;
                 _p_tipo_act.Controls.Add(btn);
                 i++;

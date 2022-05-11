@@ -32,7 +32,7 @@ namespace _1_Presentacion
         /// 9- Categoria
         /// 10- Actividad
         /// 
-        int v, ro; string n, ap, usu, pass, tel, corr;
+        int v, ro; string n, ap, usu, pass, tel, corr,des;
         int dato_entidad;
         private void _lbl_nombre_entidad_Click(object sender, EventArgs e)
         {
@@ -85,16 +85,77 @@ namespace _1_Presentacion
             _lbl_nombre_entidad.Text = nombre;
         }
         //CONSTRUCTOR PARA LAS DEMAS ENTIDADES
+        int id_2;string nom;
         public UC_boton_entidad(int id, string nombre, int x, int dato)
         {
             InitializeComponent();
             dato_entidad = dato;
             v = id;
+            nom = nombre;
             this.Anchor = AnchorStyles.Left | AnchorStyles.Top;
             this.Width = x - 10;
             this.Height = 50;
             this.Name = id.ToString();
             _lbl_nombre_entidad.Text = nombre;
+        }
+        //constructor para tipos de actividades
+        public UC_boton_entidad(int id, string nombre,string descripcion, int x, int dato)
+        {
+            InitializeComponent();
+            dato_entidad = dato;
+            v = id;
+            nom = nombre;
+            des = descripcion;
+            this.Anchor = AnchorStyles.Left | AnchorStyles.Top;
+            this.Width = x - 10;
+            this.Height = 50;
+            this.Name = id.ToString();
+            _lbl_nombre_entidad.Text = nombre;
+        }
+        //constructor para integrantes
+        byte eda;int equi,dor;string nacional,pos,rol3;
+        public UC_boton_entidad(int id,int idequi,int idusu,int identre, string nombre,string apellido,byte edad, string naciona, string posi,int dorsal,string rol, int x, int dato)
+        {
+            InitializeComponent();
+            dato_entidad = dato;
+            v = id;
+            equi = idequi;
+            id_usua = idusu;
+            id_entrenador = identre;
+            nom = nombre;
+            ap = apellido;
+            eda = edad;
+            nacional = naciona;
+            pos = posi;
+            dor = dorsal;
+            rol3 = rol;
+            
+            this.Anchor = AnchorStyles.Left | AnchorStyles.Top;
+            this.Width = x - 10;
+            this.Height = 50;
+            this.Name = id.ToString();
+            _lbl_nombre_entidad.Text = nombre;
+        }
+        //constructor para actualizar torneos
+        DateTime fecha;
+        int id_categ, id_usua, id_tip;
+        public UC_boton_entidad(int id, DateTime fe, int id_cate,int id_usu,int tipo,string nombre,int x, int dato)
+        {
+            InitializeComponent();
+            dato_entidad = dato;
+            v = id;
+            fecha = fe;
+            id_categ = id_cate;
+            id_usua = id_usu;
+            id_tip = tipo;
+            nom = nombre;
+
+            
+            this.Anchor = AnchorStyles.Left | AnchorStyles.Top;
+            this.Width = x - 10;
+            this.Height = 50;
+            this.Name = id.ToString();
+            //_lbl_nombre_entidad.Text = nombre;
         }
 
         //SOLUCIONAR BUG SOBRE LAS DIFERENTES ENTIDADES
@@ -154,17 +215,23 @@ namespace _1_Presentacion
                 //CASO PARA TIPO
                 case 4:
                     MessageBoxButtons btn_tipo = MessageBoxButtons.YesNoCancel;
-                    DialogResult dr_tipo = MessageBox.Show("¿Deseas Eliminar esta Tipo de Actividad?", "Eliminar", btn_tipo, MessageBoxIcon.Question);
+                    DialogResult dr_tipo = MessageBox.Show("¿Deseas Eliminar este Tipo de Actividad?", "Eliminar", btn_tipo, MessageBoxIcon.Question);
 
                     if (dr_tipo == DialogResult.Yes)
                     {
-                        CLS_TipoActividad obj_tipo = new CLS_TipoActividad();
-                        CLS_L_Tipo L_tipo = new CLS_L_Tipo();
-                        obj_tipo.IdTipo = v; //recibe el valor del id y lo elimina
-                        bool resultado = false;// = L_tipodeporte.(ref obj_tipodeporte);
+                        CLS_TipoActividad obj_tipoActividad = new CLS_TipoActividad();
+                        CLS_L_Tipo l_Tipo = new CLS_L_Tipo();
+                        obj_tipoActividad.IdTipo = v; //recibe el valor del id y lo elimina
+                        bool resultado = l_Tipo.Eliminar_Tipo(ref obj_tipoActividad);// = L_tipodeporte.(ref obj_tipodeporte);
 
-                        if (resultado == true) { MessageBox.Show("Tipo de Actividad Eliminado Correctamente", "Tipo Act Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-                        else { MessageBox.Show(obj_tipo.Error); }
+                        if (resultado == true) 
+                        { 
+                            MessageBox.Show("Tipo de Actividad Eliminado Correctamente", "Tipo Act Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                        }
+                        else 
+                        {
+                            MessageBox.Show(obj_tipoActividad.Error);
+                        }
                     }
                     //p.Cargar_Usuarios();
                     break;
@@ -283,19 +350,25 @@ namespace _1_Presentacion
 
                     actualizar.RecibeDatos(v, n, ap, usu, pass, tel, corr, sue, ro); //envia los datos al metodo que esta en actualizar usuario
                     break;
-                case 2:MessageBox.Show(dato_entidad.ToString());
+                case 2:
+                    Actualizar_Torneos torneos = new Actualizar_Torneos(v,fecha,id_categ,id_usua,id_tip,nom);
+                    torneos.Show();
                     break;
                 case 3:
                     MessageBox.Show(dato_entidad.ToString());
                     break;
                 case 4:
-                    MessageBox.Show(dato_entidad.ToString());
+                    Actualizar_Tipo_Act tipo = new Actualizar_Tipo_Act();
+                    tipo.Show();
+                    tipo.recibe(v, nom, des);
                     break;
                 case 5:
                     MessageBox.Show(dato_entidad.ToString());
                     break;
                 case 6:
-                    MessageBox.Show(dato_entidad.ToString());
+                    Actuzalizar_Integrantes integrantes = new Actuzalizar_Integrantes();
+                    integrantes.Show();
+                    integrantes.Recibir_Da(v,equi,id_usua,id_entrenador,nom,ap,eda,nacional,pos,dor,rol3);
                     break;
                 case 7:
                     /*Actualizar_Equipo actualizarEquipo = new Actualizar_Equipo();

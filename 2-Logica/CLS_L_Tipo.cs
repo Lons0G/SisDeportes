@@ -42,6 +42,7 @@ namespace _2_Logica
                 {
                     CommandType = CommandType.StoredProcedure
                 };
+                _conexion.Open();
                 comando.Parameters.AddWithValue("@IdTipo", obj_tipoActividad.IdTipo);
                 comando.Parameters.AddWithValue("@Descripcion", obj_tipoActividad.Descripcion);
                 comando.Parameters.AddWithValue("@Nombre", obj_tipoActividad.Nombre);
@@ -58,19 +59,20 @@ namespace _2_Logica
             }
         }
         //METODO PARA ELIMINAR TIPO ACTIVIDAD//
-        public bool Eliminar_Tipo(ref CLS_Torneo obj_torneo) {
+        public bool Eliminar_Tipo(ref CLS_TipoActividad obj_tipoActividad) {
             try {
                 Conexion();
                 SqlCommand comando = new SqlCommand("SP_ELIMINAR_TIPO", _conexion)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
-                comando.Parameters.AddWithValue("@IdTorneo", obj_torneo.IdTorneo);
+                _conexion.Open();
+                comando.Parameters.AddWithValue("@IdTipo", obj_tipoActividad.IdTipo);
                 comando.ExecuteNonQuery();
                 return true;
             }
             catch (Exception error) {
-                obj_torneo.Error = error.Message;
+                obj_tipoActividad.Error = error.Message;
                 return false;
             }
             finally {
