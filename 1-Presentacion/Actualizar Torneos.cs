@@ -15,9 +15,9 @@ namespace _1_Presentacion
     public partial class Actualizar_Torneos : Form
     {
         DateTime fecha;
-        int id_torneo, id_categoria, id_usuario, id_tipo;
+        int id_torneo, id_categoria, id_usuario, id_tipo,id_deporte;
         string nombre;
-        public Actualizar_Torneos(int id_tor, DateTime fech, int id_catego, int id_usuari, int id_tipoo, string noma)
+        public Actualizar_Torneos(int id_tor, DateTime fech, int id_catego, int id_usuari, int id_tipoo, string noma,int id_depo)
         {
             InitializeComponent();
             id_torneo = id_tor;
@@ -26,8 +26,25 @@ namespace _1_Presentacion
             id_usuario = id_usuari;
             id_tipo = id_tipoo;
             nombre = noma;
+            id_deporte = id_depo;
+           
 
         }
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            lblid_torneo.Text = id_torneo.ToString();
+            txtnom.Text = nombre;
+            lbltipo.Text = id_tipo.ToString();
+            lblusu.Text = id_usuario.ToString();
+            Cargar_Categoria();
+            Cargar_Tipo_Actividad();
+        }
+
+        private void _cb_categoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
             CLS_Torneo obj_Torneo = new CLS_Torneo();
@@ -35,7 +52,7 @@ namespace _1_Presentacion
 
             obj_Torneo.IdTorneo = id_torneo;
             obj_Torneo.Fecha = fecha;
-            obj_Torneo.IdCategoria = id_categoria;
+            obj_Torneo.IdCategoria = _cb_categoria.SelectedIndex + 1;
             obj_Torneo.IdUsuario = id_usuario;
             obj_Torneo.IdTipo = id_tipo;
             obj_Torneo.Nombre = nombre;
@@ -61,7 +78,7 @@ namespace _1_Presentacion
                 CLS_L_Categoria L_categoria = new CLS_L_Categoria();
 
                 //SE EJECTUA EL METODO PARA OBTENER LAS CATEGORAIS//
-                L_categoria.Obtener_Categoria(ref list_categoria, 1);
+                L_categoria.Obtener_Categoria(ref list_categoria, id_deporte);
 
                 _cb_categoria.DisplayMember = "Nombre";
                 _cb_categoria.ValueMember = "IdCategoria";
@@ -90,16 +107,7 @@ namespace _1_Presentacion
             _cb_tipo.DataSource = lista_act;
         }
 
-        private void btnCargar_Click(object sender, EventArgs e)
-        {
-            lblid_torneo.Text = id_torneo.ToString();
-            txtnom.Text = nombre;
-            lblcategoria.Text = id_categoria.ToString();
-            lbltipo.Text = id_tipo.ToString();
-            lblusu.Text = id_usuario.ToString();
-            Cargar_Categoria();
-            Cargar_Tipo_Actividad();
-        }
+        
 
         private void Actualizar_Torneos_Load(object sender, EventArgs e)
         {

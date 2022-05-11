@@ -138,24 +138,24 @@ namespace _1_Presentacion
         }
         //constructor para actualizar torneos
         DateTime fecha;
-        int id_categ, id_usua, id_tip;
-        public UC_boton_entidad(int id, DateTime fe, int id_cate,int id_usu,int tipo,string nombre,int x, int dato)
+        int id_categ, id_usua, id_tipo,id_depo;
+        public UC_boton_entidad(int id,DateTime fech, int id_cate,int idusu, int id_tip,string nombre,int id_d, int x, int dato)
         {
             InitializeComponent();
             dato_entidad = dato;
             v = id;
-            fecha = fe;
+            fecha = fech;
             id_categ = id_cate;
-            id_usua = id_usu;
-            id_tip = tipo;
+            id_usua=idusu;
+            id_tipo = id_tip;
             nom = nombre;
+            id_depo = id_d;
 
-            
             this.Anchor = AnchorStyles.Left | AnchorStyles.Top;
             this.Width = x - 10;
             this.Height = 50;
             this.Name = id.ToString();
-            //_lbl_nombre_entidad.Text = nombre;
+            _lbl_nombre_entidad.Text = nombre;
         }
 
         //SOLUCIONAR BUG SOBRE LAS DIFERENTES ENTIDADES
@@ -351,7 +351,7 @@ namespace _1_Presentacion
                     actualizar.RecibeDatos(v, n, ap, usu, pass, tel, corr, sue, ro); //envia los datos al metodo que esta en actualizar usuario
                     break;
                 case 2:
-                    Actualizar_Torneos torneos = new Actualizar_Torneos(v,fecha,id_categ,id_usua,id_tip,nom);
+                    Actualizar_Torneos torneos = new Actualizar_Torneos(v,fecha,id_categ,id_usua,id_tipo,nom,id_depo);
                     torneos.Show();
                     break;
                 case 3:

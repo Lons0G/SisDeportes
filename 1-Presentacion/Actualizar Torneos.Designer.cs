@@ -41,7 +41,7 @@
             this.btnCargar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.lblid_torneo = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblname = new System.Windows.Forms.Label();
             this.lblcategoria = new System.Windows.Forms.Label();
             this.lbltipo = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -108,6 +108,7 @@
             this._cb_categoria.Name = "_cb_categoria";
             this._cb_categoria.Size = new System.Drawing.Size(268, 24);
             this._cb_categoria.TabIndex = 148;
+            this._cb_categoria.SelectedIndexChanged += new System.EventHandler(this._cb_categoria_SelectedIndexChanged);
             // 
             // txtnom
             // 
@@ -175,14 +176,14 @@
             this.lblid_torneo.Size = new System.Drawing.Size(0, 25);
             this.lblid_torneo.TabIndex = 154;
             // 
-            // label6
+            // lblname
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(248, 285);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 25);
-            this.label6.TabIndex = 156;
+            this.lblname.AutoSize = true;
+            this.lblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblname.Location = new System.Drawing.Point(248, 285);
+            this.lblname.Name = "lblname";
+            this.lblname.Size = new System.Drawing.Size(0, 25);
+            this.lblname.TabIndex = 156;
             // 
             // lblcategoria
             // 
@@ -242,7 +243,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lbltipo);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblname);
             this.Controls.Add(this.lblcategoria);
             this.Controls.Add(this.lblid_torneo);
             this.Controls.Add(this.label5);
@@ -280,7 +281,7 @@
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblid_torneo;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblname;
         private System.Windows.Forms.Label lblcategoria;
         private System.Windows.Forms.Label lbltipo;
         private System.Windows.Forms.Label label8;

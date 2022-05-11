@@ -139,6 +139,11 @@ namespace _1_Presentacion
 
         }
 
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void cmbContri1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
