@@ -92,7 +92,7 @@ namespace _1_Presentacion
             dato_entidad = dato;
             v = id;
             nom = nombre;
-            this.Anchor = AnchorStyles.Left | AnchorStyles.Top;
+            this.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
             this.Width = x - 10;
             this.Height = 50;
             this.Name = id.ToString();
