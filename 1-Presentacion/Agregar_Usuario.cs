@@ -183,7 +183,7 @@ namespace _1_Presentacion
         {
             try
             {
-                Validaciones.SoloConDecimal(e);
+                Validaciones.SoloEnteros(e);
             }
             catch
             {

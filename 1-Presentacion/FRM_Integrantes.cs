@@ -86,16 +86,14 @@ namespace _1_Presentacion
 
         private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
-            e.Handled = !(char.IsDigit(e.KeyChar)
-            || e.KeyChar == (char)Keys.Back);
+            Validaciones.SoloEnteros(e);
+
         }
 
         private void txtDorsal_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
-            e.Handled = !(char.IsDigit(e.KeyChar)
-            || e.KeyChar == (char)Keys.Back);
+            Validaciones.SoloEnteros(e);
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

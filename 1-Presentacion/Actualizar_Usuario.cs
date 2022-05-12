@@ -62,6 +62,16 @@ namespace _1_Presentacion
             }
         }
 
+        private void txtTelefono2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloEnteros(e);
+        }
+
+        private void txtSueldo2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloConDecimal(e);
+        }
+
         private void txtnombre2_TextChanged(object sender, EventArgs e)
         {
            

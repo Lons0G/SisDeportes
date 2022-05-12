@@ -29,16 +29,14 @@ namespace _1_Presentacion
 
         private void TxtDorsal_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
-            e.Handled = !(char.IsDigit(e.KeyChar)
-            || e.KeyChar == (char)Keys.Back);
+            Validaciones.SoloEnteros(e);
+
         }
 
         private void TxtEdad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
-            e.Handled = !(char.IsDigit(e.KeyChar)
-            || e.KeyChar == (char)Keys.Back);
+            Validaciones.SoloEnteros(e);
+
         }
 
         private void CbEntrenador_CheckedChanged(object sender, EventArgs e)

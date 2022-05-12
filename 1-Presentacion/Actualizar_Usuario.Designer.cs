@@ -191,6 +191,7 @@
             this.txtSueldo2.Name = "txtSueldo2";
             this.txtSueldo2.Size = new System.Drawing.Size(122, 26);
             this.txtSueldo2.TabIndex = 107;
+            this.txtSueldo2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSueldo2_KeyPress);
             // 
             // label7
             // 
@@ -211,6 +212,7 @@
             this.txtTelefono2.Name = "txtTelefono2";
             this.txtTelefono2.Size = new System.Drawing.Size(159, 26);
             this.txtTelefono2.TabIndex = 105;
+            this.txtTelefono2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono2_KeyPress);
             // 
             // d
             // 
