@@ -91,7 +91,7 @@ namespace _1_Presentacion
                 }
                 else
                 {
-                    MessageBox.Show("Datos No Guardados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(obj_usuario.Error);
                 }
             }
             catch
