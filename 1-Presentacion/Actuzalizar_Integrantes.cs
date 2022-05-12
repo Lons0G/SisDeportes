@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,20 @@ namespace _1_Presentacion
         private void lbNombreEquipo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void TxtDorsal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
+            e.Handled = !(char.IsDigit(e.KeyChar)
+            || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void TxtEdad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
+            e.Handled = !(char.IsDigit(e.KeyChar)
+            || e.KeyChar == (char)Keys.Back);
         }
 
         private void CbEntrenador_CheckedChanged(object sender, EventArgs e)

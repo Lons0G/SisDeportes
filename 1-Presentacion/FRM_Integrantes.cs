@@ -11,6 +11,7 @@ using System;
 using System.Windows.Forms;
 using _3_Entidades;
 using _2_Logica;
+using System.Globalization;
 
 namespace _1_Presentacion
 {
@@ -81,6 +82,20 @@ namespace _1_Presentacion
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
+            e.Handled = !(char.IsDigit(e.KeyChar)
+            || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void txtDorsal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
+            e.Handled = !(char.IsDigit(e.KeyChar)
+            || e.KeyChar == (char)Keys.Back);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

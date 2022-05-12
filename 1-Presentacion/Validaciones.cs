@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,6 +54,11 @@ namespace _1_Presentacion
             }
         }
 
-
+        public static void SoloEnteros(KeyPressEventArgs pE)
+        {
+            CultureInfo cc = System.Threading.Thread.CurrentThread.CurrentCulture;
+            pE.Handled = !(char.IsDigit(pE.KeyChar)
+            || pE.KeyChar == (char)Keys.Back);
+        }
     }
 }
