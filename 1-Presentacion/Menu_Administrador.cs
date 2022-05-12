@@ -124,12 +124,12 @@ namespace _1_Presentacion
         }
 
 
-        private void Btn_Integrantes_Click(object sender, EventArgs e)
-        {
-            //ABRE EL FORMS DE OPCIONES_Integrante//
-            //AbrirForms(new Opciones_Integrantes());
+        //private void Btn_Integrantes_Click(object sender, EventArgs e)
+        //{
+        //    //ABRE EL FORMS DE OPCIONES_Integrante//
+        //    //AbrirForms(new Opciones_Integrantes());
 
-        }
+        //}
         private void Agregar_BTN_Usuario() {
             //REALIZAR LOS BOTONES FALTANTES PARA EL MENU DEL USUARIO//
 
@@ -141,13 +141,13 @@ namespace _1_Presentacion
             btn_Equipos.Height = 50;
             btn_Equipos.Top = (50 + 12) * 1;
 
-            //INSTANCIA UN NUEVO BOTON INTEGRANTES Y LE COLOCA LAS PROPIEDADES
-            Button btn_integrantes = new Button();
-            btn_integrantes.Name = "btn_Integrantes";
-            btn_integrantes.Text = "Integrantes";
-            btn_integrantes.Width = 120;
-            btn_integrantes.Height = 50;
-            btn_integrantes.Top = (50 + 12) * 2;
+            ////INSTANCIA UN NUEVO BOTON INTEGRANTES Y LE COLOCA LAS PROPIEDADES
+            //Button btn_integrantes = new Button();
+            //btn_integrantes.Name = "btn_Integrantes";
+            //btn_integrantes.Text = "Integrantes";
+            //btn_integrantes.Width = 120;
+            //btn_integrantes.Height = 50;
+            //btn_integrantes.Top = (50 + 12) * 2;
 
             //INSTANCIA UN NUEVO BOTON ACTIVIDAD Y LE COLOCA LAS PROPIEDADES
             Button btn_actividad = new Button();
@@ -155,7 +155,7 @@ namespace _1_Presentacion
             btn_actividad.Text = "Actividad";
             btn_actividad.Width = 120;
             btn_actividad.Height = 50;
-            btn_actividad.Top = (50 + 12) * 3;
+            btn_actividad.Top = (50 + 12) * 2;
 
             //INSTANCIA UN NUEVO BOTON EQUIPO Y LE COLOCA LAS PROPIEDADES//
             Button btn_Torneo = new Button();
@@ -163,7 +163,7 @@ namespace _1_Presentacion
             btn_Torneo.Text = "Torneos";
             btn_Torneo.Width = 120;
             btn_Torneo.Height = 50;
-            btn_Torneo.Top = (50 + 12) * 4;
+            btn_Torneo.Top = (50 + 12) * 3;
 
             //INSTANCIA UN NUEVO BOTON EQUIPO Y LE COLOCA LAS PROPIEDADES//
             Button btn_TipoAct = new Button();
@@ -171,7 +171,7 @@ namespace _1_Presentacion
             btn_TipoAct.Text = "Tipo Act";
             btn_TipoAct.Width = 120;
             btn_TipoAct.Height = 50;
-            btn_TipoAct.Top = (50 + 12) * 5;
+            btn_TipoAct.Top = (50 + 12) * 4;
 
             //INSTANCIA UN NUEVO BOTON CATEGORIAS Y LE COLOCA LAS PROPIEDADES
             Button btn_categoria = new Button();
@@ -179,13 +179,13 @@ namespace _1_Presentacion
             btn_categoria.Text = "Categoria";
             btn_categoria.Width = 120;
             btn_categoria.Height = 50;
-            btn_categoria.Top = (50 + 12) * 6;
+            btn_categoria.Top = (50 + 12) * 5;
 
 
 
             //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON USUARIO//
             btn_Equipos.Click += Btn_Equipos_Click;
-            btn_integrantes.Click += Btn_Integrantes_Click;
+            //btn_integrantes.Click += Btn_Integrantes_Click;
             btn_actividad.Click += Btn_Actividad_Click;
             btn_Torneo.Click += Btn_Torneo_Click;
             btn_TipoAct.Click += Btn_Tipo_Act_Click;
@@ -193,7 +193,7 @@ namespace _1_Presentacion
 
             //SE AGREGA EL BOTON USUARIO AL PANEL DE CONTROLES//
             _p_controles.Controls.Add(btn_Equipos);
-            _p_controles.Controls.Add(btn_integrantes);
+            //_p_controles.Controls.Add(btn_integrantes);
             _p_controles.Controls.Add(btn_actividad);
             _p_controles.Controls.Add(btn_Torneo);
             _p_controles.Controls.Add(btn_TipoAct);

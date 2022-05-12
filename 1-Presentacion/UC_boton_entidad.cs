@@ -99,7 +99,7 @@ namespace _1_Presentacion
             _lbl_nombre_entidad.Text = nombre;
         }
         //constructor para tipos de actividades
-        public UC_boton_entidad(int id, string nombre,string descripcion, int x, int dato)
+        public UC_boton_entidad(int id, string nombre, string descripcion, int x, int dato)
         {
             InitializeComponent();
             dato_entidad = dato;
@@ -157,7 +157,30 @@ namespace _1_Presentacion
             this.Name = id.ToString();
             _lbl_nombre_entidad.Text = nombre;
         }
+        //constructor para Actividad
+        DateTime hora;int id_con1, id_con2,id_torneo;string nombreTipo;
+        public UC_boton_entidad(int id,DateTime fech,DateTime hor,int id_c1,int id_c2,int id_catego,int id_usu,int id_depo,int id_tip,int id_torn,string nombre, int x, int dato)
+        {
+            InitializeComponent();
+            dato_entidad = dato;
+            v = id;
+            fecha = fech;
+            hora = hor;
+            id_con1 = id_c1;
+            id_con2 = id_c2;
+            id_categ = id_catego;
+            id_usuario = id_usu;
+            id_deporte = id_depo;
+            id_tipo = id_tip;
+            id_torneo = id_torn;
+            nom = nombre;
 
+            this.Anchor = AnchorStyles.Left | AnchorStyles.Top;
+            this.Width = x - 10;
+            this.Height = 50;
+            this.Name = id.ToString();
+            _lbl_nombre_entidad.Text = nombre;
+        }
         //SOLUCIONAR BUG SOBRE LAS DIFERENTES ENTIDADES
         private void _btn_eliminar_Click(object sender, EventArgs e)
         {
@@ -385,7 +408,8 @@ namespace _1_Presentacion
                     MessageBox.Show(dato_entidad.ToString());
                     break;
                 case 10:
-                    MessageBox.Show(dato_entidad.ToString());
+                    Actualizar_Actividad actualizarAct = new Actualizar_Actividad(v,fecha,hora,id_con1,id_con2,id_categ,id_usuario,id_deporte,id_tipo,id_torneo,nom);
+                    actualizarAct.Show();
                     break;
             }
            

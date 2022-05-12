@@ -41,12 +41,6 @@
             this.btnCargar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.lblid_torneo = new System.Windows.Forms.Label();
-            this.lblname = new System.Windows.Forms.Label();
-            this.lblcategoria = new System.Windows.Forms.Label();
-            this.lbltipo = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblusu = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -176,75 +170,12 @@
             this.lblid_torneo.Size = new System.Drawing.Size(0, 25);
             this.lblid_torneo.TabIndex = 154;
             // 
-            // lblname
-            // 
-            this.lblname.AutoSize = true;
-            this.lblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblname.Location = new System.Drawing.Point(248, 285);
-            this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(0, 25);
-            this.lblname.TabIndex = 156;
-            // 
-            // lblcategoria
-            // 
-            this.lblcategoria.AutoSize = true;
-            this.lblcategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcategoria.Location = new System.Drawing.Point(132, 285);
-            this.lblcategoria.Name = "lblcategoria";
-            this.lblcategoria.Size = new System.Drawing.Size(95, 25);
-            this.lblcategoria.TabIndex = 155;
-            this.lblcategoria.Text = "id categ:";
-            // 
-            // lbltipo
-            // 
-            this.lbltipo.AutoSize = true;
-            this.lbltipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltipo.Location = new System.Drawing.Point(248, 323);
-            this.lbltipo.Name = "lbltipo";
-            this.lbltipo.Size = new System.Drawing.Size(0, 25);
-            this.lbltipo.TabIndex = 158;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(132, 323);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 25);
-            this.label8.TabIndex = 157;
-            this.label8.Text = "id tipo:";
-            // 
-            // lblusu
-            // 
-            this.lblusu.AutoSize = true;
-            this.lblusu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblusu.Location = new System.Drawing.Point(248, 362);
-            this.lblusu.Name = "lblusu";
-            this.lblusu.Size = new System.Drawing.Size(0, 25);
-            this.lblusu.TabIndex = 160;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(132, 362);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 25);
-            this.label9.TabIndex = 159;
-            this.label9.Text = "id usuario:";
-            // 
             // Actualizar_Torneos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(503, 429);
-            this.Controls.Add(this.lblusu);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.lbltipo);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.lblname);
-            this.Controls.Add(this.lblcategoria);
             this.Controls.Add(this.lblid_torneo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCargar);
@@ -281,11 +212,5 @@
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblid_torneo;
-        private System.Windows.Forms.Label lblname;
-        private System.Windows.Forms.Label lblcategoria;
-        private System.Windows.Forms.Label lbltipo;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblusu;
-        private System.Windows.Forms.Label label9;
     }
 }

@@ -55,7 +55,7 @@ namespace _1_Presentacion
 
             foreach (var actividad in lista_actividad)
             {
-                UC_boton_entidad btn = new UC_boton_entidad(actividad.IdActividad, actividad.Nombre, x, 4);
+                UC_boton_entidad btn = new UC_boton_entidad(actividad.IdActividad, actividad.Fecha,actividad.Hora,actividad.IdContricante_1,actividad.IdContricante_2,actividad.IdCategoria,actividad.IdUsuario,actividad.IdDeporte,actividad.IdTipo,actividad.IdTorneo, actividad.Nombre, x, 10);
                 btn.Top = 52 * i;
                 panelact.Controls.Add(btn);
                 i++;

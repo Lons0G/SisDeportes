@@ -60,26 +60,7 @@ namespace _1_Presentacion
             }
 
         }
-        //public void Cargar()
-        //{
-        //    Limpiar_Torneos();
-
-        //    List<CLS_Torneo> lista_torneos = new List<CLS_Torneo>();
-        //    CLS_L_Torneo L_torneo = new CLS_L_Torneo();
-        //    L_torneo.ObtenerTorneos(ref lista_torneos);
-
-        //    int i = 0;
-        //    int x = _p_torneos.Width;
-
-        //    foreach (var torneo in lista_torneos)
-        //    {
-        //        UC_boton_entidad btn = new UC_boton_entidad(torneo.IdTorneo,torneo.Fecha,torneo.IdCategoria,torneo.IdUsuario,torneo.IdTipo, torneo.Nombre, x, 2);
-        //        btn.Top = 52 * i;
-        //        _p_torneos.Controls.Add(btn);
-        //        i++;
-        //    }
-
-        //}
+       
         private void Limpiar_Torneos()
         {
             if (_p_torneos.Controls.Count > 0) { _p_torneos.Controls.Clear(); }

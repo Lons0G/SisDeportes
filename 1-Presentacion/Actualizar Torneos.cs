@@ -27,16 +27,15 @@ namespace _1_Presentacion
             id_tipo = id_tipoo;
             nombre = noma;
             id_deporte = id_depo;
-           
+            Cargar_Categoria();
 
         }
         private void btnCargar_Click(object sender, EventArgs e)
         {
             lblid_torneo.Text = id_torneo.ToString();
             txtnom.Text = nombre;
-            lbltipo.Text = id_tipo.ToString();
-            lblusu.Text = id_usuario.ToString();
-            Cargar_Categoria();
+            dtfechatorneo.Text = fecha.ToString();
+            _cb_categoria.Text = id_categoria.ToString();
             Cargar_Tipo_Actividad();
         }
 
@@ -51,11 +50,11 @@ namespace _1_Presentacion
             CLS_L_Torneo L_Torneo = new CLS_L_Torneo();
 
             obj_Torneo.IdTorneo = id_torneo;
-            obj_Torneo.Fecha = fecha;
+            obj_Torneo.Fecha = Convert.ToDateTime(this.dtfechatorneo.Text);
             obj_Torneo.IdCategoria = _cb_categoria.SelectedIndex + 1;
             obj_Torneo.IdUsuario = id_usuario;
-            obj_Torneo.IdTipo = id_tipo;
-            obj_Torneo.Nombre = nombre;
+            obj_Torneo.IdTipo = _cb_tipo.SelectedIndex +1 ;
+            obj_Torneo.Nombre = txtnom.Text;
 
             bool resultado = L_Torneo.Editar_Torneo(ref obj_Torneo);
 
@@ -106,8 +105,6 @@ namespace _1_Presentacion
             _cb_tipo.ValueMember = "IdTipoDeporte";
             _cb_tipo.DataSource = lista_act;
         }
-
-        
 
         private void Actualizar_Torneos_Load(object sender, EventArgs e)
         {
