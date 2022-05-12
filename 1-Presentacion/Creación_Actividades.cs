@@ -65,73 +65,98 @@ namespace _1_Presentacion
         //metodo que carga los equipos
         public void Cargar_Equipos(int id)
         {
-            List<CLS_Equipo> lista_equipos = new List<CLS_Equipo>();
-            CLS_L_Equipo L_equipo = new CLS_L_Equipo();
-            L_equipo.ObtenerEquipos(ref lista_equipos, id);
-            id_usu = id;
-            cmbContri1.DisplayMember = "Nombre";
-            cmbContri1.ValueMember = "IdTipoDeporte";
-            cmbContri1.DataSource = lista_equipos;
+            try
+            {
+                List<CLS_Equipo> lista_equipos = new List<CLS_Equipo>();
+                CLS_L_Equipo L_equipo = new CLS_L_Equipo();
+                L_equipo.ObtenerEquipos(ref lista_equipos, id);
+                id_usu = id;
+                cmbContri1.DisplayMember = "Nombre";
+                cmbContri1.ValueMember = "IdTipoDeporte";
+                cmbContri1.DataSource = lista_equipos;
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+
         }
         //metodo que carga los tipos de actividad
         public void Cargar_Tipo_Actividad()
         {
-            List<CLS_TipoActividad> lista_act = new List<CLS_TipoActividad>();
-            CLS_L_Tipo l_Tipo = new CLS_L_Tipo();
-            l_Tipo.ObtenerTipos(ref lista_act);
-            cboAct.DisplayMember = "Nombre";
-            cboAct.ValueMember = "IdTipoDeporte";
-            cboAct.DataSource = lista_act;
+            try
+            {
+                List<CLS_TipoActividad> lista_act = new List<CLS_TipoActividad>();
+                CLS_L_Tipo l_Tipo = new CLS_L_Tipo();
+                l_Tipo.ObtenerTipos(ref lista_act);
+                cboAct.DisplayMember = "Nombre";
+                cboAct.ValueMember = "IdTipoDeporte";
+                cboAct.DataSource = lista_act;
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
         //metodo que carga los equipos
         public void Cargar_Equipos2(int id)
         {
-            List<CLS_Equipo> lista_equipos = new List<CLS_Equipo>();
-            CLS_L_Equipo L_equipo = new CLS_L_Equipo();
-            L_equipo.ObtenerEquipos(ref lista_equipos, id);
-              
-            cmbContri2.DisplayMember = "Nombre";
-            cmbContri2.ValueMember = "IdTipoDeporte";
-            cmbContri2.DataSource = lista_equipos;
+            try
+            {
+                List<CLS_Equipo> lista_equipos = new List<CLS_Equipo>();
+                CLS_L_Equipo L_equipo = new CLS_L_Equipo();
+                L_equipo.ObtenerEquipos(ref lista_equipos, id);
+
+                cmbContri2.DisplayMember = "Nombre";
+                cmbContri2.ValueMember = "IdTipoDeporte";
+                cmbContri2.DataSource = lista_equipos;
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
         //metodo que carga los torneos
         public void Cargar_Torneos()
         {
-            List<CLS_Torneo> lista_torneo = new List<CLS_Torneo>();
-            CLS_L_Torneo L_Torneo = new CLS_L_Torneo();
-            L_Torneo.ObtenerTorneos(ref lista_torneo);
-           
-            cboTorneo.DisplayMember = "Nombre";
-            cboTorneo.ValueMember = "IdTipoDeporte";
-            cboTorneo.DataSource = lista_torneo;
+            try
+            {
+                List<CLS_Torneo> lista_torneo = new List<CLS_Torneo>();
+                CLS_L_Torneo L_Torneo = new CLS_L_Torneo();
+                L_Torneo.ObtenerTorneos(ref lista_torneo);
+
+                cboTorneo.DisplayMember = "Nombre";
+                cboTorneo.ValueMember = "IdTipoDeporte";
+                cboTorneo.DataSource = lista_torneo;
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            //PENDIENTE, REALIZAR LA FUNCION PARA GENERAR UNA ACTIVIDAD//
-            CLS_Actividad obj_actividad = new CLS_Actividad();
-            CLS_L_Actividad L_actividad = new CLS_L_Actividad();
-
-            obj_actividad.IdUsuario = id__;
-            obj_actividad.Nombre = txtActividad.Text;
-            obj_actividad.IdDeporte = id_depo;/*cmbDeporte.SelectedIndex;*/
-            obj_actividad.IdTipo = cboAct.SelectedIndex+1;
-            obj_actividad.IdTorneo = cboTorneo.SelectedIndex;
-            obj_actividad.IdCategoria = cmbCategoria.SelectedIndex + 1; //el indice por defecto marca 0 y por eso le sume 1
-            obj_actividad.Fecha = dtpFecha.Value;
-            obj_actividad.Hora = dtpHora.Value;
-            obj_actividad.IdContricante_1 = cmbContri1.SelectedIndex + 1; //el indice por defecto marca 0 y por eso le sume 1
-            obj_actividad.IdContricante_2 = cmbContri2.SelectedIndex + 1;//el indice por defecto marca 0 y por eso le sume 1
-
-            bool resultado = L_actividad.Insertar_Actividad(ref obj_actividad);
-
-            if (resultado == true)
+            try
             {
-                MessageBox.Show("Actividad Guardada con Exito");
+                CLS_Actividad obj_actividad = new CLS_Actividad();
+                CLS_L_Actividad L_actividad = new CLS_L_Actividad();
+
+                obj_actividad.IdUsuario = id__;
+                obj_actividad.Nombre = txtActividad.Text;
+                obj_actividad.IdDeporte = id_depo;/*cmbDeporte.SelectedIndex;*/
+                obj_actividad.IdTipo = cboAct.SelectedIndex + 1;
+                obj_actividad.IdTorneo = cboTorneo.SelectedIndex;
+                obj_actividad.IdCategoria = cmbCategoria.SelectedIndex + 1; //el indice por defecto marca 0 y por eso le sume 1
+                obj_actividad.Fecha = dtpFecha.Value;
+                obj_actividad.Hora = dtpHora.Value;
+                obj_actividad.IdContricante_1 = cmbContri1.SelectedIndex + 1; //el indice por defecto marca 0 y por eso le sume 1
+                obj_actividad.IdContricante_2 = cmbContri2.SelectedIndex + 1;//el indice por defecto marca 0 y por eso le sume 1
+
+                bool resultado = L_actividad.Insertar_Actividad(ref obj_actividad);
+
+                if (resultado == true)
+                {
+                    MessageBox.Show("Actividad Guardada con Exito");
+                }
+                else
+                {
+                    MessageBox.Show(obj_actividad.Error);
+                }
             }
-            else
-            {
-                MessageBox.Show(obj_actividad.Error);
-            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
