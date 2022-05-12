@@ -58,8 +58,10 @@ namespace _1_Presentacion
                     //Cargar_Categoria();
                 }
             }
-            catch (Exception ex)
-            { MessageBox.Show(ex.Message); }
+            catch 
+            { 
+                MessageBox.Show("Error en el Metodo Cargar_Categoria", "Ha ocurrido un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         int id_usu;
         //metodo que carga los equipos
@@ -75,8 +77,10 @@ namespace _1_Presentacion
                 cmbContri1.ValueMember = "IdTipoDeporte";
                 cmbContri1.DataSource = lista_equipos;
             }
-            catch (Exception ex)
-            { MessageBox.Show(ex.Message); }
+            catch
+            { 
+                MessageBox.Show("Error en el Metodo Cargar_Equipos", "Ha ocurrido un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
         //metodo que carga los tipos de actividad
@@ -91,8 +95,10 @@ namespace _1_Presentacion
                 cboAct.ValueMember = "IdTipoDeporte";
                 cboAct.DataSource = lista_act;
             }
-            catch (Exception ex)
-            { MessageBox.Show(ex.Message); }
+            catch
+            { 
+                MessageBox.Show("Error en el Metodo Cargar_Tipo_Actividad", "Ha ocurrido un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         //metodo que carga los equipos
         public void Cargar_Equipos2(int id)
@@ -107,8 +113,10 @@ namespace _1_Presentacion
                 cmbContri2.ValueMember = "IdTipoDeporte";
                 cmbContri2.DataSource = lista_equipos;
             }
-            catch (Exception ex)
-            { MessageBox.Show(ex.Message); }
+            catch
+            { 
+                MessageBox.Show("Error en el Metodo Cargar_Equipos2", "Ha ocurrido un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         //metodo que carga los torneos
         public void Cargar_Torneos()
@@ -123,8 +131,10 @@ namespace _1_Presentacion
                 cboTorneo.ValueMember = "IdTipoDeporte";
                 cboTorneo.DataSource = lista_torneo;
             }
-            catch (Exception ex)
-            { MessageBox.Show(ex.Message); }
+            catch
+            { 
+                MessageBox.Show("Error en el Metodo Cargar_Torneos", "Ha ocurrido un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -155,8 +165,10 @@ namespace _1_Presentacion
                     MessageBox.Show(obj_actividad.Error);
                 }
             }
-            catch (Exception ex)
-            { MessageBox.Show(ex.Message); }
+            catch
+            { 
+                MessageBox.Show("Error en el Metodo btnAceptar", "Ha ocurrido un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
