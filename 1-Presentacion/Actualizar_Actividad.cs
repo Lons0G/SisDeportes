@@ -28,8 +28,8 @@ namespace _1_Presentacion
             obj_actividad.IdTipo = cboAct.SelectedIndex + 1;
             obj_actividad.IdTorneo = cboTorneo.SelectedIndex + 1;
             obj_actividad.IdCategoria = cmbCategoria.SelectedIndex + 1; //el indice por defecto marca 0 y por eso le sume 1
-            obj_actividad.Fecha = dtpFecha.Value;
-            obj_actividad.Hora = dtpHora.Value;
+            obj_actividad.Fecha = Convert.ToDateTime(this.dtpFecha.Text);
+            obj_actividad.Hora = Convert.ToDateTime(this.dtpHora.Text);
             obj_actividad.IdContricante_1 = cmbContri1.SelectedIndex + 1; //el indice por defecto marca 0 y por eso le sume 1
             obj_actividad.IdContricante_2 = cmbContri2.SelectedIndex + 1;//el indice por defecto marca 0 y por eso le sume 1
 
