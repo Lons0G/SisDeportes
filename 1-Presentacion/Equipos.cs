@@ -18,34 +18,52 @@ namespace _1_Presentacion
         private string _name;
         public Equipos(int Id,string Nombre,int iddepo)
         {
-            InitializeComponent();
-            _id = Id;
-            _name = Nombre;
-            //id_depo = iddepo;
+            try
+            {
+                InitializeComponent();
+                _id = Id;
+                _name = Nombre;
+                //id_depo = iddepo;
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo Equipos", "Ha ocurrido un error en 'Equipos'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         public void CargarDeporte()
         {
-            List<CLS_Deporte> lista_deportes = new List<CLS_Deporte>();
-            CLS_L_Deporte L_deportes = new CLS_L_Deporte();
+            try
+            {
+                List<CLS_Deporte> lista_deportes = new List<CLS_Deporte>();
+                CLS_L_Deporte L_deportes = new CLS_L_Deporte();
 
-            L_deportes.Obtener_Deportes(lista_deportes);
+                L_deportes.Obtener_Deportes(lista_deportes);
 
-            cboidequipo.DisplayMember = "Nombre";
-            cboidequipo.ValueMember = "IdTipoDeporte";
-            cboidequipo.DataSource = lista_deportes;
-  
-
+                cboidequipo.DisplayMember = "Nombre";
+                cboidequipo.ValueMember = "IdTipoDeporte";
+                cboidequipo.DataSource = lista_deportes;
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo CargarDeporte", "Ha ocurrido un error en 'Equipos'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void Cargar_TiposCategoria()
         {
-            List<CLS_TipoDeporte> lista_TiposDeportes = new List<CLS_TipoDeporte>();
-            CLS_L_TipoDeporte L_tipo_deporte = new CLS_L_TipoDeporte();
-            L_tipo_deporte.Obtener_TipoDeportes(ref lista_TiposDeportes);
+            try
+            {
+                List<CLS_TipoDeporte> lista_TiposDeportes = new List<CLS_TipoDeporte>();
+                CLS_L_TipoDeporte L_tipo_deporte = new CLS_L_TipoDeporte();
+                L_tipo_deporte.Obtener_TipoDeportes(ref lista_TiposDeportes);
 
-            cboCategoria.DisplayMember = "Nombre";
-            cboCategoria.ValueMember = "IdTipoDeporte";
-            cboCategoria.DataSource = lista_TiposDeportes;
-
+                cboCategoria.DisplayMember = "Nombre";
+                cboCategoria.ValueMember = "IdTipoDeporte";
+                cboCategoria.DataSource = lista_TiposDeportes;
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo Cargar_TiposCategoria", "Ha ocurrido un error en 'Equipos'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         //private void Cargar_TiposCategoria()
         //{
@@ -60,36 +78,47 @@ namespace _1_Presentacion
         //}
         private void btnRegEquipo_Click(object sender, EventArgs e)
         {
-            CLS_Equipo obj_equipo = new CLS_Equipo();
-            CLS_L_Equipo l_Equipo = new CLS_L_Equipo();
-
-            obj_equipo.IdUsuario = _id;
-            obj_equipo.IdDeporte = Convert.ToInt32(cboidequipo.SelectedValue);
-            obj_equipo.IdCategoria = Convert.ToInt32(cboCategoria.SelectedValue);
-            obj_equipo.IdEntrenador = 2;
-            obj_equipo.Nombre = this.txtNameEquipo.Text;
-            obj_equipo.Visitante = true;
-
-            bool resultado = l_Equipo.Insertar_Equipo(ref obj_equipo);
-            
-            if(resultado == true)
+            try
             {
-                MessageBox.Show("Equipo Guardado con Exito!");
+                CLS_Equipo obj_equipo = new CLS_Equipo();
+                CLS_L_Equipo l_Equipo = new CLS_L_Equipo();
+
+                obj_equipo.IdUsuario = _id;
+                obj_equipo.IdDeporte = Convert.ToInt32(cboidequipo.SelectedValue);
+                obj_equipo.IdCategoria = Convert.ToInt32(cboCategoria.SelectedValue);
+                obj_equipo.IdEntrenador = 2;
+                obj_equipo.Nombre = this.txtNameEquipo.Text;
+                obj_equipo.Visitante = true;
+
+                bool resultado = l_Equipo.Insertar_Equipo(ref obj_equipo);
+
+                if (resultado == true)
+                {
+                    MessageBox.Show("Equipo Guardado con Exito!");
+                }
+                else
+                {
+                    MessageBox.Show(obj_equipo.Error);
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show(obj_equipo.Error);
+                MessageBox.Show("Error en el Metodo btnRegEquipo_Click", "Ha ocurrido un error en 'Equipos'", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-
         }
 
         private void Equipos_Load(object sender, EventArgs e)
         {
-            CargarDeporte();
-            Cargar_TiposCategoria();
-            lblusuario.Text = _name;
+            try
+            {
+                CargarDeporte();
+                Cargar_TiposCategoria();
+                lblusuario.Text = _name;
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo Equipos_Load", "Ha ocurrido un error en 'Equipos'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -23,37 +23,57 @@ namespace _1_Presentacion
         string nombre, descripcion;
         public void recibe(int id_, string nom, string descrip)
         {
-            id = id_;
-            nombre = nom;
-            descripcion = descrip;
+            try
+            {
+                id = id_;
+                nombre = nom;
+                descripcion = descrip;
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo recibe", "Ha ocurrido un error en 'Actualizar Tipo Actividades'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            CLS_TipoActividad obj_tipoActividad = new CLS_TipoActividad();
-            CLS_L_Tipo l_Tipo = new CLS_L_Tipo();
-
-            obj_tipoActividad.IdTipo = id;
-            obj_tipoActividad.Nombre = txtnombreAct.Text;
-            obj_tipoActividad.Descripcion = txtDescrip.Text;
-
-            bool resultado = l_Tipo.Editar_Tipo(ref obj_tipoActividad);
-
-            if (resultado == true)
+            try
             {
-                MessageBox.Show("Tipo de Actividad Actualizada con Exito!");
-            }
-            else
-            {
-                MessageBox.Show(obj_tipoActividad.Error);
-            }
+                CLS_TipoActividad obj_tipoActividad = new CLS_TipoActividad();
+                CLS_L_Tipo l_Tipo = new CLS_L_Tipo();
 
+                obj_tipoActividad.IdTipo = id;
+                obj_tipoActividad.Nombre = txtnombreAct.Text;
+                obj_tipoActividad.Descripcion = txtDescrip.Text;
+
+                bool resultado = l_Tipo.Editar_Tipo(ref obj_tipoActividad);
+
+                if (resultado == true)
+                {
+                    MessageBox.Show("Tipo de Actividad Actualizada con Exito!");
+                }
+                else
+                {
+                    MessageBox.Show(obj_tipoActividad.Error);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo btnActualizar_Click", "Ha ocurrido un error en 'Actualizar Tipo Actividades'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            lbl_id.Text = id.ToString();
-            txtnombreAct.Text = nombre;
-            txtDescrip.Text = descripcion;
+            try
+            {
+                lbl_id.Text = id.ToString();
+                txtnombreAct.Text = nombre;
+                txtDescrip.Text = descripcion;
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo btnCargar_Click", "Ha ocurrido un error en 'Actualizar Tipo Actividades'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void Actualizar_Tipo_Act_Load(object sender, EventArgs e)
         {

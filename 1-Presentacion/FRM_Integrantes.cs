@@ -19,13 +19,21 @@ namespace _1_Presentacion
         int id_equipo, id_usuario, id_entrenador;
         public FRM_Integrantes(int id_equi,int id_usu, int id_entre)
         {
-            InitializeComponent();
-            id_equipo = id_equi;
-            id_usuario = id_usu;
-            id_entrenador = id_entre;   
+            try
+            {
+                InitializeComponent();
+                id_equipo = id_equi;
+                id_usuario = id_usu;
+                id_entrenador = id_entre;
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo btnVolver_Click", "Ha ocurrido un error en 'FRM Integrantes'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }  
         }
         public void GuardarDatosJu(string Nombre,string Apellido,string Edad,string Nacionalidad,string Posicion,string Dorsal)//Guardar Datos Jugador
         {
+
             //CLS_Integrantes obj_Integrante = new CLS_Integrantes();
             //CLS_L_Integrante L_Integrante = new CLS_L_Integrante ();
             
@@ -33,22 +41,35 @@ namespace _1_Presentacion
         }
         private void CbEntrenador_CheckedChanged(object sender, EventArgs e)
         {
-            if (CbEntrenador.Checked== true)
+            try
             {
-               CbJugador.Checked = false;
-                txtPosicion.Enabled = false;
-                txtDorsal.Enabled = false;
+                if (CbEntrenador.Checked == true)
+                {
+                    CbJugador.Checked = false;
+                    txtPosicion.Enabled = false;
+                    txtDorsal.Enabled = false;
+                }
             }
-            
+            catch
+            {
+                MessageBox.Show("Error en el Metodo CbEntrenador_CheckedChanged", "Ha ocurrido un error en 'FRM Integrantes'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
         }
 
         private void CbJugador_CheckedChanged(object sender, EventArgs e)
         {
-            if (CbJugador.Checked==true)
+            try
             {
-               CbEntrenador.Checked = false;
-                txtDorsal.Enabled = true;
-                txtPosicion.Enabled = true;
+                if (CbJugador.Checked == true)
+                {
+                    CbEntrenador.Checked = false;
+                    txtDorsal.Enabled = true;
+                    txtPosicion.Enabled = true;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo CbJugador_CheckedChanged", "Ha ocurrido un error en 'FRM Integrantes'", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

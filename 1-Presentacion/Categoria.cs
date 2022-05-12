@@ -21,41 +21,60 @@ namespace _1_Presentacion
 
         public void CargarDeporte()
         {
-            List<CLS_Deporte> lista_deportes = new List<CLS_Deporte>();
-            CLS_L_Deporte L_deportes = new CLS_L_Deporte();
+            try
+            {
+                List<CLS_Deporte> lista_deportes = new List<CLS_Deporte>();
+                CLS_L_Deporte L_deportes = new CLS_L_Deporte();
 
-            L_deportes.Obtener_Deportes(lista_deportes);
+                L_deportes.Obtener_Deportes(lista_deportes);
 
-            cboidequipo.DisplayMember = "Nombre";
-            cboidequipo.ValueMember = "IdTipoDeporte";
-            cboidequipo.DataSource = lista_deportes;
-
+                cboidequipo.DisplayMember = "Nombre";
+                cboidequipo.ValueMember = "IdTipoDeporte";
+                cboidequipo.DataSource = lista_deportes;
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo CargarDeporte", "Ha ocurrido un error en 'Categoria'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void btnCatego_Click(object sender, EventArgs e)
         {
-
-            CLS_Categoria obj_categoria = new CLS_Categoria();
-
-            CLS_L_Categoria L_categoria = new CLS_L_Categoria();
-
-            obj_categoria.IdDeporte = Convert.ToInt32(cboidequipo.SelectedValue);
-            obj_categoria.Nombre = this.txtcategoria.Text;
-
-            bool resultado = L_categoria.Insertar_Categoria(ref obj_categoria);
-
-            if (resultado == true)
+            try
             {
-                MessageBox.Show("Guadado Con Exito!");
+                CLS_Categoria obj_categoria = new CLS_Categoria();
+
+                CLS_L_Categoria L_categoria = new CLS_L_Categoria();
+
+                obj_categoria.IdDeporte = Convert.ToInt32(cboidequipo.SelectedValue);
+                obj_categoria.Nombre = this.txtcategoria.Text;
+
+                bool resultado = L_categoria.Insertar_Categoria(ref obj_categoria);
+
+                if (resultado == true)
+                {
+                    MessageBox.Show("Guadado Con Exito!");
+                }
+                else
+                {
+                    MessageBox.Show(obj_categoria.Error);
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show(obj_categoria.Error);
+                MessageBox.Show("Error en el Metodo btnCatego_Click", "Ha ocurrido un error en 'Categoria'", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Categoria_Load(object sender, EventArgs e)
         {
-            CargarDeporte();
+            try
+            {
+                CargarDeporte();
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo Categoria_Load", "Ha ocurrido un error en 'Categoria'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

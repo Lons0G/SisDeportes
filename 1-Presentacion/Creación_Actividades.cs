@@ -60,7 +60,7 @@ namespace _1_Presentacion
             }
             catch 
             { 
-                MessageBox.Show("Error en el Metodo Cargar_Categoria", "Ha ocurrido un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error en el Metodo Cargar_Categoria", "Ha ocurrido un error en 'Creacion Actividades'", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         int id_usu;
@@ -79,7 +79,7 @@ namespace _1_Presentacion
             }
             catch
             { 
-                MessageBox.Show("Error en el Metodo Cargar_Equipos", "Ha ocurrido un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error en el Metodo Cargar_Equipos", "Ha ocurrido un error en 'Creacion Actividades'", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -97,7 +97,7 @@ namespace _1_Presentacion
             }
             catch
             { 
-                MessageBox.Show("Error en el Metodo Cargar_Tipo_Actividad", "Ha ocurrido un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error en el Metodo Cargar_Tipo_Actividad", "Ha ocurrido un error en 'Creacion Actividades'", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         //metodo que carga los equipos
@@ -115,7 +115,7 @@ namespace _1_Presentacion
             }
             catch
             { 
-                MessageBox.Show("Error en el Metodo Cargar_Equipos2", "Ha ocurrido un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error en el Metodo Cargar_Equipos2", "Ha ocurrido un error en 'Creacion Actividades'", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         //metodo que carga los torneos
@@ -133,7 +133,7 @@ namespace _1_Presentacion
             }
             catch
             { 
-                MessageBox.Show("Error en el Metodo Cargar_Torneos", "Ha ocurrido un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error en el Metodo Cargar_Torneos", "Ha ocurrido un error en 'Creacion Actividades'", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -167,7 +167,7 @@ namespace _1_Presentacion
             }
             catch
             { 
-                MessageBox.Show("Error en el Metodo btnAceptar", "Ha ocurrido un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error en el Metodo btnAceptar", "Ha ocurrido un error en 'Creacion Actividades'", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

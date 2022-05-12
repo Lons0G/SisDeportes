@@ -18,6 +18,7 @@ namespace _1_Presentacion
         {
             InitializeComponent();
         }
+        
         int id_inte,id_equi,id_usu,id_entrena, dorsal; string nom, ape, nac, pos,rol;
 
         private void lbNombreEquipo_Click(object sender, EventArgs e)
@@ -27,24 +28,37 @@ namespace _1_Presentacion
 
         private void CbEntrenador_CheckedChanged(object sender, EventArgs e)
         {
-
-            if (CbEntrenador.Checked == true)
+            try
             {
-                CbJugador.Checked = false;
-                TxtPosicion.Enabled = false;
-                TxtDorsal.Enabled = false;
-                TxtPosicion.Text = "Null";
-                TxtDorsal.Text = "0";
+                if (CbEntrenador.Checked == true)
+                {
+                    CbJugador.Checked = false;
+                    TxtPosicion.Enabled = false;
+                    TxtDorsal.Enabled = false;
+                    TxtPosicion.Text = "Null";
+                    TxtDorsal.Text = "0";
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo CbEntrenador_CheckedChanged", "Ha ocurrido un error en 'Actualizar Integrante'", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void CbJugador_CheckedChanged(object sender, EventArgs e)
         {
-            if (CbJugador.Checked == true)
+            try
             {
-                CbEntrenador.Checked = false;
-                TxtDorsal.Enabled = true;
-                TxtPosicion.Enabled = true;
+                if (CbJugador.Checked == true)
+                {
+                    CbEntrenador.Checked = false;
+                    TxtDorsal.Enabled = true;
+                    TxtPosicion.Enabled = true;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo CbJugador_CheckedChanged", "Ha ocurrido un error en 'Actualizar Integrante'", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -52,30 +66,35 @@ namespace _1_Presentacion
 
         private void btncargar_Click(object sender, EventArgs e)
         {
-            this.lbID.Text = id_inte.ToString();
-            this.TxtNombre.Text = nom;
-            this.TxtApell.Text = ape;
-            this.TxtEdad.Text = edad.ToString();
-            this.TxtNacionalidad.Text = nac;
-            this.TxtPosicion.Text = pos;
-            this.TxtDorsal.Text = dorsal.ToString();
-
-            if (TxtDorsal.Text == "0")
+            try
             {
-                CbEntrenador.Checked = true;
-                CbJugador.Checked=false;
-                CbJugador.Enabled=false;
-                TxtPosicion.Enabled = false;
-                TxtDorsal.Enabled = false;
-            }
-            else
-            {
-                CbJugador.Checked=true;
-                CbEntrenador.Checked = false;
-                CbEntrenador.Enabled= false;
-            }
+                this.lbID.Text = id_inte.ToString();
+                this.TxtNombre.Text = nom;
+                this.TxtApell.Text = ape;
+                this.TxtEdad.Text = edad.ToString();
+                this.TxtNacionalidad.Text = nac;
+                this.TxtPosicion.Text = pos;
+                this.TxtDorsal.Text = dorsal.ToString();
 
-           
+                if (TxtDorsal.Text == "0")
+                {
+                    CbEntrenador.Checked = true;
+                    CbJugador.Checked = false;
+                    CbJugador.Enabled = false;
+                    TxtPosicion.Enabled = false;
+                    TxtDorsal.Enabled = false;
+                }
+                else
+                {
+                    CbJugador.Checked = true;
+                    CbEntrenador.Checked = false;
+                    CbEntrenador.Enabled = false;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo btncargar_Click", "Ha ocurrido un error en 'Actualizar Integrante'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Actuzalizar_Integrantes_Load(object sender, EventArgs e)
@@ -85,17 +104,24 @@ namespace _1_Presentacion
 
         public void Recibir_Da(int id,int id_eq,int id_usua,int id_entrenador,string no, string ap, byte eda, string na, string po, int dor,string ro)
         {
-            id_inte = id;
-            id_equi = id_eq;
-            id_usu = id_usua;
-            id_entrena = id_entrenador;
-            nom = no;
-            ape = ap;
-            edad = eda;
-            nac = na;
-            pos = po;
-            dorsal = dor;
-            rol = ro;
+            try
+            {
+                id_inte = id;
+                id_equi = id_eq;
+                id_usu = id_usua;
+                id_entrena = id_entrenador;
+                nom = no;
+                ape = ap;
+                edad = eda;
+                nac = na;
+                pos = po;
+                dorsal = dor;
+                rol = ro;
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo CbEntrenador_CheckedChanged", "Ha ocurrido un error en 'Actualizar Integrante'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -176,11 +202,7 @@ namespace _1_Presentacion
             {
 
                 MessageBox.Show("Verifique que todos los campos esten llenados y correctos","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
-
-           
-
+            } 
         }
-
     }
 }

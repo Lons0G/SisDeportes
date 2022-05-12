@@ -21,18 +21,27 @@ namespace _1_Presentacion
 
         public Menu_Administrador(ref CLS_Usuario usuario)
         {
-            InitializeComponent();
-            //VERIFICA SI EL ROL SE TRATA DE ADMINISTRADOR O DE USUARIO
-            obj_usuario = usuario;
-            if (usuario.Rol == 1) { 
-                _lbl_usuario.Text = "Administrador";
-                Agregar_BTN_Administrador();
+            try
+            {
+                InitializeComponent();
+                //VERIFICA SI EL ROL SE TRATA DE ADMINISTRADOR O DE USUARIO
+                obj_usuario = usuario;
+                if (usuario.Rol == 1)
+                {
+                    _lbl_usuario.Text = "Administrador";
+                    Agregar_BTN_Administrador();
+                }
+                else
+                {
+                    _lbl_usuario.Text = "Encargado";
+                    Agregar_BTN_Usuario();
+                }
+                _p_forms.Visible = false;
             }
-            else { 
-                _lbl_usuario.Text = "Encargado";
-                Agregar_BTN_Usuario();
+            catch
+            {
+                MessageBox.Show("Error en el Metodo btnVolver_Click", "Ha ocurrido un error en 'Menu Administrador'", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            _p_forms.Visible = false;
         }
 
         private void Menu_Administrador_Load(object sender, EventArgs e)
@@ -40,87 +49,147 @@ namespace _1_Presentacion
 
         }
 
-        private void button4_Click(object sender, EventArgs e) {
-            this.Close();
-            this.Dispose();
+        private void button4_Click(object sender, EventArgs e) 
+        {
+            try
+            {
+                this.Close();
+                this.Dispose();
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo button4_Click", "Ha ocurrido un error en 'Menu Administrador'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        public void AbrirForms(object FRM_secundario) {
-            //HACE INVISIBLE AL PICTURE BOX Y HACE VISIBLE AL PANEL DEL FORMS//
-            pictureBox1.Visible = false;
-            _p_forms.Visible = true;
-            
-            //SI EXISTE UN FORMS LO ELIMINA//
-            if (this._p_forms.Controls.Count > 0) { this._p_forms.Controls.RemoveAt(0); }
+        public void AbrirForms(object FRM_secundario) 
+        {
+            try
+            {
+                //HACE INVISIBLE AL PICTURE BOX Y HACE VISIBLE AL PANEL DEL FORMS//
+                pictureBox1.Visible = false;
+                _p_forms.Visible = true;
 
-            //INSTANCIA UN NUEVO FORMS Y LE COLOCA LAS PROPIEDADES//
-            Form secundario = FRM_secundario as Form;
-            secundario.TopLevel = false;
-            secundario.Dock = DockStyle.Fill;
+                //SI EXISTE UN FORMS LO ELIMINA//
+                if (this._p_forms.Controls.Count > 0) { this._p_forms.Controls.RemoveAt(0); }
 
-            //AGREGA EL FORMS AL PANEL DEL FORMS//
-            this._p_forms.Controls.Add(secundario);
-            this._p_forms.Tag = secundario;
-            
-            //MUESTRA EL FORMS//
-            secundario.Show();
-            
-            //SE CREA UN NUEVO EVENTO QUE DETECTA CUANDO SE CERRO EL FORMS SECUNDARIO//
-            secundario.FormClosing += new FormClosingEventHandler(Agregar_Usuario_Close);
+                //INSTANCIA UN NUEVO FORMS Y LE COLOCA LAS PROPIEDADES//
+                Form secundario = FRM_secundario as Form;
+                secundario.TopLevel = false;
+                secundario.Dock = DockStyle.Fill;
+
+                //AGREGA EL FORMS AL PANEL DEL FORMS//
+                this._p_forms.Controls.Add(secundario);
+                this._p_forms.Tag = secundario;
+
+                //MUESTRA EL FORMS//
+                secundario.Show();
+
+                //SE CREA UN NUEVO EVENTO QUE DETECTA CUANDO SE CERRO EL FORMS SECUNDARIO//
+                secundario.FormClosing += new FormClosingEventHandler(Agregar_Usuario_Close);
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo AbrirForms", "Ha ocurrido un error en 'Menu Administrador'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         //ESTE METODO SE EJECUTA CUANDO SE OPRIME EL BOTON VOLVER EN EL FORMS DE REGISTRAR USUARIO//
         private void Agregar_Usuario_Close(object sender, FormClosingEventArgs e)
         {
-            _p_forms.Visible = false;
-            pictureBox1.Visible = true;
+            try
+            {
+                _p_forms.Visible = false;
+                pictureBox1.Visible = true;
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo Agregar_Usuario_Close", "Ha ocurrido un error en 'Menu Administrador'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         //NETODO PARA GENERAR BOTONES DINAMICAMENTE//
-        private void Agregar_BTN_Administrador() {
-            //INSTANCIA UN NUEVO BOTON USUARIO Y LE COLOCA LAS PROPIEDADES//
-            Button btn_usuarios = new Button();
-            btn_usuarios.Name = "btn_usuarios";
-            btn_usuarios.Text = "Usuarios";
-            btn_usuarios.Width = 120;
-            btn_usuarios.Height = 50;
-            btn_usuarios.Top = (50 + 12) * 1;
+        private void Agregar_BTN_Administrador() 
+        {
+            try
+            {
+                //INSTANCIA UN NUEVO BOTON USUARIO Y LE COLOCA LAS PROPIEDADES//
+                Button btn_usuarios = new Button();
+                btn_usuarios.Name = "btn_usuarios";
+                btn_usuarios.Text = "Usuarios";
+                btn_usuarios.Width = 120;
+                btn_usuarios.Height = 50;
+                btn_usuarios.Top = (50 + 12) * 1;
 
-            //INSTANCIA UN NUEVO BOTON DEPORTES Y LE COLOCA LAS PROPIEDADES
-            Button btn_deportes = new Button();
-            btn_deportes.Name = "btn_deportes";
-            btn_deportes.Text = "Deportes";
-            btn_deportes.Width = 120;
-            btn_deportes.Height = 50;
-            btn_deportes.Top = (50 + 12) * 2;
+                //INSTANCIA UN NUEVO BOTON DEPORTES Y LE COLOCA LAS PROPIEDADES
+                Button btn_deportes = new Button();
+                btn_deportes.Name = "btn_deportes";
+                btn_deportes.Text = "Deportes";
+                btn_deportes.Width = 120;
+                btn_deportes.Height = 50;
+                btn_deportes.Top = (50 + 12) * 2;
 
-            //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON USUARIO//
-            btn_usuarios.Click += Btn_Usuarios_Click;
-            btn_deportes.Click += Btn_Deportes_Click;
-           
-            //SE AGREGA EL BOTON USUARIO AL PANEL DE CONTROLES//
-            _p_controles.Controls.Add(btn_usuarios);
-            _p_controles.Controls.Add(btn_deportes);
-            
+                //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON USUARIO//
+                btn_usuarios.Click += Btn_Usuarios_Click;
+                btn_deportes.Click += Btn_Deportes_Click;
+
+                //SE AGREGA EL BOTON USUARIO AL PANEL DE CONTROLES//
+                _p_controles.Controls.Add(btn_usuarios);
+                _p_controles.Controls.Add(btn_deportes);
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo Agregar_BTN_Administrador", "Ha ocurrido un error en 'Menu Administrador'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         //METODO GENERADO PARA LLAMARSE CADA VEZ QUE SE DE CLICK AL BOTON//
-        private void Btn_Usuarios_Click(object sender, EventArgs e) {
-            //ABRE EL FORMS DE OPCIONES_USUARIO//
-            AbrirForms(new Opciones_Usuario());
+        private void Btn_Usuarios_Click(object sender, EventArgs e) 
+        {
+            try
+            {
+                //ABRE EL FORMS DE OPCIONES_USUARIO//
+                AbrirForms(new Opciones_Usuario());
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo Btn_Usuarios_Click", "Ha ocurrido un error en 'Menu Administrador'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-        private void Btn_Deportes_Click(object sender, EventArgs e) {
-            //REALIZAR EL FORMS QUE PERMITIRA VISUALIZAR LOS DEPORTES//
-            AbrirForms(new Opciones_Deportes(obj_usuario.Id, obj_usuario.Usuario));
+        private void Btn_Deportes_Click(object sender, EventArgs e) 
+        {
+            try
+            {
+                //REALIZAR EL FORMS QUE PERMITIRA VISUALIZAR LOS DEPORTES//
+                AbrirForms(new Opciones_Deportes(obj_usuario.Id, obj_usuario.Usuario));
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo Btn_Deportes_Click", "Ha ocurrido un error en 'Menu Administrador'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void Btn_Equipos_Click(object sender, EventArgs e)
         {
-            //ABRE EL FORMS DE OPCIONES_Equipo//
-            AbrirForms(new Opciones_Equipo(obj_usuario.Id,obj_usuario.Nombre,obj_deporte.IdDeporte, this));  
+            try
+            {
+                //ABRE EL FORMS DE OPCIONES_Equipo//
+                AbrirForms(new Opciones_Equipo(obj_usuario.Id, obj_usuario.Nombre, obj_deporte.IdDeporte, this));
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo Btn_Equipos_Click", "Ha ocurrido un error en 'Menu Administrador'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }  
            
         }
         private void Btn_Categoria_Click(object sender, EventArgs e)
         {
-            //ABRE EL FORMS DE OPCIONES_USUARIO//
-            AbrirForms(new Categoria());
+            try
+            {
+                //ABRE EL FORMS DE OPCIONES_USUARIO//
+                AbrirForms(new Categoria());
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo Btn_Categoria_Click", "Ha ocurrido un error en 'Menu Administrador'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
@@ -130,91 +199,120 @@ namespace _1_Presentacion
         //    //AbrirForms(new Opciones_Integrantes());
 
         //}
-        private void Agregar_BTN_Usuario() {
-            //REALIZAR LOS BOTONES FALTANTES PARA EL MENU DEL USUARIO//
+        private void Agregar_BTN_Usuario()
+        {
+            try
+            {
+                //REALIZAR LOS BOTONES FALTANTES PARA EL MENU DEL USUARIO//
 
-            //INSTANCIA UN NUEVO BOTON EQUIPO Y LE COLOCA LAS PROPIEDADES//
-            Button btn_Equipos = new Button();
-            btn_Equipos.Name = "btn_Equipos";
-            btn_Equipos.Text = "Equipos";
-            btn_Equipos.Width = 120;
-            btn_Equipos.Height = 50;
-            btn_Equipos.Top = (50 + 12) * 1;
+                //INSTANCIA UN NUEVO BOTON EQUIPO Y LE COLOCA LAS PROPIEDADES//
+                Button btn_Equipos = new Button();
+                btn_Equipos.Name = "btn_Equipos";
+                btn_Equipos.Text = "Equipos";
+                btn_Equipos.Width = 120;
+                btn_Equipos.Height = 50;
+                btn_Equipos.Top = (50 + 12) * 1;
 
-            ////INSTANCIA UN NUEVO BOTON INTEGRANTES Y LE COLOCA LAS PROPIEDADES
-            //Button btn_integrantes = new Button();
-            //btn_integrantes.Name = "btn_Integrantes";
-            //btn_integrantes.Text = "Integrantes";
-            //btn_integrantes.Width = 120;
-            //btn_integrantes.Height = 50;
-            //btn_integrantes.Top = (50 + 12) * 2;
+                ////INSTANCIA UN NUEVO BOTON INTEGRANTES Y LE COLOCA LAS PROPIEDADES
+                //Button btn_integrantes = new Button();
+                //btn_integrantes.Name = "btn_Integrantes";
+                //btn_integrantes.Text = "Integrantes";
+                //btn_integrantes.Width = 120;
+                //btn_integrantes.Height = 50;
+                //btn_integrantes.Top = (50 + 12) * 2;
 
-            //INSTANCIA UN NUEVO BOTON ACTIVIDAD Y LE COLOCA LAS PROPIEDADES
-            Button btn_actividad = new Button();
-            btn_actividad.Name = "btn_Actividad";
-            btn_actividad.Text = "Actividad";
-            btn_actividad.Width = 120;
-            btn_actividad.Height = 50;
-            btn_actividad.Top = (50 + 12) * 2;
+                //INSTANCIA UN NUEVO BOTON ACTIVIDAD Y LE COLOCA LAS PROPIEDADES
+                Button btn_actividad = new Button();
+                btn_actividad.Name = "btn_Actividad";
+                btn_actividad.Text = "Actividad";
+                btn_actividad.Width = 120;
+                btn_actividad.Height = 50;
+                btn_actividad.Top = (50 + 12) * 2;
 
-            //INSTANCIA UN NUEVO BOTON EQUIPO Y LE COLOCA LAS PROPIEDADES//
-            Button btn_Torneo = new Button();
-            btn_Torneo.Name = "btn_Torneo";
-            btn_Torneo.Text = "Torneos";
-            btn_Torneo.Width = 120;
-            btn_Torneo.Height = 50;
-            btn_Torneo.Top = (50 + 12) * 3;
+                //INSTANCIA UN NUEVO BOTON EQUIPO Y LE COLOCA LAS PROPIEDADES//
+                Button btn_Torneo = new Button();
+                btn_Torneo.Name = "btn_Torneo";
+                btn_Torneo.Text = "Torneos";
+                btn_Torneo.Width = 120;
+                btn_Torneo.Height = 50;
+                btn_Torneo.Top = (50 + 12) * 3;
 
-            //INSTANCIA UN NUEVO BOTON EQUIPO Y LE COLOCA LAS PROPIEDADES//
-            Button btn_TipoAct = new Button();
-            btn_TipoAct.Name = "btn_Tipo_Act";
-            btn_TipoAct.Text = "Tipo Act";
-            btn_TipoAct.Width = 120;
-            btn_TipoAct.Height = 50;
-            btn_TipoAct.Top = (50 + 12) * 4;
+                //INSTANCIA UN NUEVO BOTON EQUIPO Y LE COLOCA LAS PROPIEDADES//
+                Button btn_TipoAct = new Button();
+                btn_TipoAct.Name = "btn_Tipo_Act";
+                btn_TipoAct.Text = "Tipo Act";
+                btn_TipoAct.Width = 120;
+                btn_TipoAct.Height = 50;
+                btn_TipoAct.Top = (50 + 12) * 4;
 
-            //INSTANCIA UN NUEVO BOTON CATEGORIAS Y LE COLOCA LAS PROPIEDADES
-            Button btn_categoria = new Button();
-            btn_categoria.Name = "btn_categoria";
-            btn_categoria.Text = "Categoria";
-            btn_categoria.Width = 120;
-            btn_categoria.Height = 50;
-            btn_categoria.Top = (50 + 12) * 5;
+                //INSTANCIA UN NUEVO BOTON CATEGORIAS Y LE COLOCA LAS PROPIEDADES
+                Button btn_categoria = new Button();
+                btn_categoria.Name = "btn_categoria";
+                btn_categoria.Text = "Categoria";
+                btn_categoria.Width = 120;
+                btn_categoria.Height = 50;
+                btn_categoria.Top = (50 + 12) * 5;
 
 
 
-            //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON USUARIO//
-            btn_Equipos.Click += Btn_Equipos_Click;
-            //btn_integrantes.Click += Btn_Integrantes_Click;
-            btn_actividad.Click += Btn_Actividad_Click;
-            btn_Torneo.Click += Btn_Torneo_Click;
-            btn_TipoAct.Click += Btn_Tipo_Act_Click;
-            btn_categoria.Click += Btn_Categoria_Click;
+                //GENERA UN NUEVO METEDO CUANDO SE DE CLICK AL BOTON USUARIO//
+                btn_Equipos.Click += Btn_Equipos_Click;
+                //btn_integrantes.Click += Btn_Integrantes_Click;
+                btn_actividad.Click += Btn_Actividad_Click;
+                btn_Torneo.Click += Btn_Torneo_Click;
+                btn_TipoAct.Click += Btn_Tipo_Act_Click;
+                btn_categoria.Click += Btn_Categoria_Click;
 
-            //SE AGREGA EL BOTON USUARIO AL PANEL DE CONTROLES//
-            _p_controles.Controls.Add(btn_Equipos);
-            //_p_controles.Controls.Add(btn_integrantes);
-            _p_controles.Controls.Add(btn_actividad);
-            _p_controles.Controls.Add(btn_Torneo);
-            _p_controles.Controls.Add(btn_TipoAct);
-            _p_controles.Controls.Add(btn_categoria);
+                //SE AGREGA EL BOTON USUARIO AL PANEL DE CONTROLES//
+                _p_controles.Controls.Add(btn_Equipos);
+                //_p_controles.Controls.Add(btn_integrantes);
+                _p_controles.Controls.Add(btn_actividad);
+                _p_controles.Controls.Add(btn_Torneo);
+                _p_controles.Controls.Add(btn_TipoAct);
+                _p_controles.Controls.Add(btn_categoria);
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo Agregar_BTN_Usuario", "Ha ocurrido un error en 'Menu Administrador'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Btn_Actividad_Click(object sender, EventArgs e)
         {
-            //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
-            /*AbrirForms(new Creación_Actividades(obj_usuario.Deporte,obj_usuario.Id));*/ //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
-            AbrirForms(new Opciones_Actividades(obj_usuario.Deporte, obj_usuario.Id)); ;
+            try
+            {
+                //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
+                /*AbrirForms(new Creación_Actividades(obj_usuario.Deporte,obj_usuario.Id));*/ //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
+                AbrirForms(new Opciones_Actividades(obj_usuario.Deporte, obj_usuario.Id)); ;
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo Btn_Actividad_Click", "Ha ocurrido un error en 'Menu Administrador'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void Btn_Torneo_Click(object sender, EventArgs e)
         {
-            //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
-            AbrirForms(new Opciones_Torneo(obj_usuario.Deporte, obj_usuario.Id)); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
+            try
+            {
+                //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
+                AbrirForms(new Opciones_Torneo(obj_usuario.Deporte, obj_usuario.Id)); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo Btn_Torneo_Click", "Ha ocurrido un error en 'Menu Administrador'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void Btn_Tipo_Act_Click(object sender, EventArgs e)
         {
-            //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
-            AbrirForms(new OpcionesTipo_Act()); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
+            try
+            {
+                //FALTA EL FORMS DE OPCIONES DE ACTVIDAD//
+                AbrirForms(new OpcionesTipo_Act()); //AL FORMS SE LE PASA EL ID DEPORTE DEL USUARIO//
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo Btn_Tipo_Act_Click", "Ha ocurrido un error en 'Menu Administrador'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void _p_controles_Paint(object sender, PaintEventArgs e)
