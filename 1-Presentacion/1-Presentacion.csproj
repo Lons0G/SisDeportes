@@ -192,6 +192,7 @@
     <Compile Include="UC_boton_entidad.Designer.cs">
       <DependentUpon>UC_boton_entidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validaciones.cs" />
     <EmbeddedResource Include="Actualizar Torneos.resx">
       <DependentUpon>Actualizar Torneos.cs</DependentUpon>
     </EmbeddedResource>

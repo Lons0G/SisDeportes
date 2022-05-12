@@ -108,5 +108,30 @@ namespace _1_Presentacion
             //mostramos la contraseña
             txtpassword.PasswordChar = '*';
         }
+
+        private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloLetras(e);
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloLetras(e);
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloConDecimal(e);
+        }
+
+        private void txtSueldo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloConDecimal(e);
+        }
     }
 }
