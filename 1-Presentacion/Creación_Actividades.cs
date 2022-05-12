@@ -74,7 +74,7 @@ namespace _1_Presentacion
                 L_equipo.ObtenerEquipos(ref lista_equipos, id);
                 id_usu = id;
                 cmbContri1.DisplayMember = "Nombre";
-                cmbContri1.ValueMember = "IdTipoDeporte";
+                cmbContri1.ValueMember = "IdEquipo";
                 cmbContri1.DataSource = lista_equipos;
             }
             catch
@@ -92,7 +92,7 @@ namespace _1_Presentacion
                 CLS_L_Tipo l_Tipo = new CLS_L_Tipo();
                 l_Tipo.ObtenerTipos(ref lista_act);
                 cboAct.DisplayMember = "Nombre";
-                cboAct.ValueMember = "IdTipoDeporte";
+                cboAct.ValueMember = "IdTipo";
                 cboAct.DataSource = lista_act;
             }
             catch
@@ -110,7 +110,7 @@ namespace _1_Presentacion
                 L_equipo.ObtenerEquipos(ref lista_equipos, id);
 
                 cmbContri2.DisplayMember = "Nombre";
-                cmbContri2.ValueMember = "IdTipoDeporte";
+                cmbContri2.ValueMember = "IdEquipo";
                 cmbContri2.DataSource = lista_equipos;
             }
             catch
@@ -128,7 +128,7 @@ namespace _1_Presentacion
                 L_Torneo.ObtenerTorneos(ref lista_torneo);
 
                 cboTorneo.DisplayMember = "Nombre";
-                cboTorneo.ValueMember = "IdTipoDeporte";
+                cboTorneo.ValueMember = "IdTorneo";
                 cboTorneo.DataSource = lista_torneo;
             }
             catch
@@ -146,13 +146,13 @@ namespace _1_Presentacion
                 obj_actividad.IdUsuario = id__;
                 obj_actividad.Nombre = txtActividad.Text;
                 obj_actividad.IdDeporte = id_depo;/*cmbDeporte.SelectedIndex;*/
-                obj_actividad.IdTipo = cboAct.SelectedIndex + 1;
-                obj_actividad.IdTorneo = cboTorneo.SelectedIndex + 1;
-                obj_actividad.IdCategoria = cmbCategoria.SelectedIndex + 1; //el indice por defecto marca 0 y por eso le sume 1
+                obj_actividad.IdTipo = Convert.ToInt32(cboAct.SelectedValue.ToString());
+                obj_actividad.IdTorneo = Convert.ToInt32(cboTorneo.SelectedValue.ToString());
+                obj_actividad.IdCategoria = Convert.ToInt32(cmbCategoria.SelectedValue.ToString()); //el indice por defecto marca 0 y por eso le sume 1
                 obj_actividad.Fecha = dtpFecha.Value;
                 obj_actividad.Hora = dtpHora.Value;
-                obj_actividad.IdContricante_1 = cmbContri1.SelectedIndex + 1; //el indice por defecto marca 0 y por eso le sume 1
-                obj_actividad.IdContricante_2 = cmbContri2.SelectedIndex + 1;//el indice por defecto marca 0 y por eso le sume 1
+                obj_actividad.IdContricante_1 = Convert.ToInt32(cmbContri1.SelectedValue.ToString()); //el indice por defecto marca 0 y por eso le sume 1
+                obj_actividad.IdContricante_2 = Convert.ToInt32(cmbContri2.SelectedValue.ToString());//el indice por defecto marca 0 y por eso le sume 1
 
                 bool resultado = L_actividad.Insertar_Actividad(ref obj_actividad);
 

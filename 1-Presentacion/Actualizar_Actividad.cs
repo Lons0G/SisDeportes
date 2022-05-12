@@ -28,8 +28,8 @@ namespace _1_Presentacion
                 obj_actividad.Nombre = txtActividad.Text;
                 obj_actividad.IdDeporte = id_deporte;/*cmbDeporte.SelectedIndex;*/
                 obj_actividad.IdTipo = cboAct.SelectedIndex + 1;
-                obj_actividad.IdTorneo = cboTorneo.SelectedIndex + 1;
-                obj_actividad.IdCategoria = cmbCategoria.SelectedIndex + 1; //el indice por defecto marca 0 y por eso le sume 1
+                obj_actividad.IdTorneo = cboTorneo.SelectedIndex;
+                obj_actividad.IdCategoria = cmbCategoria.SelectedIndex; //el indice por defecto marca 0 y por eso le sume 1
                 obj_actividad.Fecha = Convert.ToDateTime(this.dtpFecha.Text);
                 obj_actividad.Hora = Convert.ToDateTime(this.dtpHora.Text);
                 obj_actividad.IdContricante_1 = cmbContri1.SelectedIndex + 1; //el indice por defecto marca 0 y por eso le sume 1
@@ -136,7 +136,7 @@ namespace _1_Presentacion
                 CLS_L_Equipo L_equipo = new CLS_L_Equipo();
                 L_equipo.ObtenerEquipos(ref lista_equipos, id);
                 cmbContri1.DisplayMember = "Nombre";
-                cmbContri1.ValueMember = "IdTipoDeporte";
+                cmbContri1.ValueMember = "IdEquipo";
                 cmbContri1.DataSource = lista_equipos;
             }
             catch
@@ -153,7 +153,7 @@ namespace _1_Presentacion
                 CLS_L_Tipo l_Tipo = new CLS_L_Tipo();
                 l_Tipo.ObtenerTipos(ref lista_act);
                 cboAct.DisplayMember = "Nombre";
-                cboAct.ValueMember = "IdTipoDeporte";
+                cboAct.ValueMember = "IdTipo";
                 cboAct.DataSource = lista_act;
             }
             catch
@@ -171,7 +171,7 @@ namespace _1_Presentacion
                 L_equipo.ObtenerEquipos(ref lista_equipos, id);
 
                 cmbContri2.DisplayMember = "Nombre";
-                cmbContri2.ValueMember = "IdTipoDeporte";
+                cmbContri2.ValueMember = "IdEquipo";
                 cmbContri2.DataSource = lista_equipos;
             }
             catch
@@ -189,7 +189,7 @@ namespace _1_Presentacion
                 L_Torneo.ObtenerTorneos(ref lista_torneo);
 
                 cboTorneo.DisplayMember = "Nombre";
-                cboTorneo.ValueMember = "IdTipoDeporte";
+                cboTorneo.ValueMember = "IdTorneo";
                 cboTorneo.DataSource = lista_torneo;
             }
             catch
