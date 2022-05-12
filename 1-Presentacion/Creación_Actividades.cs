@@ -147,7 +147,7 @@ namespace _1_Presentacion
                 obj_actividad.Nombre = txtActividad.Text;
                 obj_actividad.IdDeporte = id_depo;/*cmbDeporte.SelectedIndex;*/
                 obj_actividad.IdTipo = cboAct.SelectedIndex + 1;
-                obj_actividad.IdTorneo = cboTorneo.SelectedIndex;
+                obj_actividad.IdTorneo = cboTorneo.SelectedIndex + 1;
                 obj_actividad.IdCategoria = cmbCategoria.SelectedIndex + 1; //el indice por defecto marca 0 y por eso le sume 1
                 obj_actividad.Fecha = dtpFecha.Value;
                 obj_actividad.Hora = dtpHora.Value;
