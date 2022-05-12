@@ -60,25 +60,22 @@ namespace _1_Presentacion
             this.TxtPosicion.Text = pos;
             this.TxtDorsal.Text = dorsal.ToString();
 
-            if (CbJugador.Checked == true)
+            if (TxtDorsal.Text == "0")
             {
-                CbEntrenador.Checked = false;
-                TxtDorsal.Enabled = true;
-                TxtPosicion.Enabled = true;
-            }
-            else if (CbEntrenador.Checked == false)
-            {
-                CbJugador.Checked = false;
+                CbEntrenador.Checked = true;
+                CbJugador.Checked=false;
+                CbJugador.Enabled=false;
                 TxtPosicion.Enabled = false;
                 TxtDorsal.Enabled = false;
             }
+            else
+            {
+                CbJugador.Checked=true;
+                CbEntrenador.Checked = false;
+                CbEntrenador.Enabled= false;
+            }
 
-
-            //if (this.TxtPosicion.Text == "Entrenador")
-            //{
-            //    this.TxtDorsal.Enabled = false;
-            //    this.TxtPosicion.Enabled = false;
-            //}
+           
         }
 
         private void Actuzalizar_Integrantes_Load(object sender, EventArgs e)
@@ -107,61 +104,78 @@ namespace _1_Presentacion
 
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
-            if (CbJugador.Checked == true)
+            try
             {
-                CLS_Integrantes obj_Integrante = new CLS_Integrantes();
-                CLS_L_Integrante log_Integrante = new CLS_L_Integrante();
-
-                obj_Integrante.IdIntegrante = Convert.ToInt32(this.lbID.Text);
-                obj_Integrante.IdEquipo = id_equi;
-                obj_Integrante.IdUsuario = id_usu;
-                obj_Integrante.IdEntrenador = id_entrena;
-                obj_Integrante.Nombre = this.TxtNombre.Text;
-                obj_Integrante.Apellido = this.TxtApell.Text;
-                obj_Integrante.Edad = Convert.ToByte(this.TxtEdad.Text);
-                obj_Integrante.Nacionalidad = this.TxtNacionalidad.Text;
-                obj_Integrante.Posicion = this.TxtPosicion.Text;
-                obj_Integrante.Dorsal = Convert.ToInt32(this.TxtDorsal.Text);
-                obj_Integrante.Rol = "Jugador";
-
-                bool resultado = log_Integrante.Editar_Integrante(ref obj_Integrante);
-
-                if (resultado == true)
+                if (CbJugador.Checked == true)
                 {
-                    MessageBox.Show("Se a actualizado correctamente el integrante del equipo");
+                    CLS_Integrantes obj_Integrante = new CLS_Integrantes();
+                    CLS_L_Integrante log_Integrante = new CLS_L_Integrante();
+
+                    obj_Integrante.IdIntegrante = Convert.ToInt32(this.lbID.Text);
+                    obj_Integrante.IdEquipo = id_equi;
+                    obj_Integrante.IdUsuario = id_usu;
+                    obj_Integrante.IdEntrenador = id_entrena;
+                    obj_Integrante.Nombre = this.TxtNombre.Text;
+                    obj_Integrante.Apellido = this.TxtApell.Text;
+                    obj_Integrante.Edad = Convert.ToByte(this.TxtEdad.Text);
+                    obj_Integrante.Nacionalidad = this.TxtNacionalidad.Text;
+                    obj_Integrante.Posicion = this.TxtPosicion.Text;
+                    obj_Integrante.Dorsal = Convert.ToInt32(this.TxtDorsal.Text);
+                    obj_Integrante.Rol = "Jugador";
+                    if (TxtNombre.Text != "" && TxtApell.Text != "" && TxtEdad.Text != "" && TxtNacionalidad.Text != "" && TxtPosicion.Text != "" && TxtDorsal.Text != "")
+                    {
+                        bool resultado = log_Integrante.Editar_Integrante(ref obj_Integrante);
+
+                        if (resultado == true)
+                        {
+                            MessageBox.Show("Se a actualizado correctamente el integrante del equipo");
+                        }
+                        else
+                        MessageBox.Show(obj_Integrante.Error);
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Verifique que todos los campos esten llenados y correctos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show(obj_Integrante.Error);
+                    CLS_Integrantes obj_Integrante = new CLS_Integrantes();
+                    CLS_L_Integrante log_Integrante = new CLS_L_Integrante();
+
+                    obj_Integrante.IdIntegrante = Convert.ToInt32(this.lbID.Text);
+                    obj_Integrante.IdEquipo = id_equi;
+                    obj_Integrante.IdUsuario = id_usu;
+                    obj_Integrante.IdEntrenador = id_entrena;
+                    obj_Integrante.Nombre = this.TxtNombre.Text;
+                    obj_Integrante.Apellido = this.TxtApell.Text;
+                    obj_Integrante.Edad = Convert.ToByte(this.TxtEdad.Text);
+                    obj_Integrante.Nacionalidad = this.TxtNacionalidad.Text;
+                    obj_Integrante.Posicion = "Null";
+                    obj_Integrante.Dorsal = 0;
+                    obj_Integrante.Rol = "Entrenador";
+                    if (TxtNombre.Text != "" && TxtApell.Text != "" && TxtEdad.Text != "" && TxtNacionalidad.Text != "")
+                    {
+                        bool resultado = log_Integrante.Editar_Integrante(ref obj_Integrante);
+
+                        if (resultado == true)
+                        {
+                            MessageBox.Show("Se a actualizado correctamente el integrante del equipo");
+                        }
+                        else
+                            MessageBox.Show(obj_Integrante.Error);
+                    }  
+                    else
+                    {
+                        MessageBox.Show("Verifique que todos los campos esten llenados y correctos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
-            else
+            catch (Exception)
             {
-                CLS_Integrantes obj_Integrante = new CLS_Integrantes();
-                CLS_L_Integrante log_Integrante = new CLS_L_Integrante();
 
-                obj_Integrante.IdIntegrante = Convert.ToInt32(this.lbID.Text);
-                obj_Integrante.IdEquipo = id_equi;
-                obj_Integrante.IdUsuario = id_usu;
-                obj_Integrante.IdEntrenador = id_entrena;
-                obj_Integrante.Nombre = this.TxtNombre.Text;
-                obj_Integrante.Apellido = this.TxtApell.Text;
-                obj_Integrante.Edad = Convert.ToByte(this.TxtEdad.Text);
-                obj_Integrante.Nacionalidad = this.TxtNacionalidad.Text;
-                obj_Integrante.Posicion = "Null";
-                obj_Integrante.Dorsal = 0;
-                obj_Integrante.Rol = "Entrenador";
-
-                bool resultado = log_Integrante.Editar_Integrante(ref obj_Integrante);
-
-                if (resultado == true)
-                {
-                    MessageBox.Show("Se a actualizado correctamente el integrante del equipo");
-                }
-                else
-                {
-                    MessageBox.Show(obj_Integrante.Error);
-                }
+                MessageBox.Show("Verifique que todos los campos esten llenados y correctos","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
            
