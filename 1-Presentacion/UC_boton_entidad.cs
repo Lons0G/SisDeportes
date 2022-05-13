@@ -98,6 +98,21 @@ namespace _1_Presentacion
             this.Name = id.ToString();
             _lbl_nombre_entidad.Text = nombre;
         }
+        //constructor para deportes
+        public UC_boton_entidad(int id,string nombre,int id_tipod,int id_usu, int x, int dato)
+        {
+            InitializeComponent();
+            dato_entidad = dato;
+            v = id;
+            id_deporte = id_tipod;
+            id_usuario = id_usu;
+            nom = nombre;
+            this.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right;
+            this.Width = x - 10;
+            this.Height = 50;
+            this.Name = id.ToString();
+            _lbl_nombre_entidad.Text = nombre;
+        }
         //constructor para tipos de actividades
         public UC_boton_entidad(int id, string nombre, string descripcion, int x, int dato)
         {
@@ -375,7 +390,7 @@ namespace _1_Presentacion
                     break;
                 case 2:
                     Actualizar_Torneos torneos = new Actualizar_Torneos(v,fecha,id_categ,id_usua,id_tipo,nom,id_depo);
-                    torneos.Show();
+                    torneos.ShowDialog();
                     break;
                 case 3:
                     MessageBox.Show(dato_entidad.ToString());
@@ -402,7 +417,8 @@ namespace _1_Presentacion
                     m_a.AbrirForms(new Opciones_Integrantes(v, n, id_usuario, id_categoria, id_deporte, id_entrenador, visita));
                     break;
                 case 8:
-                    MessageBox.Show(dato_entidad.ToString());
+                    Actualizar_Deportes deporte = new Actualizar_Deportes(v,nom,id_deporte,id_usuario);
+                    deporte.ShowDialog();
                     break;
                 case 9:
                     MessageBox.Show(dato_entidad.ToString());

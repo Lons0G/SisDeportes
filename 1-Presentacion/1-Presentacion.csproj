@@ -58,6 +58,12 @@
     <Compile Include="Actualizar_Actividad.Designer.cs">
       <DependentUpon>Actualizar_Actividad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Actualizar_Deportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Actualizar_Deportes.Designer.cs">
+      <DependentUpon>Actualizar_Deportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Actualizar_Equipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Actualizar_Actividad.resx">
       <DependentUpon>Actualizar_Actividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Actualizar_Deportes.resx">
+      <DependentUpon>Actualizar_Deportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Actualizar_Equipo.resx">
       <DependentUpon>Actualizar_Equipo.cs</DependentUpon>

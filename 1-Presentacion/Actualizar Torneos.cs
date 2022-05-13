@@ -30,6 +30,7 @@ namespace _1_Presentacion
                 nombre = noma;
                 id_deporte = id_depo;
                 Cargar_Categoria();
+                Cargar_Tipo_Actividad();
             }
             catch
             {
@@ -44,7 +45,7 @@ namespace _1_Presentacion
                 txtnom.Text = nombre;
                 dtfechatorneo.Text = fecha.ToString();
                 _cb_categoria.Text = id_categoria.ToString();
-                Cargar_Tipo_Actividad();
+                _cb_tipo.Text = id_tipo.ToString();
             }
             catch
             {
@@ -66,9 +67,9 @@ namespace _1_Presentacion
 
                 obj_Torneo.IdTorneo = id_torneo;
                 obj_Torneo.Fecha = Convert.ToDateTime(this.dtfechatorneo.Text);
-                obj_Torneo.IdCategoria = _cb_categoria.SelectedIndex + 1;
+                obj_Torneo.IdCategoria = Convert.ToInt32(_cb_categoria.SelectedValue.ToString());
                 obj_Torneo.IdUsuario = id_usuario;
-                obj_Torneo.IdTipo = _cb_tipo.SelectedIndex + 1;
+                obj_Torneo.IdTipo = Convert.ToInt32(_cb_tipo.SelectedValue.ToString());
                 obj_Torneo.Nombre = txtnom.Text;
 
                 bool resultado = L_Torneo.Editar_Torneo(ref obj_Torneo);
@@ -126,7 +127,7 @@ namespace _1_Presentacion
                 CLS_L_Tipo l_Tipo = new CLS_L_Tipo();
                 l_Tipo.ObtenerTipos(ref lista_act);
                 _cb_tipo.DisplayMember = "Nombre";
-                _cb_tipo.ValueMember = "IdTipoDeporte";
+                _cb_tipo.ValueMember = "IdTipo";
                 _cb_tipo.DataSource = lista_act;
             }
             catch

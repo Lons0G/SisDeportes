@@ -66,7 +66,7 @@ namespace _1_Presentacion
 
                 foreach (var deportes in lista_deportes)
                 {
-                    UC_boton_entidad btn = new UC_boton_entidad(deportes.IdDeporte, deportes.Nombre, x, 8);
+                    UC_boton_entidad btn = new UC_boton_entidad(deportes.IdDeporte, deportes.Nombre,deportes.IdTipoDeporte,deportes.IdUsuario, x, 8);
                     btn.Top = 52 * i;
                     _p_equipos.Controls.Add(btn);
                     i++;

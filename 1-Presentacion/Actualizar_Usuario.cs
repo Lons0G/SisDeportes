@@ -42,7 +42,7 @@ namespace _1_Presentacion
                 this.txtnombre2.Text = no;
                 this.txtApellido2.Text = ap;
                 this.lblusu.Text = usu;
-                this.txtpassword2.Text = pass;
+                this.txtpassword.Text = pass;
                 this.txtTelefono2.Text = corr;
                 this.txtCorreo2.Text = tel;
                 this.txtSueldo2.Text = suel.ToString();
@@ -70,6 +70,38 @@ namespace _1_Presentacion
         private void txtSueldo2_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validaciones.SoloConDecimal(e);
+        }
+
+        private void pbocultar_Click(object sender, EventArgs e)
+        {
+            //ocultar
+            try
+            {
+                //imagen mostrar la madamos hacia enfrente
+                pbmostrar.BringToFront();
+                //mostramos la contraseña
+                txtpassword.PasswordChar = '*';
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo pbocultar_Click", "Ha ocurrido un error en 'Agregar Usuario'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void pbmostrar_Click(object sender, EventArgs e)
+        {
+            //ver
+            try
+            {
+                //imagen ocultar la mandamos hacia enfrente
+                pbocultar.BringToFront();
+                //oculatamos la contraseña
+                txtpassword.PasswordChar = '\0';
+            }
+            catch
+            {
+                MessageBox.Show("Error en el Metodo pbmostrar_Click", "Ha ocurrido un error en 'Agregar Usuario'", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void txtnombre2_TextChanged(object sender, EventArgs e)
@@ -112,7 +144,7 @@ namespace _1_Presentacion
                 obj_usuario.Nombre = this.txtnombre2.Text;
                 obj_usuario.Apellido = this.txtApellido2.Text;
                 obj_usuario.Usuario = obj_usuario.Nombre[0] + "" + obj_usuario.Nombre[1] + "" + obj_usuario.Apellido[0] + "" + obj_usuario.Apellido[1] + "" + obj_usuario.Apellido[2];
-                obj_usuario.Password = this.txtpassword2.Text; /*en la parte de usuario, se toma 2 letras inicales y 3 inciales del apellido*/
+                obj_usuario.Password = this.txtpassword.Text; /*en la parte de usuario, se toma 2 letras inicales y 3 inciales del apellido*/
                 obj_usuario.Telefono = this.txtTelefono2.Text;
                 obj_usuario.Correo = this.txtCorreo2.Text;
                 obj_usuario.Sueldo = Convert.ToDecimal(this.txtSueldo2.Text);

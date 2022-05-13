@@ -247,7 +247,7 @@
             // pbmostrar
             // 
             this.pbmostrar.Image = ((System.Drawing.Image)(resources.GetObject("pbmostrar.Image")));
-            this.pbmostrar.Location = new System.Drawing.Point(481, 162);
+            this.pbmostrar.Location = new System.Drawing.Point(481, 163);
             this.pbmostrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbmostrar.Name = "pbmostrar";
             this.pbmostrar.Size = new System.Drawing.Size(53, 31);

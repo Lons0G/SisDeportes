@@ -1,6 +1,6 @@
 ﻿namespace _1_Presentacion
 {
-    partial class FRM_Deportes
+    partial class Actualizar_Deportes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Deportes));
-            this.label1 = new System.Windows.Forms.Label();
             this._gb_datos = new System.Windows.Forms.GroupBox();
             this._btn_registrar = new System.Windows.Forms.Button();
             this._cb_tipo_deporte = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this._txt_nombre_deporte = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this._lbl_nombre = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblusuario = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnCargar = new System.Windows.Forms.Button();
             this._gb_datos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre del Usuario: ";
             // 
             // _gb_datos
             // 
@@ -59,17 +48,17 @@
             this._gb_datos.Controls.Add(this.label4);
             this._gb_datos.Controls.Add(this._txt_nombre_deporte);
             this._gb_datos.Controls.Add(this.label3);
-            this._gb_datos.Controls.Add(this._lbl_nombre);
+            this._gb_datos.Controls.Add(this.lblusuario);
             this._gb_datos.Controls.Add(this.label1);
             this._gb_datos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._gb_datos.Location = new System.Drawing.Point(57, 124);
+            this._gb_datos.Location = new System.Drawing.Point(54, 100);
             this._gb_datos.Margin = new System.Windows.Forms.Padding(4);
             this._gb_datos.Name = "_gb_datos";
             this._gb_datos.Padding = new System.Windows.Forms.Padding(4);
             this._gb_datos.Size = new System.Drawing.Size(441, 281);
-            this._gb_datos.TabIndex = 1;
+            this._gb_datos.TabIndex = 2;
             this._gb_datos.TabStop = false;
-            this._gb_datos.Text = "c";
+            this._gb_datos.Text = "Datos";
             // 
             // _btn_registrar
             // 
@@ -80,7 +69,6 @@
             this._btn_registrar.TabIndex = 6;
             this._btn_registrar.Text = "Registrar";
             this._btn_registrar.UseVisualStyleBackColor = true;
-            this._btn_registrar.Click += new System.EventHandler(this._btn_registrar_Click);
             // 
             // _cb_tipo_deporte
             // 
@@ -121,58 +109,75 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Nombre del Deporte:";
             // 
-            // _lbl_nombre
+            // lblusuario
             // 
-            this._lbl_nombre.AutoSize = true;
-            this._lbl_nombre.Location = new System.Drawing.Point(225, 34);
-            this._lbl_nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this._lbl_nombre.Name = "_lbl_nombre";
-            this._lbl_nombre.Size = new System.Drawing.Size(108, 25);
-            this._lbl_nombre.TabIndex = 1;
-            this._lbl_nombre.Text = "lbl_nombre";
+            this.lblusuario.AutoSize = true;
+            this.lblusuario.Location = new System.Drawing.Point(225, 34);
+            this.lblusuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblusuario.Name = "lblusuario";
+            this.lblusuario.Size = new System.Drawing.Size(0, 25);
+            this.lblusuario.TabIndex = 1;
             // 
-            // pictureBox1
+            // label1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(148, 69);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(195, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nombre del Usuario: ";
             // 
-            // FRM_Deportes
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(126, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(201, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Actualizar Deportes";
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.Location = new System.Drawing.Point(421, 54);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(74, 38);
+            this.btnCargar.TabIndex = 7;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
+            // Actualizar_Deportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Tomato;
-            this.ClientSize = new System.Drawing.Size(576, 506);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(557, 506);
+            this.Controls.Add(this.btnCargar);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this._gb_datos);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FRM_Deportes";
-            this.Text = "FRM_Deportes";
-            this.Load += new System.EventHandler(this.FRM_Deportes_Load);
+            this.Name = "Actualizar_Deportes";
+            this.Text = "Actualizar_Deportes";
+            this.Load += new System.EventHandler(this.Actualizar_Deportes_Load);
             this._gb_datos.ResumeLayout(false);
             this._gb_datos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox _gb_datos;
+        private System.Windows.Forms.Button _btn_registrar;
         private System.Windows.Forms.ComboBox _cb_tipo_deporte;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox _txt_nombre_deporte;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label _lbl_nombre;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button _btn_registrar;
+        private System.Windows.Forms.Label lblusuario;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCargar;
     }
 }
