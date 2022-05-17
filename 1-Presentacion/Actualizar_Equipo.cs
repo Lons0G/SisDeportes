@@ -38,7 +38,14 @@ namespace _1_Presentacion
         {
 
         }
-        int id_,id_u,id_c,id_d,id_entre;string nom;bool visita;
+        int id_,id_u,id_c,id_d,id_entre;string nom;
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        bool visita;
         public void recibe(int id, string nombre, bool visitante,int id_usu,int id_cate,int id_depo,int id_entrena)
         {
             try
