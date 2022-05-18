@@ -147,10 +147,10 @@
             // 
             // BtnActualizar
             // 
-            this.BtnActualizar.BackColor = System.Drawing.Color.Tomato;
-            this.BtnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.BtnActualizar.BackColor = System.Drawing.Color.IndianRed;
+            this.BtnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.BtnActualizar.FlatAppearance.BorderSize = 2;
-            this.BtnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.BtnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
             this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizar.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.BtnActualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -158,16 +158,16 @@
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(99, 44);
             this.BtnActualizar.TabIndex = 139;
-            this.BtnActualizar.Text = "Actualizar";
+            this.BtnActualizar.Text = "ACTUALIZAR";
             this.BtnActualizar.UseVisualStyleBackColor = false;
             this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // btnCargar
             // 
-            this.btnCargar.BackColor = System.Drawing.Color.Tomato;
-            this.btnCargar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnCargar.BackColor = System.Drawing.Color.IndianRed;
+            this.btnCargar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btnCargar.FlatAppearance.BorderSize = 2;
-            this.btnCargar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnCargar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargar.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnCargar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -198,7 +198,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSalmon;
+            this.panel1.BackColor = System.Drawing.Color.LightCoral;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
@@ -209,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(356, 350);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtentrenador);

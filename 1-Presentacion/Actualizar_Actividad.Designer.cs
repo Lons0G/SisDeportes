@@ -30,25 +30,25 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cboTorneo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cboAct = new System.Windows.Forms.ComboBox();
-            this.dtpHora = new System.Windows.Forms.DateTimePicker();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmbContri2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmbContri1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCargar = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.cboTorneo = new System.Windows.Forms.ComboBox();
+            this.cboAct = new System.Windows.Forms.ComboBox();
+            this.dtpHora = new System.Windows.Forms.DateTimePicker();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.cmbContri2 = new System.Windows.Forms.ComboBox();
+            this.cmbContri1 = new System.Windows.Forms.ComboBox();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.txtActividad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCargar = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -75,9 +75,9 @@
             this.groupBox1.Controls.Add(this.txtActividad);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(1, 89);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(389, 488);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
@@ -95,15 +95,6 @@
             this.label9.TabIndex = 24;
             this.label9.Text = "Tipo de Torneo:";
             // 
-            // cboTorneo
-            // 
-            this.cboTorneo.FormattingEnabled = true;
-            this.cboTorneo.Location = new System.Drawing.Point(158, 373);
-            this.cboTorneo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cboTorneo.Name = "cboTorneo";
-            this.cboTorneo.Size = new System.Drawing.Size(201, 21);
-            this.cboTorneo.TabIndex = 23;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -115,41 +106,6 @@
             this.label3.Size = new System.Drawing.Size(109, 20);
             this.label3.TabIndex = 22;
             this.label3.Text = "Tipo Actividad:";
-            // 
-            // cboAct
-            // 
-            this.cboAct.FormattingEnabled = true;
-            this.cboAct.Location = new System.Drawing.Point(157, 104);
-            this.cboAct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cboAct.Name = "cboAct";
-            this.cboAct.Size = new System.Drawing.Size(203, 21);
-            this.cboAct.TabIndex = 21;
-            // 
-            // dtpHora
-            // 
-            this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHora.Location = new System.Drawing.Point(157, 225);
-            this.dtpHora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dtpHora.Name = "dtpHora";
-            this.dtpHora.Size = new System.Drawing.Size(202, 20);
-            this.dtpHora.TabIndex = 20;
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.BackColor = System.Drawing.Color.Brown;
-            this.btnAceptar.FlatAppearance.BorderSize = 0;
-            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(-1, 437);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(127, 53);
-            this.btnAceptar.TabIndex = 16;
-            this.btnAceptar.Text = "ACEPTAR";
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // label2
             // 
@@ -163,14 +119,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Actividad:";
             // 
-            // dtpFecha
-            // 
-            this.dtpFecha.Location = new System.Drawing.Point(157, 182);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(203, 20);
-            this.dtpFecha.TabIndex = 14;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -182,15 +130,6 @@
             this.label4.Size = new System.Drawing.Size(77, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Categoria:";
-            // 
-            // cmbContri2
-            // 
-            this.cmbContri2.FormattingEnabled = true;
-            this.cmbContri2.Location = new System.Drawing.Point(158, 329);
-            this.cmbContri2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cmbContri2.Name = "cmbContri2";
-            this.cmbContri2.Size = new System.Drawing.Size(201, 21);
-            this.cmbContri2.TabIndex = 13;
             // 
             // label5
             // 
@@ -204,15 +143,6 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Fecha:";
             // 
-            // cmbContri1
-            // 
-            this.cmbContri1.FormattingEnabled = true;
-            this.cmbContri1.Location = new System.Drawing.Point(157, 274);
-            this.cmbContri1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cmbContri1.Name = "cmbContri1";
-            this.cmbContri1.Size = new System.Drawing.Size(201, 21);
-            this.cmbContri1.TabIndex = 12;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -224,15 +154,6 @@
             this.label6.Size = new System.Drawing.Size(45, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "Hora:";
-            // 
-            // cmbCategoria
-            // 
-            this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(159, 144);
-            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(202, 21);
-            this.cmbCategoria.TabIndex = 10;
             // 
             // label7
             // 
@@ -258,42 +179,6 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Contricante 2:";
             // 
-            // txtActividad
-            // 
-            this.txtActividad.Location = new System.Drawing.Point(157, 68);
-            this.txtActividad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtActividad.Name = "txtActividad";
-            this.txtActividad.Size = new System.Drawing.Size(203, 20);
-            this.txtActividad.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 37);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Actualizar Actividad";
-            // 
-            // btnCargar
-            // 
-            this.btnCargar.BackColor = System.Drawing.Color.Brown;
-            this.btnCargar.FlatAppearance.BorderSize = 0;
-            this.btnCargar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
-            this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCargar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCargar.ForeColor = System.Drawing.Color.White;
-            this.btnCargar.Location = new System.Drawing.Point(-1, 1);
-            this.btnCargar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(126, 47);
-            this.btnCargar.TabIndex = 25;
-            this.btnCargar.Text = "CARGAR";
-            this.btnCargar.UseVisualStyleBackColor = false;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightCoral;
@@ -304,6 +189,122 @@
             this.panel1.Size = new System.Drawing.Size(126, 488);
             this.panel1.TabIndex = 25;
             // 
+            // btnCargar
+            // 
+            this.btnCargar.BackColor = System.Drawing.Color.Brown;
+            this.btnCargar.FlatAppearance.BorderSize = 0;
+            this.btnCargar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCargar.ForeColor = System.Drawing.Color.White;
+            this.btnCargar.Location = new System.Drawing.Point(-1, 1);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(126, 47);
+            this.btnCargar.TabIndex = 25;
+            this.btnCargar.Text = "CARGAR";
+            this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.BackColor = System.Drawing.Color.Brown;
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnAceptar.ForeColor = System.Drawing.Color.White;
+            this.btnAceptar.Location = new System.Drawing.Point(-1, 437);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(127, 53);
+            this.btnAceptar.TabIndex = 16;
+            this.btnAceptar.Text = "ACEPTAR";
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // cboTorneo
+            // 
+            this.cboTorneo.FormattingEnabled = true;
+            this.cboTorneo.Location = new System.Drawing.Point(158, 373);
+            this.cboTorneo.Margin = new System.Windows.Forms.Padding(2);
+            this.cboTorneo.Name = "cboTorneo";
+            this.cboTorneo.Size = new System.Drawing.Size(201, 21);
+            this.cboTorneo.TabIndex = 23;
+            // 
+            // cboAct
+            // 
+            this.cboAct.FormattingEnabled = true;
+            this.cboAct.Location = new System.Drawing.Point(157, 104);
+            this.cboAct.Margin = new System.Windows.Forms.Padding(2);
+            this.cboAct.Name = "cboAct";
+            this.cboAct.Size = new System.Drawing.Size(203, 21);
+            this.cboAct.TabIndex = 21;
+            // 
+            // dtpHora
+            // 
+            this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHora.Location = new System.Drawing.Point(157, 225);
+            this.dtpHora.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpHora.Name = "dtpHora";
+            this.dtpHora.Size = new System.Drawing.Size(202, 20);
+            this.dtpHora.TabIndex = 20;
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Location = new System.Drawing.Point(157, 182);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(203, 20);
+            this.dtpFecha.TabIndex = 14;
+            // 
+            // cmbContri2
+            // 
+            this.cmbContri2.FormattingEnabled = true;
+            this.cmbContri2.Location = new System.Drawing.Point(158, 329);
+            this.cmbContri2.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbContri2.Name = "cmbContri2";
+            this.cmbContri2.Size = new System.Drawing.Size(201, 21);
+            this.cmbContri2.TabIndex = 13;
+            // 
+            // cmbContri1
+            // 
+            this.cmbContri1.FormattingEnabled = true;
+            this.cmbContri1.Location = new System.Drawing.Point(157, 274);
+            this.cmbContri1.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbContri1.Name = "cmbContri1";
+            this.cmbContri1.Size = new System.Drawing.Size(201, 21);
+            this.cmbContri1.TabIndex = 12;
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(159, 144);
+            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(202, 21);
+            this.cmbCategoria.TabIndex = 10;
+            // 
+            // txtActividad
+            // 
+            this.txtActividad.Location = new System.Drawing.Point(157, 68);
+            this.txtActividad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtActividad.Name = "txtActividad";
+            this.txtActividad.Size = new System.Drawing.Size(203, 20);
+            this.txtActividad.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(57, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(261, 37);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Actualizar Actividad";
+            // 
             // Actualizar_Actividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,7 +313,7 @@
             this.ClientSize = new System.Drawing.Size(390, 576);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Actualizar_Actividad";
             this.Text = "Actualizar_Actividad";
             this.Load += new System.EventHandler(this.Actualizar_Actividad_Load);

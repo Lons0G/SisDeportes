@@ -47,12 +47,12 @@
             // _lbl_usuario
             // 
             this._lbl_usuario.AutoSize = true;
-            this._lbl_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lbl_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lbl_usuario.ForeColor = System.Drawing.Color.White;
-            this._lbl_usuario.Location = new System.Drawing.Point(12, 39);
+            this._lbl_usuario.Location = new System.Drawing.Point(0, 34);
             this._lbl_usuario.Margin = new System.Windows.Forms.Padding(0);
             this._lbl_usuario.Name = "_lbl_usuario";
-            this._lbl_usuario.Size = new System.Drawing.Size(132, 25);
+            this._lbl_usuario.Size = new System.Drawing.Size(120, 20);
             this._lbl_usuario.TabIndex = 3;
             this._lbl_usuario.Text = "Administrador";
             // 
@@ -62,10 +62,9 @@
             this._p_controles.Controls.Add(this._p_salir);
             this._p_controles.Dock = System.Windows.Forms.DockStyle.Fill;
             this._p_controles.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this._p_controles.Location = new System.Drawing.Point(0, 95);
-            this._p_controles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._p_controles.Location = new System.Drawing.Point(0, 77);
             this._p_controles.Name = "_p_controles";
-            this._p_controles.Size = new System.Drawing.Size(160, 744);
+            this._p_controles.Size = new System.Drawing.Size(120, 605);
             this._p_controles.TabIndex = 4;
             this._p_controles.Paint += new System.Windows.Forms.PaintEventHandler(this._p_controles_Paint);
             // 
@@ -73,21 +72,24 @@
             // 
             this._p_salir.Controls.Add(this.button4);
             this._p_salir.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this._p_salir.Location = new System.Drawing.Point(0, 701);
-            this._p_salir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._p_salir.Location = new System.Drawing.Point(0, 570);
             this._p_salir.Name = "_p_salir";
-            this._p_salir.Size = new System.Drawing.Size(160, 43);
+            this._p_salir.Size = new System.Drawing.Size(120, 35);
             this._p_salir.TabIndex = 5;
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button4.BackColor = System.Drawing.Color.IndianRed;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(160, 43);
+            this.button4.Size = new System.Drawing.Size(120, 35);
             this.button4.TabIndex = 8;
-            this.button4.Text = "Salir";
+            this.button4.Text = "SALIR";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -97,9 +99,9 @@
             this._p_usuario.Controls.Add(this._lbl_usuario);
             this._p_usuario.Dock = System.Windows.Forms.DockStyle.Top;
             this._p_usuario.Location = new System.Drawing.Point(0, 0);
-            this._p_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 12);
+            this._p_usuario.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this._p_usuario.Name = "_p_usuario";
-            this._p_usuario.Size = new System.Drawing.Size(160, 95);
+            this._p_usuario.Size = new System.Drawing.Size(120, 77);
             this._p_usuario.TabIndex = 5;
             this._p_usuario.Paint += new System.Windows.Forms.PaintEventHandler(this._p_usuario_Paint);
             // 
@@ -108,9 +110,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1632, 839);
+            this.pictureBox1.Size = new System.Drawing.Size(1224, 682);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -119,10 +121,9 @@
             // 
             this._p_forms.BackColor = System.Drawing.Color.White;
             this._p_forms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._p_forms.Location = new System.Drawing.Point(160, 0);
-            this._p_forms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this._p_forms.Location = new System.Drawing.Point(120, 0);
             this._p_forms.Name = "_p_forms";
-            this._p_forms.Size = new System.Drawing.Size(1472, 839);
+            this._p_forms.Size = new System.Drawing.Size(1104, 682);
             this._p_forms.TabIndex = 6;
             // 
             // _p_lateral
@@ -132,21 +133,20 @@
             this._p_lateral.Controls.Add(this._p_usuario);
             this._p_lateral.Dock = System.Windows.Forms.DockStyle.Left;
             this._p_lateral.Location = new System.Drawing.Point(0, 0);
-            this._p_lateral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this._p_lateral.Name = "_p_lateral";
-            this._p_lateral.Size = new System.Drawing.Size(160, 839);
+            this._p_lateral.Size = new System.Drawing.Size(120, 682);
             this._p_lateral.TabIndex = 6;
             // 
             // Menu_Administrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(1632, 839);
+            this.ClientSize = new System.Drawing.Size(1224, 682);
             this.Controls.Add(this._p_forms);
             this.Controls.Add(this._p_lateral);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Menu_Administrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu_Administrador";

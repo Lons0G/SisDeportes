@@ -39,9 +39,9 @@
             this.txtUsuLog = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbmostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbocultar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,6 +76,10 @@
             // btnIniciar
             // 
             this.btnIniciar.BackColor = System.Drawing.Color.Firebrick;
+            this.btnIniciar.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.btnIniciar.FlatAppearance.BorderSize = 2;
+            this.btnIniciar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnIniciar.Location = new System.Drawing.Point(94, 480);
@@ -165,6 +169,21 @@
             this.panel1.Size = new System.Drawing.Size(62, 622);
             this.panel1.TabIndex = 35;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.MistyRose;
+            this.panel3.Location = new System.Drawing.Point(63, 247);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(236, 195);
+            this.panel3.TabIndex = 37;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(64, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(238, 256);
+            this.panel2.TabIndex = 37;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -174,21 +193,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 36;
             this.pictureBox2.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(64, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(238, 256);
-            this.panel2.TabIndex = 37;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.MistyRose;
-            this.panel3.Location = new System.Drawing.Point(63, 247);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(236, 195);
-            this.panel3.TabIndex = 37;
             // 
             // Login
             // 
