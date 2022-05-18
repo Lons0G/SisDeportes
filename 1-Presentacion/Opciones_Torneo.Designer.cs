@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Opciones_Torneo));
             this._p_torneos = new System.Windows.Forms.Panel();
             this._p_forms2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnInsertarTorneo = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // _p_torneos
@@ -57,17 +54,6 @@
             this._p_forms2.TabIndex = 12;
             this._p_forms2.Paint += new System.Windows.Forms.PaintEventHandler(this._p_forms2_Paint);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(30, 5);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(92, 64);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnInsertarTorneo
             // 
             this.btnInsertarTorneo.BackColor = System.Drawing.Color.IndianRed;
@@ -77,7 +63,7 @@
             this.btnInsertarTorneo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertarTorneo.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertarTorneo.ForeColor = System.Drawing.Color.White;
-            this.btnInsertarTorneo.Location = new System.Drawing.Point(12, 72);
+            this.btnInsertarTorneo.Location = new System.Drawing.Point(11, 55);
             this.btnInsertarTorneo.Margin = new System.Windows.Forms.Padding(2);
             this.btnInsertarTorneo.Name = "btnInsertarTorneo";
             this.btnInsertarTorneo.Size = new System.Drawing.Size(124, 36);
@@ -94,14 +80,12 @@
             this.ClientSize = new System.Drawing.Size(800, 400);
             this.Controls.Add(this._p_torneos);
             this.Controls.Add(this._p_forms2);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnInsertarTorneo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Opciones_Torneo";
             this.Text = "Opciones_Torneo";
             this.Load += new System.EventHandler(this.Opciones_Torneo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -110,7 +94,6 @@
 
         private System.Windows.Forms.Panel _p_torneos;
         private System.Windows.Forms.Panel _p_forms2;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnInsertarTorneo;
     }
 }

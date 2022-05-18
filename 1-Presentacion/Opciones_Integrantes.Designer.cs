@@ -39,9 +39,14 @@
             // 
             // btnInsertar
             // 
-            this.btnInsertar.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnInsertar.BackColor = System.Drawing.Color.IndianRed;
+            this.btnInsertar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnInsertar.FlatAppearance.BorderSize = 2;
+            this.btnInsertar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsertar.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertar.ForeColor = System.Drawing.Color.White;
-            this.btnInsertar.Location = new System.Drawing.Point(7, 50);
+            this.btnInsertar.Location = new System.Drawing.Point(16, 66);
             this.btnInsertar.Margin = new System.Windows.Forms.Padding(2);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(115, 32);
@@ -53,10 +58,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(31, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(27, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(75, 41);
+            this.pictureBox2.Size = new System.Drawing.Size(99, 58);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
@@ -67,7 +72,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._p_integrantes.AutoScroll = true;
-            this._p_integrantes.BackColor = System.Drawing.Color.Salmon;
+            this._p_integrantes.BackColor = System.Drawing.Color.LightCoral;
             this._p_integrantes.Location = new System.Drawing.Point(14, 108);
             this._p_integrantes.Name = "_p_integrantes";
             this._p_integrantes.Size = new System.Drawing.Size(330, 280);
@@ -83,9 +88,14 @@
             // 
             // _btn_editar_equipo
             // 
-            this._btn_editar_equipo.BackColor = System.Drawing.Color.OrangeRed;
+            this._btn_editar_equipo.BackColor = System.Drawing.Color.IndianRed;
+            this._btn_editar_equipo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this._btn_editar_equipo.FlatAppearance.BorderSize = 2;
+            this._btn_editar_equipo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this._btn_editar_equipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this._btn_editar_equipo.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._btn_editar_equipo.ForeColor = System.Drawing.Color.White;
-            this._btn_editar_equipo.Location = new System.Drawing.Point(126, 50);
+            this._btn_editar_equipo.Location = new System.Drawing.Point(140, 66);
             this._btn_editar_equipo.Margin = new System.Windows.Forms.Padding(2);
             this._btn_editar_equipo.Name = "_btn_editar_equipo";
             this._btn_editar_equipo.Size = new System.Drawing.Size(92, 32);
@@ -98,6 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(800, 400);
             this.Controls.Add(this._btn_editar_equipo);
             this.Controls.Add(this.btnInsertar);
