@@ -202,5 +202,10 @@ namespace _1_Presentacion
                 MessageBox.Show("Error en el Metodo txtSueldo_KeyPress", "Ha ocurrido un error en 'Agregar Usuario'", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void d_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
