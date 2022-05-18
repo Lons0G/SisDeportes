@@ -42,26 +42,32 @@
             this.pictureBox2.Location = new System.Drawing.Point(14, 11);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(75, 41);
+            this.pictureBox2.Size = new System.Drawing.Size(116, 54);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
             // btnInsertarEquipo
             // 
-            this.btnInsertarEquipo.BackColor = System.Drawing.Color.Maroon;
+            this.btnInsertarEquipo.BackColor = System.Drawing.Color.IndianRed;
+            this.btnInsertarEquipo.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.btnInsertarEquipo.FlatAppearance.BorderSize = 2;
+            this.btnInsertarEquipo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnInsertarEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsertarEquipo.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertarEquipo.ForeColor = System.Drawing.Color.White;
-            this.btnInsertarEquipo.Location = new System.Drawing.Point(5, 57);
+            this.btnInsertarEquipo.Location = new System.Drawing.Point(14, 69);
             this.btnInsertarEquipo.Margin = new System.Windows.Forms.Padding(2);
             this.btnInsertarEquipo.Name = "btnInsertarEquipo";
-            this.btnInsertarEquipo.Size = new System.Drawing.Size(92, 32);
+            this.btnInsertarEquipo.Size = new System.Drawing.Size(116, 34);
             this.btnInsertarEquipo.TabIndex = 3;
-            this.btnInsertarEquipo.Text = "Insertar Equipo";
+            this.btnInsertarEquipo.Text = "INSERTAR EQUIPO";
             this.btnInsertarEquipo.UseVisualStyleBackColor = false;
             this.btnInsertarEquipo.Click += new System.EventHandler(this.btnInsertarEquipo_Click);
             // 
             // _p_forms2
             // 
+            this._p_forms2.BackColor = System.Drawing.Color.MistyRose;
             this._p_forms2.Dock = System.Windows.Forms.DockStyle.Right;
             this._p_forms2.Location = new System.Drawing.Point(350, 0);
             this._p_forms2.Name = "_p_forms2";
@@ -73,6 +79,7 @@
             this._p_equipos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this._p_equipos.BackColor = System.Drawing.Color.MistyRose;
             this._p_equipos.Location = new System.Drawing.Point(14, 108);
             this._p_equipos.Name = "_p_equipos";
             this._p_equipos.Size = new System.Drawing.Size(330, 280);
@@ -83,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(800, 400);
             this.Controls.Add(this._p_equipos);
             this.Controls.Add(this._p_forms2);
