@@ -94,5 +94,10 @@ namespace _1_Presentacion
                 MessageBox.Show("Error en el Metodo FRM_Deportes_Load", "Ha ocurrido un error en 'FRM Deportes'", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void _lbl_nombre_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
