@@ -50,7 +50,7 @@
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnActualizar.Location = new System.Drawing.Point(102, 234);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(99, 43);
             this.btnActualizar.TabIndex = 58;
@@ -73,7 +73,7 @@
             // 
             this.txtDescrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescrip.Location = new System.Drawing.Point(176, 174);
-            this.txtDescrip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescrip.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescrip.Name = "txtDescrip";
             this.txtDescrip.Size = new System.Drawing.Size(122, 26);
             this.txtDescrip.TabIndex = 56;
@@ -93,7 +93,7 @@
             // 
             this.txtnombreAct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnombreAct.Location = new System.Drawing.Point(176, 133);
-            this.txtnombreAct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnombreAct.Margin = new System.Windows.Forms.Padding(2);
             this.txtnombreAct.Name = "txtnombreAct";
             this.txtnombreAct.Size = new System.Drawing.Size(122, 26);
             this.txtnombreAct.TabIndex = 54;
@@ -118,7 +118,7 @@
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargar.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnCargar.Location = new System.Drawing.Point(224, 76);
-            this.btnCargar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(74, 33);
             this.btnCargar.TabIndex = 59;
@@ -160,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SeaShell;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(305, 288);
             this.Controls.Add(this.lbl_id);
             this.Controls.Add(this.label1);
@@ -171,7 +171,7 @@
             this.Controls.Add(this.txtnombreAct);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Actualizar_Tipo_Act";
             this.Text = "Actualizar_Tipo_Act";
             this.Load += new System.EventHandler(this.Actualizar_Tipo_Act_Load);
